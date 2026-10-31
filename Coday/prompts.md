@@ -10,86 +10,86 @@ Jeder Prompt unten ist komplett: Brand-Block, Szene und der Text im Bild. In Are
 
 | ID | Titel | Kategorie | Format | Text im Bild | Bild |
 | --- | --- | --- | --- | --- | --- |
-| [CD-001](#cd-001) ⚠️ | PHP-Lücke: sachlicher Aufhänger | Security | 3:4 | PHP-Lücke: Ist deine Website aktualisiert? | – |
-| [CD-002](#cd-002) ⚠️ | WordPress-Update reicht nicht | Security | 3:4 | Diesmal reicht ein WordPress-Update nicht. | – |
-| [CD-003](#cd-003) | Kostenloser Website-Check (Haupt-CTA) | Security | 3:4 | Kostenloser Website-Check aus Wetzlar | – |
-| [CD-004](#cd-004) ⚠️ | PHP 8.2 Support-Ende | Security | 3:4 | PHP 8.2: Sicherheits-Updates nur bis 31.12. | – |
-| [CD-005](#cd-005) | Karussell-Cover: In 4 Schritten (K1 1/6) | Karussell | 3:4 | PHP-Version prüfen in 4 Schritten | – |
-| [CD-006](#cd-006) | Frag zuerst deinen Hoster | Security | 3:4 | Erster Schritt: Frag deinen Hoster. | – |
-| [CD-007](#cd-007) | Ich prüfe. Du entscheidest. | Security | 3:4 | Ich prüfe. Du entscheidest. | – |
-| [CD-008](#cd-008) | Migration WordPress → Next.js | Leistung | 3:4 | Weniger Plugins. Weniger Baustellen. | – |
-| [CD-009](#cd-009) | Wartung | Security | 3:4 | Updates, Backups, Monitoring: erledigt. | – |
-| [CD-010](#cd-010) ⚠️ | GEO-Hook | GEO | 3:4 | Kennt ChatGPT deinen Betrieb? | – |
-| [CD-011](#cd-011) | Karussell-Cover GEO (K2 1/6) | Karussell | 3:4 | GEO in 5 Slides erklärt | – |
-| [CD-012](#cd-012) ⚠️ | Ladezeit | Leistung | 3:4 | Jede Sekunde Ladezeit kostet Anfragen. | – |
-| [CD-013](#cd-013) | Festpreis | Leistung | 3:4 | Festpreis statt Stundenzettel. | – |
-| [CD-014](#cd-014) | Ein Ansprechpartner | Leistung | 3:4 | Ein Ansprechpartner. Von Plan bis Code. | – |
-| [CD-015](#cd-015) | Quellcode-Übergabe | Leistung | 3:4 | Dein Code gehört dir. | – |
-| [CD-016](#cd-016) | Gastro | Branche | 3:4 | Speisekarte online, mit Allergenen. | – |
+| [CD-001](#cd-001) ⚠️ | PHP-Lücke: sachlicher Aufhänger | Security | 3:4 | PHP-Lücke: Ist deine Website aktualisiert? | [ansehen](bilder/instagram-3x4/CD-001.jpg) |
+| [CD-002](#cd-002) ⚠️ | WordPress-Update reicht nicht | Security | 3:4 | Diesmal reicht ein WordPress-Update nicht. | [ansehen](bilder/instagram-3x4/CD-002.jpg) |
+| [CD-003](#cd-003) | Kostenloser Website-Check (Haupt-CTA) | Security | 3:4 | Kostenloser Website-Check aus Wetzlar | [ansehen](bilder/instagram-3x4/CD-003.jpg) |
+| [CD-004](#cd-004) ⚠️ | PHP 8.2 Support-Ende | Security | 3:4 | PHP 8.2: Sicherheits-Updates nur bis 31.12. | [ansehen](bilder/instagram-3x4/CD-004.jpg) |
+| [CD-005](#cd-005) | Karussell-Cover: In 4 Schritten (K1 1/6) | Karussell | 3:4 | PHP-Version prüfen in 4 Schritten | [ansehen](bilder/instagram-3x4/CD-005.jpg) |
+| [CD-006](#cd-006) | Frag zuerst deinen Hoster | Security | 3:4 | Erster Schritt: Frag deinen Hoster. | [ansehen](bilder/instagram-3x4/CD-006.jpg) |
+| [CD-007](#cd-007) | Ich prüfe. Du entscheidest. | Security | 3:4 | Ich prüfe. Du entscheidest. | [ansehen](bilder/instagram-3x4/CD-007.jpg) |
+| [CD-008](#cd-008) | Migration WordPress → Next.js | Leistung | 3:4 | Weniger Plugins. Weniger Baustellen. | [ansehen](bilder/instagram-3x4/CD-008.jpg) |
+| [CD-009](#cd-009) | Wartung | Security | 3:4 | Updates, Backups, Monitoring: erledigt. | [ansehen](bilder/instagram-3x4/CD-009.jpg) |
+| [CD-010](#cd-010) ⚠️ | GEO-Hook | GEO | 3:4 | Kennt ChatGPT deinen Betrieb? | [ansehen](bilder/instagram-3x4/CD-010.jpg) |
+| [CD-011](#cd-011) | Karussell-Cover GEO (K2 1/6) | Karussell | 3:4 | GEO in 5 Slides erklärt | [ansehen](bilder/instagram-3x4/CD-011.jpg) |
+| [CD-012](#cd-012) ⚠️ | Ladezeit | Leistung | 3:4 | Jede Sekunde Ladezeit kostet Anfragen. | [ansehen](bilder/instagram-3x4/CD-012.jpg) |
+| [CD-013](#cd-013) | Festpreis | Leistung | 3:4 | Festpreis statt Stundenzettel. | [ansehen](bilder/instagram-3x4/CD-013.jpg) |
+| [CD-014](#cd-014) | Ein Ansprechpartner | Leistung | 3:4 | Ein Ansprechpartner. Von Plan bis Code. | [ansehen](bilder/instagram-3x4/CD-014.jpg) |
+| [CD-015](#cd-015) | Quellcode-Übergabe | Leistung | 3:4 | Dein Code gehört dir. | [ansehen](bilder/instagram-3x4/CD-015.jpg) |
+| [CD-016](#cd-016) | Gastro | Branche | 3:4 | Speisekarte online, mit Allergenen. | [ansehen](bilder/instagram-3x4/CD-016.jpg) |
 | [CD-017](#cd-017) | Handwerk | Branche | 3:4 | Mehr Anfragen vom Handy. | – |
 | [CD-018](#cd-018) | Schlüsseldienst | Branche | 3:4 | Notfall? Ein Tippen bis zum Anruf. | – |
-| [CD-019](#cd-019) | Friseur | Branche | 3:4 | Termine buchen, auch um 23 Uhr. | – |
-| [CD-020](#cd-020) | Boutique | Branche | 3:4 | Dein Laden. Rund um die Uhr geöffnet. | – |
-| [CD-021](#cd-021) | Kanzlei/Praxis | Branche | 3:4 | Vertrauen beginnt vor dem ersten Termin. | – |
-| [CD-022](#cd-022) | Lokal | Lokal | 3:4 | Webdesign aus Wetzlar. Für Mittelhessen. | – |
-| [CD-023](#cd-023) | Vorher/Nachher (Konzept) | Vorher/Nachher | 3:4 | Baukasten oder Maßarbeit? | – |
-| [CD-024](#cd-024) | Mythen-Karussell-Cover (K3 1/6) | Karussell | 3:4 | 5 Website-Mythen, die dich Kunden kosten | – |
-| [CD-025](#cd-025) | 3D begehbar | Leistung | 3:4 | Begehbar. Direkt im Browser. | – |
-| [CD-026](#cd-026) | Meme: Plugin-Update | Humor | 3:4 | Freitag, 17:58: 14 Plugin-Updates. | – |
+| [CD-019](#cd-019) | Friseur | Branche | 3:4 | Termine buchen, auch um 23 Uhr. | [ansehen](bilder/instagram-3x4/CD-019.jpg) |
+| [CD-020](#cd-020) | Boutique | Branche | 3:4 | Dein Laden. Rund um die Uhr geöffnet. | [ansehen](bilder/instagram-3x4/CD-020.jpg) |
+| [CD-021](#cd-021) | Kanzlei/Praxis | Branche | 3:4 | Vertrauen beginnt vor dem ersten Termin. | [ansehen](bilder/instagram-3x4/CD-021.jpg) |
+| [CD-022](#cd-022) | Lokal | Lokal | 3:4 | Webdesign aus Wetzlar. Für Mittelhessen. | [ansehen](bilder/instagram-3x4/CD-022.jpg) |
+| [CD-023](#cd-023) | Vorher/Nachher (Konzept) | Vorher/Nachher | 3:4 | Baukasten oder Maßarbeit? | [ansehen](bilder/instagram-3x4/CD-023.jpg) |
+| [CD-024](#cd-024) | Mythen-Karussell-Cover (K3 1/6) | Karussell | 3:4 | 5 Website-Mythen, die dich Kunden kosten | [ansehen](bilder/instagram-3x4/CD-024.jpg) |
+| [CD-025](#cd-025) | 3D begehbar | Leistung | 3:4 | Begehbar. Direkt im Browser. | [ansehen](bilder/instagram-3x4/CD-025.jpg) |
+| [CD-026](#cd-026) | Meme: Plugin-Update | Humor | 3:4 | Freitag, 17:58: 14 Plugin-Updates. | [ansehen](bilder/instagram-3x4/CD-026.jpg) |
 | [CD-027](#cd-027) | Behind the Scenes | BTS | 3:4 | Hier entsteht deine Website. | – |
-| [CD-028](#cd-028) | Story: Website-Check | Story | 9:16 | Website-Check: kostenlos | – |
+| [CD-028](#cd-028) | Story: Website-Check | Story | 9:16 | Website-Check: kostenlos | [ansehen](bilder/story-9x16/CD-028.jpg) |
 | [CD-029](#cd-029) | K1 PHP-Version prüfen: Hoster fragen (K1 2/6) | Karussell | 3:4 | 1. Frag deinen Hoster, ob PHP aktualisiert wurde. | – |
-| [CD-030](#cd-030) | K1 PHP-Version prüfen: Version ablesen (K1 3/6) | Karussell | 3:4 | 2. PHP-Version im Hosting-Kundenbereich ablesen. | – |
-| [CD-031](#cd-031) | K1 PHP-Version prüfen: Support-Tabelle (K1 4/6) | Karussell | 3:4 | 3. Version mit Support-Tabelle vergleichen. | – |
+| [CD-030](#cd-030) | K1 PHP-Version prüfen: Version ablesen (K1 3/6) | Karussell | 3:4 | 2. PHP-Version im Hosting-Kundenbereich ablesen. | [ansehen](bilder/instagram-3x4/CD-030.jpg) |
+| [CD-031](#cd-031) | K1 PHP-Version prüfen: Support-Tabelle (K1 4/6) | Karussell | 3:4 | 3. Version mit Support-Tabelle vergleichen. | [ansehen](bilder/instagram-3x4/CD-031.jpg) |
 | [CD-032](#cd-032) | K1 PHP-Version prüfen: Update planen (K1 5/6) | Karussell | 3:4 | 4. PHP-Update planen, nicht nur WordPress. | – |
-| [CD-033](#cd-033) | K1 PHP-Version prüfen: Check (K1 6/6) | Karussell | 3:4 | Unsicher? Kostenloser Check: Link in Bio | – |
-| [CD-034](#cd-034) | K2 GEO: Was ist GEO (K2 2/6) | Karussell | 3:4 | GEO = Sichtbarkeit in KI-Antworten | – |
-| [CD-035](#cd-035) | K2 GEO: Struktur (K2 3/6) | Karussell | 3:4 | KI liest Struktur, nicht Deko. | – |
-| [CD-036](#cd-036) | K2 GEO: Klare Angaben (K2 4/6) | Karussell | 3:4 | Klare Angaben: Was, wo, für wen. | – |
-| [CD-037](#cd-037) | K2 GEO: Tempo (K2 5/6) | Karussell | 3:4 | Schnelle, saubere Seiten helfen allen Suchen. | – |
-| [CD-038](#cd-038) | K2 GEO: Check (K2 6/6) | Karussell | 3:4 | Wie sichtbar bist du? Check: Link in Bio | – |
-| [CD-039](#cd-039) | K3 Mythos: Baukasten (K3 2/6) | Karussell | 3:4 | Mythos: Ein Baukasten reicht. | – |
-| [CD-040](#cd-040) | K3 Mythos: Ruhe nach dem Launch (K3 3/6) | Karussell | 3:4 | Mythos: Nach dem Launch ist Ruhe. | – |
-| [CD-041](#cd-041) | K3 Mythos: WordPress-Update (K3 4/6) | Karussell | 3:4 | Mythos: WordPress-Update = sicher. | – |
-| [CD-042](#cd-042) | K3 Mythos: Ladezeit (K3 5/6) | Karussell | 3:4 | Mythos: Ladezeit ist egal. | – |
-| [CD-043](#cd-043) | K3 Mythos: Nur eine Suche (K3 6/6) | Karussell | 3:4 | Mythos: Google ist die einzige Suche. | – |
-| [CD-044](#cd-044) | Server aktuell? | Security | 3:4 | Server aktuell? Website sicher(er). | – |
-| [CD-045](#cd-045) | Updates aufschieben | Security | 3:4 | Updates aufschieben kostet später mehr. | – |
-| [CD-046](#cd-046) | Backup vor jedem Update | Security | 3:4 | Backup vor jedem Update. | – |
-| [CD-047](#cd-047) | Notfall: Ruhe bewahren | Security | 3:4 | Website gehackt? Ruhe bewahren. | – |
-| [CD-048](#cd-048) | 3 Fragen an deinen Hoster | Security | 3:4 | 3 Fragen an deinen Hoster | – |
-| [CD-049](#cd-049) | Headless CMS | Leistung | 3:4 | Headless CMS: Inhalte pflegen, sicher bauen. | – |
-| [CD-050](#cd-050) | Schnelle Shops | Leistung | 3:4 | Shops, die schnell laden. | – |
-| [CD-051](#cd-051) | Lokal gefunden werden | Leistung | 3:4 | Lokal gefunden werden. | – |
-| [CD-052](#cd-052) | Website und Profil im Einklang | Leistung | 3:4 | Website und Unternehmensprofil im Einklang. | – |
-| [CD-053](#cd-053) | Jede Seite führt zur Anfrage | Leistung | 3:4 | Jede Seite führt zur Anfrage. | – |
-| [CD-054](#cd-054) | Kontaktformular kaputt? | Problem | 3:4 | Kontaktformular kaputt? Merkst du nie. | – |
-| [CD-055](#cd-055) | Auf dem Handy unlesbar? | Problem | 3:4 | Auf dem Handy unlesbar? | – |
-| [CD-056](#cd-056) | Website von 2015? | Problem | 3:4 | Website von 2015? | – |
-| [CD-057](#cd-057) | Button nicht gefunden | Problem | 3:4 | Kunden finden den Button nicht. | – |
-| [CD-058](#cd-058) | Vorher warten, nachher da | Vorher/Nachher | 3:4 | Vorher: warten. Nachher: da. | – |
-| [CD-059](#cd-059) | 30 Plugins zu 0 | Vorher/Nachher | 3:4 | Vorher: 30 Plugins. Nachher: 0. | – |
-| [CD-060](#cd-060) | Branche Café | Branche | 3:4 | Dein Café, auf der Karte ganz oben. | – |
-| [CD-061](#cd-061) | Branche Handwerk: Konfigurator | Branche | 3:4 | Konfigurator statt Rückruf-Chaos. | – |
-| [CD-062](#cd-062) | Branche Makler | Branche | 3:4 | Exposés, die verkaufen. | – |
-| [CD-063](#cd-063) | Branche Reinigung | Branche | 3:4 | Saubere Arbeit, saubere Website. | – |
-| [CD-064](#cd-064) | Branche Kanzlei | Branche | 3:4 | Seriös. Schnell. Klar. | – |
-| [CD-065](#cd-065) | Aus dem Lahntal | Lokal | 3:4 | Aus dem Lahntal für deinen Betrieb. | – |
-| [CD-066](#cd-066) | Einzugsgebiet | Lokal | 3:4 | Wetzlar · Gießen · Marburg · Limburg | – |
-| [CD-067](#cd-067) | Core Web Vitals | Wissen | 3:4 | Was sind Core Web Vitals? | – |
-| [CD-068](#cd-068) | PHP-Version ≠ WordPress-Version | Wissen | 3:4 | PHP-Version ≠ WordPress-Version | – |
-| [CD-069](#cd-069) | Was ist Next.js? | Wissen | 3:4 | Was ist eigentlich Next.js? | – |
-| [CD-070](#cd-070) ⚠️ | Zahlen: Mobile Performance | Zahlen | 3:4 | 94 Mobile Performance (PageSpeed, 17.07.2026) | – |
-| [CD-071](#cd-071) ⚠️ | Zahlen: Accessibility und SEO | Zahlen | 3:4 | 100 Accessibility · 100 SEO | – |
-| [CD-072](#cd-072) | Erst Skizze, dann Code | BTS | 3:4 | Erst Skizze, dann Code. | – |
-| [CD-073](#cd-073) | Montag, 8 Uhr | BTS | 3:4 | Montag, 8 Uhr, Wetzlar. | – |
-| [CD-074](#cd-074) | Humor: kein Menü | Humor | 3:4 | Ich, wenn die Website kein Menü hat. | – |
-| [CD-075](#cd-075) | Humor: statische Seiten | Humor | 3:4 | Statische Seiten schlafen gut. | – |
-| [CD-076](#cd-076) ⚠️ | Humor: PHP 8.2 nach Silvester | Humor | 3:4 | PHP 8.2 nach Silvester: | – |
-| [CD-077](#cd-077) | Story: PHP-Update | Story | 9:16 | PHP-Update? Ich übernehme das. | – |
-| [CD-078](#cd-078) | Story: PHP-Version (Umfrage) | Story | 9:16 | Weißt du deine PHP-Version? | – |
-| [CD-079](#cd-079) | Story: Wie schnell? | Story | 9:16 | Wie schnell ist deine Seite? | – |
-| [CD-080](#cd-080) | Story: ChatGPT-Frage (Umfrage) | Story | 9:16 | Fragst du ChatGPT nach Betrieben? | – |
+| [CD-033](#cd-033) | K1 PHP-Version prüfen: Check (K1 6/6) | Karussell | 3:4 | Unsicher? Kostenloser Check: Link in Bio | [ansehen](bilder/instagram-3x4/CD-033.jpg) |
+| [CD-034](#cd-034) | K2 GEO: Was ist GEO (K2 2/6) | Karussell | 3:4 | GEO = Sichtbarkeit in KI-Antworten | [ansehen](bilder/instagram-3x4/CD-034.jpg) |
+| [CD-035](#cd-035) | K2 GEO: Struktur (K2 3/6) | Karussell | 3:4 | KI liest Struktur, nicht Deko. | [ansehen](bilder/instagram-3x4/CD-035.jpg) |
+| [CD-036](#cd-036) | K2 GEO: Klare Angaben (K2 4/6) | Karussell | 3:4 | Klare Angaben: Was, wo, für wen. | [ansehen](bilder/instagram-3x4/CD-036.jpg) |
+| [CD-037](#cd-037) | K2 GEO: Tempo (K2 5/6) | Karussell | 3:4 | Schnelle, saubere Seiten helfen allen Suchen. | [ansehen](bilder/instagram-3x4/CD-037.jpg) |
+| [CD-038](#cd-038) | K2 GEO: Check (K2 6/6) | Karussell | 3:4 | Wie sichtbar bist du? Check: Link in Bio | [ansehen](bilder/instagram-3x4/CD-038.jpg) |
+| [CD-039](#cd-039) | K3 Mythos: Baukasten (K3 2/6) | Karussell | 3:4 | Mythos: Ein Baukasten reicht. | [ansehen](bilder/instagram-3x4/CD-039.jpg) |
+| [CD-040](#cd-040) | K3 Mythos: Ruhe nach dem Launch (K3 3/6) | Karussell | 3:4 | Mythos: Nach dem Launch ist Ruhe. | [ansehen](bilder/instagram-3x4/CD-040.jpg) |
+| [CD-041](#cd-041) | K3 Mythos: WordPress-Update (K3 4/6) | Karussell | 3:4 | Mythos: WordPress-Update = sicher. | [ansehen](bilder/instagram-3x4/CD-041.jpg) |
+| [CD-042](#cd-042) | K3 Mythos: Ladezeit (K3 5/6) | Karussell | 3:4 | Mythos: Ladezeit ist egal. | [ansehen](bilder/instagram-3x4/CD-042.jpg) |
+| [CD-043](#cd-043) | K3 Mythos: Nur eine Suche (K3 6/6) | Karussell | 3:4 | Mythos: Google ist die einzige Suche. | [ansehen](bilder/instagram-3x4/CD-043.jpg) |
+| [CD-044](#cd-044) | Server aktuell? | Security | 3:4 | Server aktuell? Website sicher(er). | [ansehen](bilder/instagram-3x4/CD-044.jpg) |
+| [CD-045](#cd-045) | Updates aufschieben | Security | 3:4 | Updates aufschieben kostet später mehr. | [ansehen](bilder/instagram-3x4/CD-045.jpg) |
+| [CD-046](#cd-046) | Backup vor jedem Update | Security | 3:4 | Backup vor jedem Update. | [ansehen](bilder/instagram-3x4/CD-046.jpg) |
+| [CD-047](#cd-047) | Notfall: Ruhe bewahren | Security | 3:4 | Website gehackt? Ruhe bewahren. | [ansehen](bilder/instagram-3x4/CD-047.jpg) |
+| [CD-048](#cd-048) | 3 Fragen an deinen Hoster | Security | 3:4 | 3 Fragen an deinen Hoster | [ansehen](bilder/instagram-3x4/CD-048.jpg) |
+| [CD-049](#cd-049) | Headless CMS | Leistung | 3:4 | Headless CMS: Inhalte pflegen, sicher bauen. | [ansehen](bilder/instagram-3x4/CD-049.jpg) |
+| [CD-050](#cd-050) | Schnelle Shops | Leistung | 3:4 | Shops, die schnell laden. | [ansehen](bilder/instagram-3x4/CD-050.jpg) |
+| [CD-051](#cd-051) | Lokal gefunden werden | Leistung | 3:4 | Lokal gefunden werden. | [ansehen](bilder/instagram-3x4/CD-051.jpg) |
+| [CD-052](#cd-052) | Website und Profil im Einklang | Leistung | 3:4 | Website und Unternehmensprofil im Einklang. | [ansehen](bilder/instagram-3x4/CD-052.jpg) |
+| [CD-053](#cd-053) | Jede Seite führt zur Anfrage | Leistung | 3:4 | Jede Seite führt zur Anfrage. | [ansehen](bilder/instagram-3x4/CD-053.jpg) |
+| [CD-054](#cd-054) | Kontaktformular kaputt? | Problem | 3:4 | Kontaktformular kaputt? Merkst du nie. | [ansehen](bilder/instagram-3x4/CD-054.jpg) |
+| [CD-055](#cd-055) | Auf dem Handy unlesbar? | Problem | 3:4 | Auf dem Handy unlesbar? | [ansehen](bilder/instagram-3x4/CD-055.jpg) |
+| [CD-056](#cd-056) | Website von 2015? | Problem | 3:4 | Website von 2015? | [ansehen](bilder/instagram-3x4/CD-056.jpg) |
+| [CD-057](#cd-057) | Button nicht gefunden | Problem | 3:4 | Kunden finden den Button nicht. | [ansehen](bilder/instagram-3x4/CD-057.jpg) |
+| [CD-058](#cd-058) | Vorher warten, nachher da | Vorher/Nachher | 3:4 | Vorher: warten. Nachher: da. | [ansehen](bilder/instagram-3x4/CD-058.jpg) |
+| [CD-059](#cd-059) | 30 Plugins zu 0 | Vorher/Nachher | 3:4 | Vorher: 30 Plugins. Nachher: 0. | [ansehen](bilder/instagram-3x4/CD-059.jpg) |
+| [CD-060](#cd-060) | Branche Café | Branche | 3:4 | Dein Café, auf der Karte ganz oben. | [ansehen](bilder/instagram-3x4/CD-060.jpg) |
+| [CD-061](#cd-061) | Branche Handwerk: Konfigurator | Branche | 3:4 | Konfigurator statt Rückruf-Chaos. | [ansehen](bilder/instagram-3x4/CD-061.jpg) |
+| [CD-062](#cd-062) | Branche Makler | Branche | 3:4 | Exposés, die verkaufen. | [ansehen](bilder/instagram-3x4/CD-062.jpg) |
+| [CD-063](#cd-063) | Branche Reinigung | Branche | 3:4 | Saubere Arbeit, saubere Website. | [ansehen](bilder/instagram-3x4/CD-063.jpg) |
+| [CD-064](#cd-064) | Branche Kanzlei | Branche | 3:4 | Seriös. Schnell. Klar. | [ansehen](bilder/instagram-3x4/CD-064.jpg) |
+| [CD-065](#cd-065) | Aus dem Lahntal | Lokal | 3:4 | Aus dem Lahntal für deinen Betrieb. | [ansehen](bilder/instagram-3x4/CD-065.jpg) |
+| [CD-066](#cd-066) | Einzugsgebiet | Lokal | 3:4 | Wetzlar · Gießen · Marburg · Limburg | [ansehen](bilder/instagram-3x4/CD-066.jpg) |
+| [CD-067](#cd-067) | Core Web Vitals | Wissen | 3:4 | Was sind Core Web Vitals? | [ansehen](bilder/instagram-3x4/CD-067.jpg) |
+| [CD-068](#cd-068) | PHP-Version ≠ WordPress-Version | Wissen | 3:4 | PHP-Version ≠ WordPress-Version | [ansehen](bilder/instagram-3x4/CD-068.jpg) |
+| [CD-069](#cd-069) | Was ist Next.js? | Wissen | 3:4 | Was ist eigentlich Next.js? | [ansehen](bilder/instagram-3x4/CD-069.jpg) |
+| [CD-070](#cd-070) ⚠️ | Zahlen: Mobile Performance | Zahlen | 3:4 | 94 Mobile Performance (PageSpeed, 17.07.2026) | [ansehen](bilder/instagram-3x4/CD-070.jpg) |
+| [CD-071](#cd-071) ⚠️ | Zahlen: Accessibility und SEO | Zahlen | 3:4 | 100 Accessibility · 100 SEO | [ansehen](bilder/instagram-3x4/CD-071.jpg) |
+| [CD-072](#cd-072) | Erst Skizze, dann Code | BTS | 3:4 | Erst Skizze, dann Code. | [ansehen](bilder/instagram-3x4/CD-072.jpg) |
+| [CD-073](#cd-073) | Montag, 8 Uhr | BTS | 3:4 | Montag, 8 Uhr, Wetzlar. | [ansehen](bilder/instagram-3x4/CD-073.jpg) |
+| [CD-074](#cd-074) | Humor: kein Menü | Humor | 3:4 | Ich, wenn die Website kein Menü hat. | [ansehen](bilder/instagram-3x4/CD-074.jpg) |
+| [CD-075](#cd-075) | Humor: statische Seiten | Humor | 3:4 | Statische Seiten schlafen gut. | [ansehen](bilder/instagram-3x4/CD-075.jpg) |
+| [CD-076](#cd-076) ⚠️ | Humor: PHP 8.2 nach Silvester | Humor | 3:4 | PHP 8.2 nach Silvester: | [ansehen](bilder/instagram-3x4/CD-076.jpg) |
+| [CD-077](#cd-077) | Story: PHP-Update | Story | 9:16 | PHP-Update? Ich übernehme das. | [ansehen](bilder/story-9x16/CD-077.jpg) |
+| [CD-078](#cd-078) | Story: PHP-Version (Umfrage) | Story | 9:16 | Weißt du deine PHP-Version? | [ansehen](bilder/story-9x16/CD-078.jpg) |
+| [CD-079](#cd-079) | Story: Wie schnell? | Story | 9:16 | Wie schnell ist deine Seite? | [ansehen](bilder/story-9x16/CD-079.jpg) |
+| [CD-080](#cd-080) | Story: ChatGPT-Frage (Umfrage) | Story | 9:16 | Fragst du ChatGPT nach Betrieben? | [ansehen](bilder/story-9x16/CD-080.jpg) |
 
 <a id="cd-001"></a>
 ## CD-001 · PHP-Lücke: sachlicher Aufhänger
@@ -104,6 +104,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Am 21.10.2026 hat das PHP-Projekt Notfall-Updates für zwei kritische Lücken veröffentlicht („PHP2Shell“). Die Lücken stecken in PHP selbst, ein WordPress-Update schließt sie nicht. Frag zuerst deinen Hoster. Unsicher? Ich prüfe deine Seite kostenlos. Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** ⚠️ Fakten prüfen. Fakten vor dem Posten prüfen (Stand 27.–29.10.2026): Datum 21.10.2026 und PHP2Shell-Angaben; die Lage entwickelt sich weiter, ein Nachtrag (CVE-2026-115560) ist angekündigt. Headline oben links platzieren. Posting-Plan: Woche 1, Mo. 2.11.2026, 7:30 oder 18:00 Uhr. Bonus: ohne Text im Format 16:9 als Blog-Header für codayweb.de; für LinkedIn.  
+**Bilder:** [original](bilder/original/CD-001.png) · [instagram-3x4](bilder/instagram-3x4/CD-001.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-001.jpg)
+
+<img src="bilder/instagram-3x4/CD-001.jpg" width="270">
 
 <a id="cd-002"></a>
 ## CD-002 · WordPress-Update reicht nicht
@@ -118,6 +121,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Die Oktober-Lücken sitzen in PHP auf dem Server, nicht in Theme oder Plugins. Laut BSI muss die PHP-Version aktualisiert werden. Kostenloser Check: Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #wordpress #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** ⚠️ Fakten prüfen. Fakten vor dem Posten prüfen (Stand 27.–29.10.2026): Lücken in PHP statt in Theme/Plugins, BSI-Empfehlung zum PHP-Update. Posting-Plan: Woche 2, Mo. 9.11.2026, 7:30 oder 18:00 Uhr. Bonus: ohne Text im Format 16:9 als Blog-Header für codayweb.de; für LinkedIn.  
+**Bilder:** [original](bilder/original/CD-002.png) · [instagram-3x4](bilder/instagram-3x4/CD-002.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-002.jpg)
+
+<img src="bilder/instagram-3x4/CD-002.jpg" width="270">
 
 <a id="cd-003"></a>
 ## CD-003 · Kostenloser Website-Check (Haupt-CTA)
@@ -132,6 +138,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Ich schaue mir deine Website persönlich an: PHP-Version, Updates, Ladezeit, Sichtbarkeit. Kostenlos und unverbindlich. Schreib „CHECK“ per DM.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Posting-Plan: Woche 1, Fr. 6.11.2026; Woche 10, Fr. 8.1.2027 (laut Dokument „Jahresend-CTA“), 7:30 oder 18:00 Uhr. Woche 10 liegt rechnerisch im Januar 2027; für einen Jahresend-CTA den Termin in den Dezember legen. Bonus: als Seitenteiler in Akquise-Mails/Pitch-PDF.  
+**Bilder:** [original](bilder/original/CD-003.png) · [instagram-3x4](bilder/instagram-3x4/CD-003.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-003.jpg)
+
+<img src="bilder/instagram-3x4/CD-003.jpg" width="270">
 
 <a id="cd-004"></a>
 ## CD-004 · PHP 8.2 Support-Ende
@@ -146,6 +155,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Laut php.net endet der Sicherheits-Support für PHP 8.2 am 31.12.2026, danach gibt es keine Updates vom PHP-Projekt mehr. Update, Aufpreis beim Hoster oder Neubau? Ich helfe dir bei der Entscheidung.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #php #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** ⚠️ Fakten prüfen. Fakten vor dem Posten prüfen (Stand 27.–29.10.2026): Sicherheits-Support für PHP 8.2 endet laut php.net am 31.12.2026. Posting-Plan: Woche 3, Mo. 16.11.2026; Woche 10, Mo. 4.1.2027 (laut Dokument „Reminder Dezember“), 7:30 oder 18:00 Uhr. Achtung: Woche 10 liegt rechnerisch im Januar 2027, also nach dem Support-Ende am 31.12.; den Reminder deshalb im Dezember posten. Bonus: ohne Text im Format 16:9 als Blog-Header für codayweb.de; für LinkedIn.  
+**Bilder:** [original](bilder/original/CD-004.png) · [instagram-3x4](bilder/instagram-3x4/CD-004.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-004.jpg)
+
+<img src="bilder/instagram-3x4/CD-004.jpg" width="270">
 
 <a id="cd-005"></a>
 ## CD-005 · Karussell-Cover: In 4 Schritten
@@ -161,6 +173,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Speichern für später! Die vier Schritte stehen in den Slides.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Cover (Slide 1/6) von Karussell K1 „PHP-Version prüfen“; Slides 2–6: CD-029 bis CD-033. Den internen Verweis „(siehe Karussell K1)“ aus der Caption entfernt. Posting-Plan: Woche 1, Mi. 4.11.2026, 7:30 oder 18:00 Uhr. Bonus: Karussell K1 als PDF für LinkedIn.  
+**Bilder:** [original](bilder/original/CD-005.png) · [instagram-3x4](bilder/instagram-3x4/CD-005.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-005.jpg)
+
+<img src="bilder/instagram-3x4/CD-005.jpg" width="270">
 
 <a id="cd-006"></a>
 ## CD-006 · Frag zuerst deinen Hoster
@@ -174,6 +189,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Erster Schritt: Frag deinen Hoster.“  
 **Caption:** Bei Shared Hosting übernimmt meist der Provider das PHP-Update. Bei einem eigenen Server bist du selbst dran. Ich übernehme das zum Festpreis nach kostenlosem Check.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #hosting #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
+**Bilder:** [original](bilder/original/CD-006.png) · [instagram-3x4](bilder/instagram-3x4/CD-006.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-006.jpg)
+
+<img src="bilder/instagram-3x4/CD-006.jpg" width="270">
 
 <a id="cd-007"></a>
 ## CD-007 · Ich prüfe. Du entscheidest.
@@ -188,6 +206,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Kein Verkaufsdruck: Erst der Check, dann ein Festpreis-Angebot. Und nur, wenn du willst.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Posting-Plan: Woche 8, Mo. 21.12.2026, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-007.png) · [instagram-3x4](bilder/instagram-3x4/CD-007.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-007.jpg)
+
+<img src="bilder/instagram-3x4/CD-007.jpg" width="270">
 
 <a id="cd-008"></a>
 ## CD-008 · Migration WordPress → Next.js
@@ -202,6 +223,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Websites ohne Plugin-System bedeuten keine Plugin-Updates. Unhackbar ist keine Website, aber die Angriffsfläche wird kleiner. Relaunch-Gespräch: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Posting-Plan: Woche 4, Mo. 23.11.2026, 7:30 oder 18:00 Uhr. Bonus: für LinkedIn.  
+**Bilder:** [original](bilder/original/CD-008.png) · [instagram-3x4](bilder/instagram-3x4/CD-008.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-008.jpg)
+
+<img src="bilder/instagram-3x4/CD-008.jpg" width="270">
 
 <a id="cd-009"></a>
 ## CD-009 · Wartung
@@ -216,6 +240,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** WordPress-Wartung inklusive PHP-Version, Backup vor jedem Update und Erreichbarkeits-Monitoring. Monatspreis nach kostenlosem Check.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #wartung #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Posting-Plan: Woche 5, Mo. 30.11.2026, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-009.png) · [instagram-3x4](bilder/instagram-3x4/CD-009.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-009.jpg)
+
+<img src="bilder/instagram-3x4/CD-009.jpg" width="270">
 
 <a id="cd-010"></a>
 ## CD-010 · GEO-Hook
@@ -230,6 +257,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Laut Bitkom (11/2025) nutzen 50 % der Internetnutzer zumindest gelegentlich KI-Chats statt klassischer Suchmaschinen. GEO sorgt dafür, dass deine Website für diese Systeme lesbar ist. Wie? Siehe Karussell „GEO in 5 Slides erklärt“.  
 **Hashtags:** #geo #kisichtbarkeit #lokaleseo #googleranking #chatgpt #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** ⚠️ Fakten prüfen. Zahl vor dem Posten prüfen: Bitkom (11/2025), 50 % der Internetnutzer nutzen zumindest gelegentlich KI-Chats statt klassischer Suchmaschinen. „Siehe Karussell K2“ aus dem Dokument durch den Titel des GEO-Karussells ersetzt; erst posten, wenn dieses Karussell online ist. Posting-Plan: Woche 7, Mo. 14.12.2026, 7:30 oder 18:00 Uhr. Bonus: ohne Text im Format 16:9 als Blog-Header für codayweb.de.  
+**Bilder:** [original](bilder/original/CD-010.png) · [instagram-3x4](bilder/instagram-3x4/CD-010.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-010.jpg)
+
+<img src="bilder/instagram-3x4/CD-010.jpg" width="270">
 
 <a id="cd-011"></a>
 ## CD-011 · Karussell-Cover GEO
@@ -245,6 +275,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Speichern und an den Chef schicken 😉  
 **Hashtags:** #geo #kisichtbarkeit #lokaleseo #googleranking #chatgpt #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Cover (Slide 1/6) von Karussell K2 „GEO in 5 Slides“; Slides 2–6: CD-034 bis CD-038. Position von „Swipe →“ im Dokument nicht angegeben; unten links wie bei Prompt 5. Posting-Plan: Woche 3, Mi. 18.11.2026, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-011.png) · [instagram-3x4](bilder/instagram-3x4/CD-011.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-011.jpg)
+
+<img src="bilder/instagram-3x4/CD-011.jpg" width="270">
 
 <a id="cd-012"></a>
 ## CD-012 · Ladezeit
@@ -259,6 +292,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** In Googles Studie „Milliseconds Make Millions“ brachten schon 0,1 Sekunden schnellere mobile Ladezeit 8,4 % mehr Conversions im Handel. Ich messe Core Web Vitals als feste Größe, nicht erst nach dem Launch.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #pagespeed #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** ⚠️ Fakten prüfen. Studienwert vor dem Posten prüfen: Google-Studie „Milliseconds Make Millions“ (0,1 s schnellere mobile Ladezeit, 8,4 % mehr Conversions im Handel). Posting-Plan: Woche 9, Mo. 28.12.2026, 7:30 oder 18:00 Uhr. Bonus: ohne Text im Format 16:9 als Blog-Header für codayweb.de.  
+**Bilder:** [original](bilder/original/CD-012.png) · [instagram-3x4](bilder/instagram-3x4/CD-012.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-012.jpg)
+
+<img src="bilder/instagram-3x4/CD-012.jpg" width="270">
 
 <a id="cd-013"></a>
 ## CD-013 · Festpreis
@@ -273,6 +309,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Nach dem kostenlosen Erstgespräch bekommst du ein Angebot mit verbindlichem Festpreis. Er ändert sich nur, wenn du mehr beauftragst.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben. Posting-Plan: Woche 6, Mo. 7.12.2026, 7:30 oder 18:00 Uhr. Bonus: für LinkedIn.  
+**Bilder:** [original](bilder/original/CD-013.png) · [instagram-3x4](bilder/instagram-3x4/CD-013.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-013.jpg)
+
+<img src="bilder/instagram-3x4/CD-013.jpg" width="270">
 
 <a id="cd-014"></a>
 ## CD-014 · Ein Ansprechpartner
@@ -287,6 +326,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Bei Coday planst, besprichst und baust du mit derselben Person. Kein Weiterreichen an ein Team, das du nie kennengelernt hast.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #solounternehmer  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben. Posting-Plan: Woche 2, Mi. 11.11.2026, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-014.png) · [instagram-3x4](bilder/instagram-3x4/CD-014.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-014.jpg)
+
+<img src="bilder/instagram-3x4/CD-014.jpg" width="270">
 
 <a id="cd-015"></a>
 ## CD-015 · Quellcode-Übergabe
@@ -301,6 +343,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Zum Projektabschluss bekommst du den Quellcode. Kein Lizenz-Abo, kein Lock-in.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Posting-Plan: Woche 10, Mi. 6.1.2027, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-015.png) · [instagram-3x4](bilder/instagram-3x4/CD-015.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-015.jpg)
+
+<img src="bilder/instagram-3x4/CD-015.jpg" width="270">
 
 <a id="cd-016"></a>
 ## CD-016 · Gastro
@@ -315,6 +360,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Gäste schauen vorher aufs Handy: Karte, Preise, Allergene, Anfahrt. Websites für Gastro in Mittelhessen.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #gastronomie #restaurantwebsite #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben. Posting-Plan: Woche 2, Fr. 13.11.2026, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-016.png) · [instagram-3x4](bilder/instagram-3x4/CD-016.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-016.jpg)
+
+<img src="bilder/instagram-3x4/CD-016.jpg" width="270">
 
 <a id="cd-017"></a>
 ## CD-017 · Handwerk
@@ -357,6 +405,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Deine Kundinnen buchen, wenn sie Zeit haben, nicht nur während der Öffnungszeiten.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #friseur #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben. Posting-Plan: Woche 6, Fr. 11.12.2026, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-019.png) · [instagram-3x4](bilder/instagram-3x4/CD-019.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-019.jpg)
+
+<img src="bilder/instagram-3x4/CD-019.jpg" width="270">
 
 <a id="cd-020"></a>
 ## CD-020 · Boutique
@@ -371,6 +422,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Websites für Boutiquen und lokale Shops in Wetzlar und Umgebung.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #boutique #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben. Posting-Plan: Woche 8, Fr. 25.12.2026 (1. Weihnachtsfeiertag), 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-020.png) · [instagram-3x4](bilder/instagram-3x4/CD-020.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-020.jpg)
+
+<img src="bilder/instagram-3x4/CD-020.jpg" width="270">
 
 <a id="cd-021"></a>
 ## CD-021 · Kanzlei/Praxis
@@ -385,6 +439,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Leistungen, Team, Öffnungszeiten und Kontakt an einem Ort, seriös und schnell.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #kanzlei #praxis #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben. Posting-Plan: Woche 7, Fr. 18.12.2026, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-021.png) · [instagram-3x4](bilder/instagram-3x4/CD-021.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-021.jpg)
+
+<img src="bilder/instagram-3x4/CD-021.jpg" width="270">
 
 <a id="cd-022"></a>
 ## CD-022 · Lokal
@@ -399,6 +456,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Wetzlar, Gießen, Marburg, Limburg: Erstgespräch per Telefon, Video oder bei dir vor Ort.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #marburg #limburg #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Posting-Plan: Woche 5, Fr. 4.12.2026, 7:30 oder 18:00 Uhr. Bonus: fürs Google-Unternehmensprofil (ohne Text-Overlay).  
+**Bilder:** [original](bilder/original/CD-022.png) · [instagram-3x4](bilder/instagram-3x4/CD-022.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-022.jpg)
+
+<img src="bilder/instagram-3x4/CD-022.jpg" width="270">
 
 <a id="cd-023"></a>
 ## CD-023 · Vorher/Nachher (Konzept)
@@ -415,6 +475,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Symbolbild, kein Kundenprojekt. Was du gewinnst: Klarheit, Tempo, einen Weg zur Anfrage auf jeder Seite.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Der Hinweis „Symbolbild, kein Kundenprojekt.“ muss in der Caption bleiben. Posting-Plan: Woche 7, Mi. 16.12.2026, 7:30 oder 18:00 Uhr. Bonus: als Seitenteiler in Akquise-Mails/Pitch-PDF.  
+**Bilder:** [original](bilder/original/CD-023.png) · [instagram-3x4](bilder/instagram-3x4/CD-023.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-023.jpg)
+
+<img src="bilder/instagram-3x4/CD-023.jpg" width="270">
 
 <a id="cd-024"></a>
 ## CD-024 · Mythen-Karussell-Cover
@@ -430,6 +493,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Welcher Mythos hält sich bei dir am hartnäckigsten? Kommentier die Nummer.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #geo #kisichtbarkeit #lokaleseo #googleranking #chatgpt #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Cover (Slide 1/6) von Karussell K3 „5 Website-Mythen“; Slides 2–6: CD-039 bis CD-043. Position von „Swipe →“ im Dokument nicht angegeben; unten links wie bei Prompt 5. Posting-Plan: Woche 5, Mi. 2.12.2026, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-024.png) · [instagram-3x4](bilder/instagram-3x4/CD-024.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-024.jpg)
+
+<img src="bilder/instagram-3x4/CD-024.jpg" width="270">
 
 <a id="cd-025"></a>
 ## CD-025 · 3D begehbar
@@ -444,6 +510,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Hallen, Gebäude, Museumsräume als begehbares 3D, ohne App. Aus CAD oder Scan. Demo anfragen: DM.  
 **Hashtags:** #3d #gaussiansplatting #digitalerrundgang #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Posting-Plan: Woche 8, Mi. 23.12.2026, 7:30 oder 18:00 Uhr. Bonus: als Seitenteiler in Akquise-Mails/Pitch-PDF.  
+**Bilder:** [original](bilder/original/CD-025.png) · [instagram-3x4](bilder/instagram-3x4/CD-025.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-025.jpg)
+
+<img src="bilder/instagram-3x4/CD-025.jpg" width="270">
 
 <a id="cd-026"></a>
 ## CD-026 · Meme: Plugin-Update
@@ -458,6 +527,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Kennst du? 😅 Muss nicht sein. Wartung oder Website ohne Plugin-Zoo: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #agenturleben  
 **Hinweise:** Posting-Plan: Woche 4, Mi. 25.11.2026, 7:30 oder 18:00 Uhr.  
+**Bilder:** [original](bilder/original/CD-026.png) · [instagram-3x4](bilder/instagram-3x4/CD-026.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-026.jpg)
+
+<img src="bilder/instagram-3x4/CD-026.jpg" width="270">
 
 <a id="cd-027"></a>
 ## CD-027 · Behind the Scenes
@@ -487,6 +559,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Story mit Link-Sticker zu codayweb.de/de/website-check (Story ohne Caption). Headline im mittleren Drittel platzieren.  
+**Bilder:** [original](bilder/original/CD-028.png) · [story-9x16](bilder/story-9x16/CD-028.jpg)
+
+<img src="bilder/story-9x16/CD-028.jpg" width="270">
 
 <a id="cd-029"></a>
 ## CD-029 · K1 PHP-Version prüfen: Hoster fragen
@@ -519,6 +594,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 3/6 von Karussell K1 „PHP-Version prüfen“ (Cover: CD-005); Caption und Hashtags stehen beim Cover. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 1, Mi. 4.11.2026.  
+**Bilder:** [original](bilder/original/CD-030.png) · [instagram-3x4](bilder/instagram-3x4/CD-030.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-030.jpg)
+
+<img src="bilder/instagram-3x4/CD-030.jpg" width="270">
 
 <a id="cd-031"></a>
 ## CD-031 · K1 PHP-Version prüfen: Support-Tabelle
@@ -535,6 +613,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 4/6 von Karussell K1 „PHP-Version prüfen“ (Cover: CD-005); Caption und Hashtags stehen beim Cover. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 1, Mi. 4.11.2026.  
+**Bilder:** [original](bilder/original/CD-031.png) · [instagram-3x4](bilder/instagram-3x4/CD-031.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-031.jpg)
+
+<img src="bilder/instagram-3x4/CD-031.jpg" width="270">
 
 <a id="cd-032"></a>
 ## CD-032 · K1 PHP-Version prüfen: Update planen
@@ -567,6 +648,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 6/6 von Karussell K1 „PHP-Version prüfen“ (Cover: CD-005); Caption und Hashtags stehen beim Cover. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 1, Mi. 4.11.2026.  
+**Bilder:** [original](bilder/original/CD-033.png) · [instagram-3x4](bilder/instagram-3x4/CD-033.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-033.jpg)
+
+<img src="bilder/instagram-3x4/CD-033.jpg" width="270">
 
 <a id="cd-034"></a>
 ## CD-034 · K2 GEO: Was ist GEO
@@ -583,6 +667,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 2/6 von Karussell K2 „GEO in 5 Slides“ (Cover: CD-011); Caption und Hashtags stehen beim Cover. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 3, Mi. 18.11.2026.  
+**Bilder:** [original](bilder/original/CD-034.png) · [instagram-3x4](bilder/instagram-3x4/CD-034.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-034.jpg)
+
+<img src="bilder/instagram-3x4/CD-034.jpg" width="270">
 
 <a id="cd-035"></a>
 ## CD-035 · K2 GEO: Struktur
@@ -599,6 +686,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 3/6 von Karussell K2 „GEO in 5 Slides“ (Cover: CD-011); Caption und Hashtags stehen beim Cover. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 3, Mi. 18.11.2026.  
+**Bilder:** [original](bilder/original/CD-035.png) · [instagram-3x4](bilder/instagram-3x4/CD-035.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-035.jpg)
+
+<img src="bilder/instagram-3x4/CD-035.jpg" width="270">
 
 <a id="cd-036"></a>
 ## CD-036 · K2 GEO: Klare Angaben
@@ -615,6 +705,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 4/6 von Karussell K2 „GEO in 5 Slides“ (Cover: CD-011); Caption und Hashtags stehen beim Cover. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 3, Mi. 18.11.2026.  
+**Bilder:** [original](bilder/original/CD-036.png) · [instagram-3x4](bilder/instagram-3x4/CD-036.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-036.jpg)
+
+<img src="bilder/instagram-3x4/CD-036.jpg" width="270">
 
 <a id="cd-037"></a>
 ## CD-037 · K2 GEO: Tempo
@@ -631,6 +724,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 5/6 von Karussell K2 „GEO in 5 Slides“ (Cover: CD-011); Caption und Hashtags stehen beim Cover. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 3, Mi. 18.11.2026.  
+**Bilder:** [original](bilder/original/CD-037.png) · [instagram-3x4](bilder/instagram-3x4/CD-037.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-037.jpg)
+
+<img src="bilder/instagram-3x4/CD-037.jpg" width="270">
 
 <a id="cd-038"></a>
 ## CD-038 · K2 GEO: Check
@@ -647,6 +743,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 6/6 von Karussell K2 „GEO in 5 Slides“ (Cover: CD-011); Caption und Hashtags stehen beim Cover. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 3, Mi. 18.11.2026.  
+**Bilder:** [original](bilder/original/CD-038.png) · [instagram-3x4](bilder/instagram-3x4/CD-038.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-038.jpg)
+
+<img src="bilder/instagram-3x4/CD-038.jpg" width="270">
 
 <a id="cd-039"></a>
 ## CD-039 · K3 Mythos: Baukasten
@@ -663,6 +762,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 2/6 von Karussell K3 „5 Website-Mythen“ (Cover: CD-024); Caption und Hashtags stehen beim Cover. Das Dokument nennt nur „ein durchgestrichenes Icon“; das Motiv ist passend zum Mythos gewählt. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 5, Mi. 2.12.2026.  
+**Bilder:** [original](bilder/original/CD-039.png) · [instagram-3x4](bilder/instagram-3x4/CD-039.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-039.jpg)
+
+<img src="bilder/instagram-3x4/CD-039.jpg" width="270">
 
 <a id="cd-040"></a>
 ## CD-040 · K3 Mythos: Ruhe nach dem Launch
@@ -679,6 +781,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 3/6 von Karussell K3 „5 Website-Mythen“ (Cover: CD-024); Caption und Hashtags stehen beim Cover. Das Dokument nennt nur „ein durchgestrichenes Icon“; das Motiv ist passend zum Mythos gewählt. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 5, Mi. 2.12.2026.  
+**Bilder:** [original](bilder/original/CD-040.png) · [instagram-3x4](bilder/instagram-3x4/CD-040.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-040.jpg)
+
+<img src="bilder/instagram-3x4/CD-040.jpg" width="270">
 
 <a id="cd-041"></a>
 ## CD-041 · K3 Mythos: WordPress-Update
@@ -695,6 +800,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 4/6 von Karussell K3 „5 Website-Mythen“ (Cover: CD-024); Caption und Hashtags stehen beim Cover. Das Dokument nennt nur „ein durchgestrichenes Icon“; das Motiv ist passend zum Mythos gewählt. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 5, Mi. 2.12.2026.  
+**Bilder:** [original](bilder/original/CD-041.png) · [instagram-3x4](bilder/instagram-3x4/CD-041.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-041.jpg)
+
+<img src="bilder/instagram-3x4/CD-041.jpg" width="270">
 
 <a id="cd-042"></a>
 ## CD-042 · K3 Mythos: Ladezeit
@@ -711,6 +819,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 5/6 von Karussell K3 „5 Website-Mythen“ (Cover: CD-024); Caption und Hashtags stehen beim Cover. Das Dokument nennt nur „ein durchgestrichenes Icon“; das Motiv ist passend zum Mythos gewählt. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 5, Mi. 2.12.2026.  
+**Bilder:** [original](bilder/original/CD-042.png) · [instagram-3x4](bilder/instagram-3x4/CD-042.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-042.jpg)
+
+<img src="bilder/instagram-3x4/CD-042.jpg" width="270">
 
 <a id="cd-043"></a>
 ## CD-043 · K3 Mythos: Nur eine Suche
@@ -727,6 +838,9 @@ Use the uploaded image as the exact style reference: same background, colours, t
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Slide 6/6 von Karussell K3 „5 Website-Mythen“ (Cover: CD-024); Caption und Hashtags stehen beim Cover. Das Dokument nennt nur „ein durchgestrichenes Icon“; das Motiv ist passend zum Mythos gewählt. Für einen einheitlichen Look optional das Cover als Stil-Referenz hochladen: „Use the uploaded image as the exact style reference; same background, typography and layout.“ Wird mit dem Cover als Karussell gepostet: Woche 5, Mi. 2.12.2026.  
+**Bilder:** [original](bilder/original/CD-043.png) · [instagram-3x4](bilder/instagram-3x4/CD-043.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-043.jpg)
+
+<img src="bilder/instagram-3x4/CD-043.jpg" width="270">
 
 <a id="cd-044"></a>
 ## CD-044 · Server aktuell?
@@ -740,6 +854,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Server aktuell? Website sicher(er).“  
 **Caption:** Die PHP-Version zählt mehr als das Theme. Kostenloser Check: Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
+**Bilder:** [original](bilder/original/CD-044.png) · [instagram-3x4](bilder/instagram-3x4/CD-044.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-044.jpg)
+
+<img src="bilder/instagram-3x4/CD-044.jpg" width="270">
 
 <a id="cd-045"></a>
 ## CD-045 · Updates aufschieben
@@ -753,6 +870,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Updates aufschieben kostet später mehr.“  
 **Caption:** Setz auf planbare Wartung statt auf den Notfall. Kostenloser Check: Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu  
+**Bilder:** [original](bilder/original/CD-045.png) · [instagram-3x4](bilder/instagram-3x4/CD-045.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-045.jpg)
+
+<img src="bilder/instagram-3x4/CD-045.jpg" width="270">
 
 <a id="cd-046"></a>
 ## CD-046 · Backup vor jedem Update
@@ -766,6 +886,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Backup vor jedem Update.“  
 **Caption:** So läuft Wartung bei Coday. Kostenloser Check: Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
+**Bilder:** [original](bilder/original/CD-046.png) · [instagram-3x4](bilder/instagram-3x4/CD-046.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-046.jpg)
+
+<img src="bilder/instagram-3x4/CD-046.jpg" width="270">
 
 <a id="cd-047"></a>
 ## CD-047 · Notfall: Ruhe bewahren
@@ -780,6 +903,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Über die Notfall-Hotline melde ich mich, sobald ich die Nachricht sehe. Kostenloser Check: Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** „gehackt“ kann den Inhaltsfilter auslösen; dann ohne Text generieren und die Headline in Canva setzen.  
+**Bilder:** [original](bilder/original/CD-047.png) · [instagram-3x4](bilder/instagram-3x4/CD-047.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-047.jpg)
+
+<img src="bilder/instagram-3x4/CD-047.jpg" width="270">
 
 <a id="cd-048"></a>
 ## CD-048 · 3 Fragen an deinen Hoster
@@ -793,6 +919,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „3 Fragen an deinen Hoster“  
 **Caption:** Frag deinen Hoster nach PHP-Version, Updates und Backups. Kostenloser Check: Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu  
+**Bilder:** [original](bilder/original/CD-048.png) · [instagram-3x4](bilder/instagram-3x4/CD-048.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-048.jpg)
+
+<img src="bilder/instagram-3x4/CD-048.jpg" width="270">
 
 <a id="cd-049"></a>
 ## CD-049 · Headless CMS
@@ -806,6 +935,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Headless CMS: Inhalte pflegen, sicher bauen.“  
 **Caption:** Mit einem Headless CMS bearbeitest du Inhalte getrennt von der Website. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
+**Bilder:** [original](bilder/original/CD-049.png) · [instagram-3x4](bilder/instagram-3x4/CD-049.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-049.jpg)
+
+<img src="bilder/instagram-3x4/CD-049.jpg" width="270">
 
 <a id="cd-050"></a>
 ## CD-050 · Schnelle Shops
@@ -819,6 +951,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Shops, die schnell laden.“  
 **Caption:** Ich baue E-Commerce ohne Plugin-Ballast. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
+**Bilder:** [original](bilder/original/CD-050.png) · [instagram-3x4](bilder/instagram-3x4/CD-050.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-050.jpg)
+
+<img src="bilder/instagram-3x4/CD-050.jpg" width="270">
 
 <a id="cd-051"></a>
 ## CD-051 · Lokal gefunden werden
@@ -832,6 +967,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Lokal gefunden werden.“  
 **Caption:** Ich biete lokale SEO für Betriebe in Mittelhessen. Kostenloser Check: Link in Bio.  
 **Hashtags:** #geo #kisichtbarkeit #lokaleseo #googleranking #chatgpt #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
+**Bilder:** [original](bilder/original/CD-051.png) · [instagram-3x4](bilder/instagram-3x4/CD-051.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-051.jpg)
+
+<img src="bilder/instagram-3x4/CD-051.jpg" width="270">
 
 <a id="cd-052"></a>
 ## CD-052 · Website und Profil im Einklang
@@ -845,6 +983,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Website und Unternehmensprofil im Einklang.“  
 **Caption:** Sorg für einheitliche Daten überall, auf der Website und im Unternehmensprofil. Kostenloser Check: Link in Bio.  
 **Hashtags:** #geo #kisichtbarkeit #lokaleseo #googleranking #chatgpt #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
+**Bilder:** [original](bilder/original/CD-052.png) · [instagram-3x4](bilder/instagram-3x4/CD-052.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-052.jpg)
+
+<img src="bilder/instagram-3x4/CD-052.jpg" width="270">
 
 <a id="cd-053"></a>
 ## CD-053 · Jede Seite führt zur Anfrage
@@ -858,6 +999,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Jede Seite führt zur Anfrage.“  
 **Caption:** Ich plane UX mit einem klaren Weg zur Anfrage. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
+**Bilder:** [original](bilder/original/CD-053.png) · [instagram-3x4](bilder/instagram-3x4/CD-053.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-053.jpg)
+
+<img src="bilder/instagram-3x4/CD-053.jpg" width="270">
 
 <a id="cd-054"></a>
 ## CD-054 · Kontaktformular kaputt?
@@ -871,6 +1015,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Kontaktformular kaputt? Merkst du nie.“  
 **Caption:** Monitoring hilft, solche Fehler früh zu bemerken. Kostenloser Check: Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
+**Bilder:** [original](bilder/original/CD-054.png) · [instagram-3x4](bilder/instagram-3x4/CD-054.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-054.jpg)
+
+<img src="bilder/instagram-3x4/CD-054.jpg" width="270">
 
 <a id="cd-055"></a>
 ## CD-055 · Auf dem Handy unlesbar?
@@ -884,6 +1031,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Auf dem Handy unlesbar?“  
 **Caption:** Ich baue Websites mobile-first. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
+**Bilder:** [original](bilder/original/CD-055.png) · [instagram-3x4](bilder/instagram-3x4/CD-055.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-055.jpg)
+
+<img src="bilder/instagram-3x4/CD-055.jpg" width="270">
 
 <a id="cd-056"></a>
 ## CD-056 · Website von 2015?
@@ -898,6 +1048,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Ich mache deinen Relaunch zum Festpreis. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben.  
+**Bilder:** [original](bilder/original/CD-056.png) · [instagram-3x4](bilder/instagram-3x4/CD-056.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-056.jpg)
+
+<img src="bilder/instagram-3x4/CD-056.jpg" width="270">
 
 <a id="cd-057"></a>
 ## CD-057 · Button nicht gefunden
@@ -911,6 +1064,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Kunden finden den Button nicht.“  
 **Caption:** Ein UX-Audit zeigt, wo deine Besucher hängen bleiben. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
+**Bilder:** [original](bilder/original/CD-057.png) · [instagram-3x4](bilder/instagram-3x4/CD-057.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-057.jpg)
+
+<img src="bilder/instagram-3x4/CD-057.jpg" width="270">
 
 <a id="cd-058"></a>
 ## CD-058 · Vorher warten, nachher da
@@ -925,6 +1081,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Das ist ein Symbolbild, kein Kundenprojekt. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Der Hinweis „Symbolbild“ muss in der Caption bleiben.  
+**Bilder:** [original](bilder/original/CD-058.png) · [instagram-3x4](bilder/instagram-3x4/CD-058.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-058.jpg)
+
+<img src="bilder/instagram-3x4/CD-058.jpg" width="270">
 
 <a id="cd-059"></a>
 ## CD-059 · 30 Plugins zu 0
@@ -939,6 +1098,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Das ist ein Symbolbild. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu  
 **Hinweise:** Der Hinweis „Symbolbild“ muss in der Caption bleiben.  
+**Bilder:** [original](bilder/original/CD-059.png) · [instagram-3x4](bilder/instagram-3x4/CD-059.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-059.jpg)
+
+<img src="bilder/instagram-3x4/CD-059.jpg" width="270">
 
 <a id="cd-060"></a>
 ## CD-060 · Branche Café
@@ -953,6 +1115,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** So wird dein Café für Spontangäste sichtbar. Kostenloser Check: Link in Bio.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #cafe  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben.  
+**Bilder:** [original](bilder/original/CD-060.png) · [instagram-3x4](bilder/instagram-3x4/CD-060.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-060.jpg)
+
+<img src="bilder/instagram-3x4/CD-060.jpg" width="270">
 
 <a id="cd-061"></a>
 ## CD-061 · Branche Handwerk: Konfigurator
@@ -967,6 +1132,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Mit einem Konfigurator kommen Anfragen gleich mit allen Infos. Kostenloser Check: Link in Bio.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #handwerk  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben.  
+**Bilder:** [original](bilder/original/CD-061.png) · [instagram-3x4](bilder/instagram-3x4/CD-061.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-061.jpg)
+
+<img src="bilder/instagram-3x4/CD-061.jpg" width="270">
 
 <a id="cd-062"></a>
 ## CD-062 · Branche Makler
@@ -981,6 +1149,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Ich baue Immobilien-Websites mit Suchfunktion. Kostenloser Check: Link in Bio.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #immobilien  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben.  
+**Bilder:** [original](bilder/original/CD-062.png) · [instagram-3x4](bilder/instagram-3x4/CD-062.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-062.jpg)
+
+<img src="bilder/instagram-3x4/CD-062.jpg" width="270">
 
 <a id="cd-063"></a>
 ## CD-063 · Branche Reinigung
@@ -995,6 +1166,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Ich baue Websites für Dienstleister wie Reinigungsfirmen. Kostenloser Check: Link in Bio.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben.  
+**Bilder:** [original](bilder/original/CD-063.png) · [instagram-3x4](bilder/instagram-3x4/CD-063.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-063.jpg)
+
+<img src="bilder/instagram-3x4/CD-063.jpg" width="270">
 
 <a id="cd-064"></a>
 ## CD-064 · Branche Kanzlei
@@ -1008,6 +1182,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Seriös. Schnell. Klar.“  
 **Caption:** Ich baue Websites für Kanzleien. Kostenloser Check: Link in Bio.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar #kanzlei  
+**Bilder:** [original](bilder/original/CD-064.png) · [instagram-3x4](bilder/instagram-3x4/CD-064.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-064.jpg)
+
+<img src="bilder/instagram-3x4/CD-064.jpg" width="270">
 
 <a id="cd-065"></a>
 ## CD-065 · Aus dem Lahntal
@@ -1021,6 +1198,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Aus dem Lahntal für deinen Betrieb.“  
 **Caption:** Ich bin für dich vor Ort erreichbar. Kostenloser Check: Link in Bio.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
+**Bilder:** [original](bilder/original/CD-065.png) · [instagram-3x4](bilder/instagram-3x4/CD-065.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-065.jpg)
+
+<img src="bilder/instagram-3x4/CD-065.jpg" width="270">
 
 <a id="cd-066"></a>
 ## CD-066 · Einzugsgebiet
@@ -1034,6 +1214,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Wetzlar · Gießen · Marburg · Limburg“  
 **Caption:** Das ist mein Einzugsgebiet. Kostenloser Check: Link in Bio.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
+**Bilder:** [original](bilder/original/CD-066.png) · [instagram-3x4](bilder/instagram-3x4/CD-066.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-066.jpg)
+
+<img src="bilder/instagram-3x4/CD-066.jpg" width="270">
 
 <a id="cd-067"></a>
 ## CD-067 · Core Web Vitals
@@ -1048,6 +1231,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Ich erkläre es kurz in den Kommentaren. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Kurze Erklärung der Core Web Vitals als ersten Kommentar posten (die Caption verweist darauf). Bonus: ohne Text im Format 16:9 als Blog-Header für codayweb.de.  
+**Bilder:** [original](bilder/original/CD-067.png) · [instagram-3x4](bilder/instagram-3x4/CD-067.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-067.jpg)
+
+<img src="bilder/instagram-3x4/CD-067.jpg" width="270">
 
 <a id="cd-068"></a>
 ## CD-068 · PHP-Version ≠ WordPress-Version
@@ -1064,6 +1250,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Das ist der häufigste Irrtum. Kostenloser Check: Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu  
 **Hinweise:** Bonus: ohne Text im Format 16:9 als Blog-Header für codayweb.de.  
+**Bilder:** [original](bilder/original/CD-068.png) · [instagram-3x4](bilder/instagram-3x4/CD-068.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-068.jpg)
+
+<img src="bilder/instagram-3x4/CD-068.jpg" width="270">
 
 <a id="cd-069"></a>
 ## CD-069 · Was ist Next.js?
@@ -1078,6 +1267,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Ich erkläre es für Nicht-Techniker. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Die eigentliche Erklärung steht nicht im Dokument: kurz in der Caption oder im ersten Kommentar ergänzen. Bonus: ohne Text im Format 16:9 als Blog-Header für codayweb.de.  
+**Bilder:** [original](bilder/original/CD-069.png) · [instagram-3x4](bilder/instagram-3x4/CD-069.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-069.jpg)
+
+<img src="bilder/instagram-3x4/CD-069.jpg" width="270">
 
 <a id="cd-070"></a>
 ## CD-070 · Zahlen: Mobile Performance
@@ -1092,6 +1284,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Der Wert wurde auf codayweb.de gemessen. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** ⚠️ Fakten prüfen. Nur mit tagesaktueller Messung posten: PageSpeed auf codayweb.de neu messen und Wert und Datum in Headline und Caption anpassen (Stand im Dokument: 17.7.2026; ein älterer Report zeigte 91).  
+**Bilder:** [original](bilder/original/CD-070.png) · [instagram-3x4](bilder/instagram-3x4/CD-070.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-070.jpg)
+
+<img src="bilder/instagram-3x4/CD-070.jpg" width="270">
 
 <a id="cd-071"></a>
 ## CD-071 · Zahlen: Accessibility und SEO
@@ -1106,6 +1301,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Die Werte stammen aus einem Lab-Test von codayweb.de mit PageSpeed vom 17.07.2026. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #geo #kisichtbarkeit #lokaleseo #googleranking #chatgpt  
 **Hinweise:** ⚠️ Fakten prüfen. Nur mit tagesaktueller Messung und Datum im Bild posten: PageSpeed neu messen, Werte und Datum in Bild und Caption anpassen (Stand im Dokument: 17.7.2026). Die Datumszeile im Bild ist ergänzt, weil das Dokument für Zahlen-Posts das Datum im Bild verlangt.  
+**Bilder:** [original](bilder/original/CD-071.png) · [instagram-3x4](bilder/instagram-3x4/CD-071.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-071.jpg)
+
+<img src="bilder/instagram-3x4/CD-071.jpg" width="270">
 
 <a id="cd-072"></a>
 ## CD-072 · Erst Skizze, dann Code
@@ -1120,6 +1318,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** So startet jedes Projekt. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben.  
+**Bilder:** [original](bilder/original/CD-072.png) · [instagram-3x4](bilder/instagram-3x4/CD-072.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-072.jpg)
+
+<img src="bilder/instagram-3x4/CD-072.jpg" width="270">
 
 <a id="cd-073"></a>
 ## CD-073 · Montag, 8 Uhr
@@ -1134,6 +1335,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Du erreichst mich Mo–Fr von 9 bis 18 Uhr. Kostenloser Check: Link in Bio.  
 **Hashtags:** #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar  
 **Hinweise:** Wirkt das Bild fotorealistisch, „KI-generiertes Symbolbild“ in die Caption schreiben.  
+**Bilder:** [original](bilder/original/CD-073.png) · [instagram-3x4](bilder/instagram-3x4/CD-073.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-073.jpg)
+
+<img src="bilder/instagram-3x4/CD-073.jpg" width="270">
 
 <a id="cd-074"></a>
 ## CD-074 · Humor: kein Menü
@@ -1147,6 +1351,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Ich, wenn die Website kein Menü hat.“  
 **Caption:** Tag jemanden 😄 Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig  
+**Bilder:** [original](bilder/original/CD-074.png) · [instagram-3x4](bilder/instagram-3x4/CD-074.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-074.jpg)
+
+<img src="bilder/instagram-3x4/CD-074.jpg" width="270">
 
 <a id="cd-075"></a>
 ## CD-075 · Humor: statische Seiten
@@ -1160,6 +1367,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Text im Bild:** „Statische Seiten schlafen gut.“  
 **Caption:** Statische Seiten bieten weniger Angriffsfläche. Kostenloser Check: Link in Bio.  
 **Hashtags:** #webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu  
+**Bilder:** [original](bilder/original/CD-075.png) · [instagram-3x4](bilder/instagram-3x4/CD-075.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-075.jpg)
+
+<img src="bilder/instagram-3x4/CD-075.jpg" width="270">
 
 <a id="cd-076"></a>
 ## CD-076 · Humor: PHP 8.2 nach Silvester
@@ -1175,6 +1385,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:** Plan dein PHP-Update rechtzeitig. Kostenloser Check: Link in Bio.  
 **Hashtags:** #websitesicherheit #phpsicherheit #wordpresssicherheit #itsicherheit #kmu  
 **Hinweise:** ⚠️ Fakten prüfen. Fakten vor dem Posten prüfen (Stand 27.–29.10.2026): Sicherheits-Support für PHP 8.2 endet laut php.net am 31.12.2026. Vor dem 31.12. posten.  
+**Bilder:** [original](bilder/original/CD-076.png) · [instagram-3x4](bilder/instagram-3x4/CD-076.jpg) · [facebook-linkedin-4x5](bilder/facebook-linkedin-4x5/CD-076.jpg)
+
+<img src="bilder/instagram-3x4/CD-076.jpg" width="270">
 
 <a id="cd-077"></a>
 ## CD-077 · Story: PHP-Update
@@ -1189,6 +1402,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Story mit Link-Sticker (Linkziel im Dokument nicht angegeben). Die Story-Prompts 64–67 laufen wöchentlich rotierend.  
+**Bilder:** [original](bilder/original/CD-077.png) · [story-9x16](bilder/story-9x16/CD-077.jpg)
+
+<img src="bilder/story-9x16/CD-077.jpg" width="270">
 
 <a id="cd-078"></a>
 ## CD-078 · Story: PHP-Version (Umfrage)
@@ -1203,6 +1419,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Story mit Umfrage-Sticker Ja/Nein im freien unteren Drittel. Die Story-Prompts 64–67 laufen wöchentlich rotierend; laut Posting-Plan folgt diese Umfrage in derselben Woche auf jeden Security-Post (Ziel: Nachfragen per DM).  
+**Bilder:** [original](bilder/original/CD-078.png) · [story-9x16](bilder/story-9x16/CD-078.jpg)
+
+<img src="bilder/story-9x16/CD-078.jpg" width="270">
 
 <a id="cd-079"></a>
 ## CD-079 · Story: Wie schnell?
@@ -1217,6 +1436,9 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Story mit Link-Sticker zum kostenlosen Website-Check (codayweb.de/de/website-check). Die Story-Prompts 64–67 laufen wöchentlich rotierend.  
+**Bilder:** [original](bilder/original/CD-079.png) · [story-9x16](bilder/story-9x16/CD-079.jpg)
+
+<img src="bilder/story-9x16/CD-079.jpg" width="270">
 
 <a id="cd-080"></a>
 ## CD-080 · Story: ChatGPT-Frage (Umfrage)
@@ -1231,3 +1453,6 @@ Brand style for a one-person web agency in Wetzlar, Germany. Premium, calm, tech
 **Caption:**   
 **Hashtags:**   
 **Hinweise:** Story mit Umfrage-Sticker. Die Story-Prompts 64–67 laufen wöchentlich rotierend.  
+**Bilder:** [original](bilder/original/CD-080.png) · [story-9x16](bilder/story-9x16/CD-080.jpg)
+
+<img src="bilder/story-9x16/CD-080.jpg" width="270">
