@@ -1,0 +1,52 @@
+[
+ {
+  "id": "CD-U01",
+  "doc_ref": "29",
+  "title": "Edit: Laptop-Mockup mit eigenem Screenshot",
+  "prompt": "Use the uploaded screenshot as the exact screen content. Place it on a modern silver laptop on a clean oak desk, soft daylight from the left, shallow depth of field. Keep every pixel of the screenshot unchanged and undistorted, correct perspective. Vertical 3:4 format, empty space top-left for a headline added later. No extra text, no logos.",
+  "upload": "Eigener Screenshot von codayweb.de (Desktop-Ansicht; PNG, JPEG oder WebP, max. 15 MB).",
+  "caption": "codayweb.de, mit Next.js gebaut, ohne PHP-Plugins.",
+  "hashtags": "#webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar",
+  "notes": "Headline später in Canva setzen (die Fläche oben links bleibt frei). Posting-Plan: Woche 6, Mi. 9.12.2026, 7:30 oder 18:00 Uhr. Bonus: fürs Google-Unternehmensprofil (ohne Text-Overlay); als Seitenteiler in Akquise-Mails/Pitch-PDF. Keine Kundendaten, Logins oder nicht freigegebenen Screenshots hochladen."
+ },
+ {
+  "id": "CD-U02",
+  "doc_ref": "30",
+  "title": "Edit: Smartphone-Mockup Referenz",
+  "prompt": "Use the uploaded mobile screenshot as the exact screen content of a modern smartphone held at a slight angle above a neutral stone surface, soft studio light. Do not alter, translate or retype any screen text. Vertical 3:4, generous margins, no extra text, no logos.",
+  "upload": "Mobiler Screenshot eines Kundenprojekts (nur mit schriftlicher Kundenfreigabe; PNG, JPEG oder WebP, max. 15 MB).",
+  "caption": "Live-Projekt für [Kunde], umgesetzt von Coday. Link zur Case Study in Bio.",
+  "hashtags": "#webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar",
+  "notes": "Nur mit schriftlicher Kundenfreigabe; nicht verwenden: hey-fede.de, k-aqua.de. „[Kunde]“ in der Caption durch den Kundennamen ersetzen und passende Branchen-Hashtags ergänzen (Dokument: „#W #L + Branche“). Posting-Plan: Woche 9, Fr. 1.1.2027 (Neujahr, laut Dokument „Freigabe“), 7:30 oder 18:00 Uhr. Bonus: als Seitenteiler in Akquise-Mails/Pitch-PDF."
+ },
+ {
+  "id": "CD-U03",
+  "doc_ref": "68",
+  "title": "Edit: Logo-Integration",
+  "prompt": "Place the uploaded logo unchanged, small, bottom-right, on this image; change nothing else.",
+  "upload": "Echtes Coday-Logo (PNG) und das fertige Bild, in das es eingesetzt werden soll.",
+  "caption": "",
+  "hashtags": "",
+  "notes": "Hilfs-Edit ohne eigenen Post (Dokument: „Logo-Integration“): setzt das echte Logo in die frei gehaltene Ecke unten rechts eines fertigen Bildes. Das Logo nie generieren lassen."
+ },
+ {
+  "id": "CD-U04",
+  "doc_ref": "69",
+  "title": "Edit: Vorher/Nachher mit zwei Screenshots",
+  "prompt": "Left: first image labelled 'Vorher', right: second labelled 'Nachher', identical device frames, change no screen pixels.",
+  "upload": "Zwei Screenshots derselben Website: zuerst die alte Version (Vorher), dann die neue (Nachher); nur eigene oder freigegebene Seiten.",
+  "caption": "",
+  "hashtags": "#webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig",
+  "notes": "Dokument-Hinweis: „Nur eigene oder freigegebene Seiten!“ Im Bild stehen nur „Vorher“ und „Nachher“. Das Dokument gibt keine Caption vor."
+ },
+ {
+  "id": "CD-U05",
+  "doc_ref": "70",
+  "title": "Edit: Tablet-Mockup im Café",
+  "prompt": "Place on a tablet held in a café setting, hands only, no face, screen content unchanged.",
+  "upload": "Ein Website-Screenshot (eigene oder freigegebene Seite).",
+  "caption": "",
+  "hashtags": "#webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig",
+  "notes": "Dokument: „Mockup“, keine Caption vorgegeben. Nur eigene oder freigegebene Screenshots hochladen."
+ }
+]
