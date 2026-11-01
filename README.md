@@ -31,7 +31,7 @@ Modell: GPT Image 2.5, Variante Sunburst.
    ```
 
    Das Skript liest den Text im Bild (macOS-Texterkennung), findet den passenden Prompt, legt das Bild als
-   `<ID>.png` ab, erzeugt alle Formate und lädt alles zu GitHub hoch. Bilder ohne Text oder mit unsicherer
+   `<ID>.jpg` ab, erzeugt alle Formate und lädt alles zu GitHub hoch. Bilder ohne Text oder mit unsicherer
    Zuordnung landen in `unsortiert/` (nicht im Repo).
 
 Karussell-Slides ab Nr. 2: vorher die fertige Cover-Slide hochladen, dann den Prompt senden.
