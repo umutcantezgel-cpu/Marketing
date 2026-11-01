@@ -5,9 +5,9 @@
   "title": "Edit: Laptop-Mockup mit eigenem Screenshot",
   "prompt": "Use the uploaded screenshot as the exact screen content. Place it on a modern silver laptop on a clean oak desk, soft daylight from the left, shallow depth of field. Keep every pixel of the screenshot unchanged and undistorted, correct perspective. Vertical 3:4 format, empty space top-left for a headline added later. No extra text, no logos.",
   "upload": "Eigener Screenshot von codayweb.de (Desktop-Ansicht; PNG, JPEG oder WebP, max. 15 MB).",
-  "caption": "codayweb.de, mit Next.js gebaut, ohne PHP-Plugins.",
+  "caption": "codayweb.de, mit Next.js gebaut, ohne PHP-Plugins. (Mockup, Umgebung KI-generiert)",
   "hashtags": "#webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar",
-  "notes": "Headline später in Canva setzen (die Fläche oben links bleibt frei). Posting-Plan: Woche 6, Mi. 9.12.2026, 7:30 oder 18:00 Uhr. Bonus: fürs Google-Unternehmensprofil (ohne Text-Overlay); als Seitenteiler in Akquise-Mails/Pitch-PDF. Keine Kundendaten, Logins oder nicht freigegebenen Screenshots hochladen."
+  "notes": "Headline später in Canva setzen (die Fläche oben links bleibt frei). Vor dem Screenshot prüfen, dass der gesperrte Referenz-Menüpunkt (siehe Dokument, Abschnitt „Coday selbst“) nicht mehr im Menü von codayweb.de steht. „Mockup, Umgebung KI-generiert“ in der Caption stehen lassen (fotorealistische Szene). Posting-Plan: Woche 6, Mi. 9.12.2026, 7:30 oder 18:00 Uhr. Bonus: fürs Google-Unternehmensprofil (ohne Text-Overlay); als Seitenteiler in Akquise-Mails/Pitch-PDF. Keine Kundendaten, Logins oder nicht freigegebenen Screenshots hochladen."
  },
  {
   "id": "CD-U02",
@@ -15,9 +15,9 @@
   "title": "Edit: Smartphone-Mockup Referenz",
   "prompt": "Use the uploaded mobile screenshot as the exact screen content of a modern smartphone held at a slight angle above a neutral stone surface, soft studio light. Do not alter, translate or retype any screen text. Vertical 3:4, generous margins, no extra text, no logos.",
   "upload": "Mobiler Screenshot eines Kundenprojekts (nur mit schriftlicher Kundenfreigabe; PNG, JPEG oder WebP, max. 15 MB).",
-  "caption": "Live-Projekt für [Kunde], umgesetzt von Coday. Link zur Case Study in Bio.",
+  "caption": "Live-Projekt für [Kunde], umgesetzt von Coday. Link zur Case Study in Bio. (Mockup, Umgebung KI-generiert)",
   "hashtags": "#webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig #wetzlar #mittelhessen #lahndill #giessen #webdesignwetzlar",
-  "notes": "Nur mit schriftlicher Kundenfreigabe; nicht verwenden: hey-fede.de, k-aqua.de. „[Kunde]“ in der Caption durch den Kundennamen ersetzen und passende Branchen-Hashtags ergänzen (Dokument: „#W #L + Branche“). Posting-Plan: Woche 9, Fr. 1.1.2027 (Neujahr, laut Dokument „Freigabe“), 7:30 oder 18:00 Uhr. Bonus: als Seitenteiler in Akquise-Mails/Pitch-PDF."
+  "notes": "Kundenreferenz nur nach Kundenfreigabe (schriftlich); die im Dokument gesperrten Referenzen (Qualitätscheckliste, Punkt 5) nicht verwenden. „[Kunde]“ in der Caption durch den Kundennamen ersetzen und passende Branchen-Hashtags ergänzen (Dokument: „#W #L + Branche“). „Mockup, Umgebung KI-generiert“ in der Caption stehen lassen. Posting-Plan: Woche 9, Fr. 1.1.2027 (Neujahr, laut Dokument „Freigabe“), 7:30 oder 18:00 Uhr. Bonus: als Seitenteiler in Akquise-Mails/Pitch-PDF."
  },
  {
   "id": "CD-U03",
@@ -37,7 +37,7 @@
   "upload": "Zwei Screenshots derselben Website: zuerst die alte Version (Vorher), dann die neue (Nachher); nur eigene oder freigegebene Seiten.",
   "caption": "",
   "hashtags": "#webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig",
-  "notes": "Dokument-Hinweis: „Nur eigene oder freigegebene Seiten!“ Im Bild stehen nur „Vorher“ und „Nachher“. Das Dokument gibt keine Caption vor."
+  "notes": "Nur eigene Seiten; Kundenseiten nur nach Kundenfreigabe (Dokument: „Nur eigene oder freigegebene Seiten!“). Im Bild stehen nur „Vorher“ und „Nachher“. Das Dokument gibt keine Caption vor; beim Posten „(Mockup, Umgebung KI-generiert)“ in die Caption schreiben."
  },
  {
   "id": "CD-U05",
@@ -47,6 +47,6 @@
   "upload": "Ein Website-Screenshot (eigene oder freigegebene Seite).",
   "caption": "",
   "hashtags": "#webdesign #nextjs #webentwicklung #websiterelaunch #selbststaendig",
-  "notes": "Dokument: „Mockup“, keine Caption vorgegeben. Nur eigene oder freigegebene Screenshots hochladen."
+  "notes": "Dokument: „Mockup“, keine Caption vorgegeben; beim Posten „(Mockup, Umgebung KI-generiert)“ in die Caption schreiben. Nur eigene Screenshots hochladen; Kundenseiten nur nach Kundenfreigabe."
  }
 ]

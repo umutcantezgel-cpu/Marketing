@@ -1,0 +1,1136 @@
+{
+ "BE-001": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "23f2fa78-65e0-44ca-bd70-b7bf39825a52",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-002": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "1d479341-40bb-48c6-a4b7-5c7f489f9bcb",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-003": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "596795ed-a204-4cfc-ba5a-6fbf498ec29f",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-004": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "medium",
+  "aufloesung": "2k",
+  "job_id": "744da48b-9fe6-4282-9895-e4265e2b88df",
+  "text_ocr": "ok",
+  "batch": "rd2-01"
+ },
+ "BE-005": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "6e72100d-1497-4de5-be96-3ca3df3dac8a",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-006": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "30cb7409-c9b2-431d-9ec7-6f361eaeb959",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-007": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "a210bb98-745c-45ec-afd0-570f1aa6ce94",
+  "text_ocr": "ok",
+  "batch": "pre-01"
+ },
+ "BE-008": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "0c122e0d-2f94-4444-a811-cab363c048b4",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-009": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "59b0c76f-72a4-4e7a-85d8-b1d8fd74bc5a",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-010": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "b8fd5879-7cbf-47ad-8e2a-d03a9a79dd5e",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-011": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "b629b0fb-4e23-4c82-b14c-7c1bdfa5b05c",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-012": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "medium",
+  "aufloesung": "2k",
+  "job_id": "e54fcfe4-67ab-4061-87e8-40f0a88bbfb6",
+  "text_ocr": "ok",
+  "batch": "rd2-01"
+ },
+ "BE-013": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "8e56b7c4-ba05-4dbd-ac04-8cd524c3ebca",
+  "text_ocr": "ok",
+  "batch": "bedoc-01"
+ },
+ "BE-014": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "03b69f50-9ff8-474e-bf56-135cc076210b",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-015": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "dd08cda4-696b-42bc-937c-39dfb38ab808",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-016": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "72c16505-addc-426c-8463-067256c6106b",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-017": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "4bd72eac-c61c-4448-82cf-4e7d9625b4d6",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-018": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "d03f9717-41d6-49e8-a357-b204ed46b8ed",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-019": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "64c43b46-e8b0-4c01-bb1e-8ba88c6eef1d",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-020": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "d77cfb2a-ade8-479a-ab56-e467526e6ec9",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-021": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "2b25cc1e-0aef-4f48-84a8-f8d95bb62837",
+  "text_ocr": "ok",
+  "batch": "becov-01"
+ },
+ "BE-022": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "1e845bb4-fff2-488e-b5e6-a156a3f6d68a",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-023": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "1c45c5fc-148c-4711-b66d-3c716161aa18",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-024": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "655367b0-85a1-46dc-b287-71ce23a94dfd",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-025": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "80add5de-2b05-4162-a13b-399df432a7fe",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-026": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "8117ce67-2e9c-49f6-96fb-de646260eb05",
+  "text_ocr": "ok",
+  "batch": "bedoc-02"
+ },
+ "BE-027": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "1580e8b0-85ed-45c2-b54f-0d1c0e7593a6",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-028": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "bf21619f-cf81-4ca2-be2a-df19cdbfc9a6",
+  "text_ocr": "ok",
+  "batch": "becov-01"
+ },
+ "BE-029": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "2e144fb3-96aa-4cf4-9786-3db930b5fc12",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-030": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "8c369290-268c-4b04-b39f-85a295ca6c25",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-031": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "0b2d3ce2-1b12-4cee-b27d-6c197375cb57",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-032": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "9f5d3340-edbe-471f-aedc-f412c4318468",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-033": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "7202bedd-d51c-430f-91bb-01ea73fd63bf",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-034": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "65ce5e4d-cd35-48af-b8a9-5454c4fc5599",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-035": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "1d6b6dfc-ebff-4891-8281-d4d23efc6b56",
+  "text_ocr": "ok",
+  "batch": "becov-01"
+ },
+ "BE-036": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "caf8b7a8-c317-414b-ae3e-3181fd1692ee",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-037": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "79bf52ed-b889-4ab4-aafa-2b1904d34acb",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-038": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "822ad1b6-3312-4d28-a328-76324e6c5bc5",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-039": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "a325a3e0-4ea5-47ca-b668-a65acc8994e0",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-040": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "c3d988fe-1663-402f-b1aa-cdce8f794cd8",
+  "text_ocr": "ok",
+  "batch": "bedoc-03"
+ },
+ "BE-041": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "96f189ba-e444-440f-b3e3-c6065e0e6c1f",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-042": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "27afdff7-9c5f-4945-a072-261e04a696bb",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-043": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "a93e94ef-f135-451b-837d-c8000699d776",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-044": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "cb0648fb-c7cd-4c71-b4c5-4543634791bc",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-045": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "95704a29-dcb5-4ad9-8a71-98ce16a10ec9",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-046": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "1ee4eecd-ce68-4fcb-ac80-d032c0b72fcb",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-047": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "a41e6078-2669-4849-aad9-d84ff545dbc8",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-048": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "38f4ebd5-4b44-4432-acf0-daae89651de2",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-049": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "f8f125ea-ca2b-4967-b189-4c69853cf7e0",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-050": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "a33a0f2e-b28b-44f8-a530-df42c8a3ab42",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-051": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "a3edbd86-6e95-4cb7-a070-cf45f42ffef1",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-052": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "8731aabe-73ec-4e73-afe9-b4bed5f2d0dd",
+  "text_ocr": "ok",
+  "batch": "bedoc-04"
+ },
+ "BE-053": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "b3af4760-8919-45a0-bd84-29195f0ae7ac",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-054": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "eb5f449c-ce61-4cfa-8a8f-55b5cdea13bd",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-055": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "f1adca5d-bfbb-4fdc-86ea-aeb8a3206131",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-056": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "c2fb0797-792b-41dd-9a88-958140c3e66a",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-057": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "264a0864-a3f8-47a0-acf7-6d18b82c5427",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-058": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "2fd98efd-4fef-4b28-8d26-a058880497fe",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-059": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "874c473e-94fe-45d7-be51-9d855dc17ca8",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-060": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "b9f63197-966d-4534-bfaf-939931fd1a0d",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-061": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "b8185dbd-719a-4d25-8779-97b2e4682c5f",
+  "text_ocr": "ok",
+  "batch": "rd4-01"
+ },
+ "BE-062": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "23fd1d14-d4d4-40d0-a9a1-d5c194a11c23",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-063": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "cc031e72-0a3a-40eb-afbb-b952d692d208",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-064": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "2c5207a5-cf38-476d-a3a7-a2450a902851",
+  "text_ocr": "ok",
+  "batch": "bedoc-05"
+ },
+ "BE-065": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "664cba54-a496-4056-91fe-5a574bba09bc",
+  "text_ocr": "ok",
+  "batch": "bedoc-06"
+ },
+ "BE-066": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "65e180a5-5e08-4293-b371-5e66fdaf0aaf",
+  "text_ocr": "ok",
+  "batch": "bedoc-06"
+ },
+ "BE-067": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "c7b95283-3d54-4603-bbc7-f7da4ad0f25c",
+  "text_ocr": "ok",
+  "batch": "bedoc-06"
+ },
+ "BE-068": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "a29bb0ae-ad8d-4c75-a77a-a2a10153b53a",
+  "text_ocr": "ok",
+  "batch": "bedoc-06"
+ },
+ "BE-069": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "7e2d3bfb-2f49-4ba7-94af-27c1c4d07b0f",
+  "text_ocr": "ok",
+  "batch": "becovnew-01"
+ },
+ "BE-070": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "437c3452-27a3-4a89-ac53-5f1e53d2ab55",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-071": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "e7803e65-2895-4108-a057-63c44f17d2ec",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-072": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "7cb6ef09-c82e-4a3a-84e6-0bd9e2e33256",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-073": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "cf53c59e-7985-47f2-9382-910021271c20",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-074": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "medium",
+  "aufloesung": "1k",
+  "job_id": "1cfd99b3-e44e-4d22-817f-11d0145f6dd3",
+  "text_ocr": "ok",
+  "batch": "rd3-01"
+ },
+ "BE-075": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "7ef3d1a2-ebb3-4d2e-a796-586d7824d6df",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-076": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "d4009387-c427-44db-b01f-b39493353011",
+  "text_ocr": "ok",
+  "batch": "becovnew-01"
+ },
+ "BE-077": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "799e22a6-7b0f-4ed7-a764-ffc2360b3475",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-078": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "3131e6de-9564-4126-9ea7-ca5ce4a9c427",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-079": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "84bab5c2-51d7-432d-8990-004672111bc6",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-080": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "4d713a17-459d-4b6c-b982-7a7ee3c4b99d",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-081": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "29c32470-1c9a-4637-8bd2-a8368a86f593",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-082": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "f7048d18-bddf-4a65-a55a-da43159ddb21",
+  "text_ocr": "ok",
+  "batch": "benew-01"
+ },
+ "BE-083": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "c42c4fb9-19e5-44bc-a8a8-726330a669bb",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-084": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "4a9971fd-d7be-4ae7-9b12-5b3ca0d74a36",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-085": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "bb65bcb6-34d7-4e58-9f21-51f805d3b589",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-086": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "ab01f4f2-161e-4954-9bb4-ec4f820fa863",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-087": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "38237d33-5255-4436-992c-0386e34ade15",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-088": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "95ed79a9-b326-41c5-a584-081bfbefcb14",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-089": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "adca891b-ac7f-4c85-9f2e-703edf301f72",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-090": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "2194f441-dc0d-4418-a4b7-5ad2f04fed49",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-091": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "efd9f49c-5335-41a6-9296-307caee98d90",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-092": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "589a7bd3-d17f-43f2-83c2-688b18de82ea",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-093": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "dd93446c-e908-4590-87a2-d0cd77fa57a2",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-094": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "4143f4fa-5a4c-4f8e-be74-a6f7a15c6fa6",
+  "text_ocr": "ok",
+  "batch": "benew-02"
+ },
+ "BE-095": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "8d3e7763-48a6-44ef-adaf-f68471dcc4b2",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-096": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "08304112-0a9d-46e5-8612-0ff585ac1f07",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-097": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "cd1e75ad-e9f9-49bf-a399-b68f249be27b",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-098": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "72736e60-2ea8-4e5b-8ea7-c23e57ceaf07",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-099": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "b92bb90a-fb8a-405f-a056-68fa2bf9c9fd",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-100": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "fc97af16-95cd-4cc6-9242-869efa4c9fb1",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-101": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "f82877de-c9bc-463b-a048-914b751ddb59",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-102": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "c81d967c-215c-4ed6-84c3-d1c1baddce5c",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-103": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "4e5d525a-83d0-43a1-8d10-dae6338bd84b",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-104": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "d185384b-33df-4dfe-8ca7-afb66cf1466e",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-105": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "4703731d-5827-4438-a5be-d3bb70d7a98f",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-106": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "ae7ba2bc-131b-4dd9-82ff-38452907a621",
+  "text_ocr": "ok",
+  "batch": "benew-03"
+ },
+ "BE-107": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "d4e032e9-116b-41ba-a03e-dc8ceedea30d",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-108": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "b3ca0457-f1cf-490e-9ea6-8a7be4976ad8",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-109": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "b3a4c8b0-a8ff-4e43-b87b-5b9ded76cdf3",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-110": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "d5eb191d-4132-4948-ad7f-0cc21cc973b4",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-111": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "edf0d28d-69ef-40b8-9c98-d491872d8919",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-112": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "26383860-3987-4b0f-9402-e25d9c5b613f",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-113": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "87202a68-67dc-42e5-818a-f78d0bfed437",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-114": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "43704c84-eef1-4733-b2a8-a56d31cb69db",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-115": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "75c3ec79-479c-438f-8e65-5152f0745ed6",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-116": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "1b53ea60-7f8c-4fdb-ae75-59c4c5e4a4b7",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-117": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "03e4b357-d748-487f-bd79-d535674ab6ec",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-118": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "a1f6d44c-b713-4c86-b953-ce9abbcb8e03",
+  "text_ocr": "ok",
+  "batch": "benew-04"
+ },
+ "BE-119": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "1k",
+  "job_id": "93bc7db0-f797-4eeb-b180-b275c3f356ff",
+  "text_ocr": "ok",
+  "batch": "benew-05"
+ },
+ "BE-120": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "51856437-8697-4a5f-aa1a-e6b3f1b8d8e4",
+  "text_ocr": "ok",
+  "batch": "story-01"
+ },
+ "BE-121": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "c83d194f-03e1-4470-a006-10c8c2ff44b7",
+  "text_ocr": "ok",
+  "batch": "story-01"
+ },
+ "BE-122": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "54b1ffee-faab-4e56-8010-4173b8909eea",
+  "text_ocr": "text",
+  "batch": "story-01"
+ },
+ "BE-123": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "f90ae02c-9be5-40c7-9698-234475a2ee77",
+  "text_ocr": "ok",
+  "batch": "story-01"
+ },
+ "BE-124": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "b4a6898b-2352-4580-8bec-c33e60ae37f7",
+  "text_ocr": "ok",
+  "batch": "story-01"
+ },
+ "BE-125": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "708ff4ec-4e07-449b-8b7f-3edb4e087f8d",
+  "text_ocr": "ok",
+  "batch": "story-02"
+ },
+ "BE-126": {
+  "quelle": "Higgsfield",
+  "modell": "gpt_image_2_5 sunburst",
+  "qualitaet": "low",
+  "aufloesung": "2k",
+  "job_id": "bfbb63a1-e07c-4cce-806e-080bcf903a05",
+  "text_ocr": "ok",
+  "batch": "story-02"
+ }
+}

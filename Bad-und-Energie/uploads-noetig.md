@@ -60,4 +60,4 @@ Dokument Nr. E6 · **Hochladen:** Fertige Slide (z. B. das Karussell-Cover) als 
 Use the uploaded image as the exact style reference: same background, colours, typography and layout. Create the next slide with this content: <Szene>. Headline: "<Text>"
 ```
 
-**Hinweise:** Vorlage für die Karussell-Slides ab Slide 2 (K1–K3): <Szene> und <Text> aus der Karussell-Tabelle einsetzen; Caption und Hashtags des jeweiligen Karussells verwenden. Im Dokument keine Caption und keine Hashtags.  
+**Hinweise:** Vorlage für die Karussell-Slides ab Slide 2 (K1–K3 aus dem Dokument, K4–K5 aus der Bibliothek): <Szene> und <Text> der jeweiligen Slide einsetzen; Caption und Hashtags des jeweiligen Karussells verwenden. Im Dokument keine Caption und keine Hashtags.  

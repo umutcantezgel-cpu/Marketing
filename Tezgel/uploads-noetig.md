@@ -20,7 +20,7 @@ Dokument Nr. E2 · **Hochladen:** Zwei echte Fotos desselben Raums: zuerst das V
 Use the two uploaded photos of the same room: the first is before, the second is after our work. Place them side by side in one vertical 3:4 image with a thin white divider, matched crop and matched brightness. Add the small labels "Vorher" (left) and "Nachher" (right) in a clean sans-serif. Do not alter the content of either photo.
 ```
 
-**Hinweise:** Format 3:4. Labels „Vorher“ und „Nachher“ im Bild Wort für Wort prüfen. Ergebnis gegen das Originalfoto prüfen: Fliesen, Fugen, Schnitte und Silikon müssen identisch sein. Nur Fotos ohne Personen, Hausnummern oder private Gegenstände und nur mit Zustimmung der Kunden hochladen; Mitarbeiter nur mit deren Einverständnis. Arena darf hochgeladene Inhalte laut Nutzungsbedingungen (Abschnitt 3.3) weiterverwenden. Posting-Plan: Woche 4 (Mo 23.11.2026), gegen 18 Uhr.  
+**Hinweise:** Format 3:4. Labels „Vorher“ und „Nachher“ im Bild Wort für Wort prüfen. Ergebnis gegen die beiden Originalfotos prüfen: Fliesen, Fugen, Schnitte und Silikon müssen identisch sein. Nur Fotos ohne Personen, Hausnummern oder private Gegenstände und nur mit Zustimmung der Kunden hochladen; Mitarbeiter nur mit deren Einverständnis. Arena darf hochgeladene Inhalte laut Nutzungsbedingungen (Abschnitt 3.3) weiterverwenden. Posting-Plan: Woche 4 (Mo 23.11.2026), gegen 18 Uhr.  
 
 ## TZ-U03 · Baustelle aufräumen
 

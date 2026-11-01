@@ -2,7 +2,7 @@
 
 Coday, Webagentur in Wetzlar. Captions in Du-Form, Haupt-CTA: kostenloser Website-Check.
 
-- [prompts.md](prompts.md): 80 Bildprompts zum Kopieren (80 aus dem Prompt-Arsenal, 0 neu), davon 75 Feed-Posts (3:4) und 5 Stories (9:16)
+- [prompts.md](prompts.md): 127 Bildprompts zum Kopieren (80 aus dem Prompt-Arsenal, 40 neu, 7 Story-Versionen starker Posts), davon 109 Feed-Posts (3:4) und 18 Stories (9:16)
 - [captions.csv](captions.csv): Caption, Hashtags und Hinweise je Bild (Semikolon-getrennt, öffnet in Excel und Numbers)
 - [uploads-noetig.md](uploads-noetig.md): 5 Edit-Prompts für eigene Fotos, Screenshots oder das Logo
 - [bilder/](bilder/): fertige Bilder in allen Formaten

@@ -2,8 +2,8 @@
 """Sortiert heruntergeladene Bilder (Arena, ChatGPT ...) automatisch ins Repo ein.
 
 Liest den Text im Bild per macOS-Texterkennung, sucht den passenden Prompt in
-Coday/, Bad-und-Energie/ und Tezgel/ (prompts.json) und kopiert das Bild als
-<ID>.png nach <Firma>/bilder/original/. Danach entstehen die Posting-Formate
+Coday/, Bad-und-Energie/ und Tezgel/ (prompts.json) und speichert das Bild als
+<ID>.jpg nach <Firma>/bilder/original/. Danach entstehen die Posting-Formate
 (Instagram 3:4, Facebook/LinkedIn 4:5, Story 9:16) und prompts.md zeigt die Bilder.
 
 Die Downloads bleiben unverändert liegen (es wird kopiert, nicht verschoben).
@@ -116,11 +116,12 @@ def main():
             while list(target_dir.glob(f"{name}.*")):
                 n += 1
                 name = f"{entry['id']}_v{n}"
-            target = target_dir / f"{name}{path.suffix.lower()}"
+            target = target_dir / f"{name}.jpg"
             report.append(f"{path.name} -> {target.relative_to(ROOT)} ({best[0]:.0%})")
             if not args.probelauf:
                 target_dir.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(path, target)
+                # Originale als JPEG (Qualität 92): gleiche Auflösung, ein Bruchteil der PNG-Größe
+                bib.sips("-s", "format", "jpeg", "-s", "formatOptions", "92", str(path), "--out", str(target))
                 bib.export_image(key, target, entry["format"])
                 touched.add(key)
         else:

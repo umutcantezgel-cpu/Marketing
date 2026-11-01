@@ -2,7 +2,7 @@
 
 Bad & Energie GmbH Lahn-Dill, SHK-Meisterbetrieb seit 1926. Captions in Sie-Form, Recruiting in Du-Form.
 
-- [prompts.md](prompts.md): 68 Bildprompts zum Kopieren (68 aus dem Prompt-Arsenal, 0 neu), davon 64 Feed-Posts (3:4) und 4 Stories (9:16)
+- [prompts.md](prompts.md): 126 Bildprompts zum Kopieren (68 aus dem Prompt-Arsenal, 51 neu, 7 Story-Versionen starker Posts), davon 107 Feed-Posts (3:4) und 19 Stories (9:16)
 - [captions.csv](captions.csv): Caption, Hashtags und Hinweise je Bild (Semikolon-getrennt, öffnet in Excel und Numbers)
 - [uploads-noetig.md](uploads-noetig.md): 6 Edit-Prompts für eigene Fotos, Screenshots oder das Logo
 - [bilder/](bilder/): fertige Bilder in allen Formaten

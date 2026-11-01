@@ -3,6 +3,14 @@
 Bildprompts, Captions und fertige Social-Media-Bilder für Instagram, Facebook und LinkedIn.
 Modell: GPT Image 2.5, Variante Sunburst.
 
+**Stand 01.11.2026:** 379 fertige Bilder, alle mit Caption und Hashtags.
+
+| Firma | Prompts | Bilder | davon Feed (3:4, plus 4:5-Zuschnitt) | davon Stories (9:16) |
+| --- | --- | --- | --- | --- |
+| Coday | 127 | 127 | 109 | 18 |
+| Bad & Energie | 126 | 126 | 107 | 19 |
+| Tezgel | 126 | 126 | 109 | 17 |
+
 | Ordner | Firma | Inhalt |
 | --- | --- | --- |
 | [Coday/](Coday/) | Coday, Webagentur Wetzlar | [Prompts](Coday/prompts.md) · [Captions (CSV)](Coday/captions.csv) · [Bilder](Coday/bilder/) |
@@ -32,10 +40,14 @@ Karussell-Slides ab Nr. 2: vorher die fertige Cover-Slide hochladen, dann den Pr
 
 | Ordner | Größe | Wofür |
 | --- | --- | --- |
-| `bilder/original/` | wie erzeugt | Archiv, für spätere Bearbeitung |
+| `bilder/original/` | volle Auflösung (Higgsfield 2K: 1744 × 2336), JPEG | Archiv, Anzeigen, spätere Bearbeitung |
 | `bilder/instagram-3x4/` | 1080 × 1440 | Instagram-Feed (füllt Feed und Profilraster) |
 | `bilder/facebook-linkedin-4x5/` | 1080 × 1350 | Facebook- und LinkedIn-Feed (Mitte des 3:4-Bildes, Text liegt im Sicherheitsrand) |
 | `bilder/story-9x16/` | 1080 × 1920 | Instagram- und Facebook-Story |
+
+`bilder/generiert.json` hält pro Bild fest, woher es stammt: Arena (von Hand) oder Higgsfield mit Modell,
+Qualität, Auflösung und Job-ID. Fast alle Bilder stammen von GPT Image 2.5 Sunburst über Higgsfield
+(Prompts aus den Dokumenten in 2K, neue Prompts in 1K).
 
 ## Markenfarben in den Prompts
 
