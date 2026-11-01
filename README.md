@@ -64,6 +64,8 @@ Die Ecke unten rechts bleibt frei: Dort kommt das echte Logo hin.
 
 ## Vor dem Posten
 
+Die Checkliste mit allen offenen Fragen pro Firma steht in [offene-fragen.md](offene-fragen.md).
+
 - **Nutzungsrechte Arena:** Laut Arena-Nutzungsbedingungen (Stand 23.02.2026) ist Output für Werbung ohne
   schriftliche Zustimmung untersagt (§ 3.5 G), ebenso die kommerzielle Verwertung (§ 5 i). Für Werbung also
   entweder eine schriftliche Freigabe von Arena einholen oder das Bild mit demselben Prompt in ChatGPT
