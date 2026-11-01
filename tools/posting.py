@@ -13,7 +13,8 @@ Aufruf:
   python3 tools/posting.py vorrat                Reichweite des Plans und Posts, die auf eine Freigabe warten
   python3 tools/posting.py faellig --kurz        offene Aufträge der nächsten Tage als Übersicht
   python3 tools/posting.py faellig --datum D     fertige Metricool-Aufträge für einen Tag (JSON)
-  python3 tools/posting.py bilder                Bilder der offenen Aufträge ins öffentliche Bilder-Repo
+  python3 tools/posting.py bilder                Bilder der offenen Aufträge öffentlich bereitstellen und Links prüfen
+                                                 (mit bild_url nur prüfen, sonst ins öffentliche Bilder-Repo kopieren)
   python3 tools/posting.py eintragen ZEILE ...   Ergebnisse ins Log; ZEILE = schluessel;status;metricool_id;bemerkung,
                                                  "-" liest die Zeilen von stdin
 """
@@ -267,16 +268,22 @@ def readme_plan(key):
     return slots
 
 
-def rotate(posts):
-    """Kategorien abwechseln, innerhalb einer Kategorie in ID-Reihenfolge."""
+def rotate(posts, recent=()):
+    """Kategorien abwechseln, innerhalb einer Kategorie in ID-Reihenfolge.
+
+    recent: Kategorien der schon eingeplanten Feed-Posts in Datumsfolge. Der Wechsel geht dort weiter, wo er
+    aufgehört hat: zuerst Kategorien, die noch nicht dran waren, dann die am längsten nicht mehr benutzten.
+    """
     groups = {}
     for p in posts:
         groups.setdefault(p["kategorie"], []).append(p)
+    last = {c: i for i, c in enumerate(recent)}
+    order = sorted(groups, key=lambda c: (c in last, last.get(c, 0)))
     out = []
     while any(groups.values()):
-        for g in groups.values():
-            if g:
-                out.append(g.pop(0))
+        for c in order:
+            if groups[c]:
+                out.append(groups[c].pop(0))
     return out
 
 
@@ -352,7 +359,9 @@ def build_plan(key, s, today, log, held):
 
     first_done = {post for (art, post, nr) in pinned if art == "feed" and nr == 1}
     first_done |= {v[0] for v in fixed.values() if v and v[1] == 1}
-    pool = rotate([p for pid, p in feed.items() if not p["sperre"] and pid not in first_done])
+    recent = [feed[post]["kategorie"] for (art, post, nr), when in sorted(pinned.items(), key=lambda kv: kv[1])
+              if art == "feed" and post in feed]
+    pool = rotate([p for pid, p in feed.items() if not p["sperre"] and pid not in first_done], recent)
     lost = []
     when, last = start, max(list(fixed) + [start])
     while (pool or when <= last) and when <= start + dt.timedelta(days=400):
@@ -388,10 +397,15 @@ def build_plan(key, s, today, log, held):
             story_pool.append(p)
     feed_days = [day(r["datum"]) for r in rows if r["art"] == "feed"]
     end = max(feed_days) if feed_days else start
-    when, previous = start, None
+    # Der Abstand gilt auch zu Stories, die schon in Metricool liegen (außer Story-Versionen am Tag ihres Feed-Posts)
+    pinned_fill = {when for (art, post, nr), when in pinned.items() if art == "story" and post in stories
+                   and first_day.get(post_of.get(stories[post]["eltern"])) != when}
+    when, previous = start, max((d for d in pinned_fill if d < start), default=None)
     while story_pool and when <= end:
         lost += expire(story_pool, when)
-        if when not in story_taken and (previous is None or (when - previous).days >= STORY_GAP):
+        if when in pinned_fill:
+            previous = when
+        elif when not in story_taken and (previous is None or (when - previous).days >= STORY_GAP):
             pid = take(story_pool, when, allowed_on(when))
             if pid:
                 story_taken.add(when)

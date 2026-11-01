@@ -31,9 +31,11 @@ verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplante
   `"sticker_stories": "aus"` fallen sie weg.
 - **Gesperrt:** CD-001 bis CD-016 und die Coday-Karussells K1 und K2, deren Cover aus Arena stammt. Arena erlaubt
   Werbung nur mit schriftlicher Zustimmung.
-- **Bilder:** Metricool lädt Bilder nur über öffentliche Links. Die Aufgabe kopiert deshalb jeweils die Bilder der nächsten
-  7 Tage ins öffentliche Repo [Marketing-Bilder](https://github.com/umutcantezgel-cpu/Marketing-Bilder). Prompts,
-  Notizen und alles andere bleiben privat.
+- **Bilder:** Metricool lädt Bilder nur über öffentliche Links und speichert sie beim Einplanen bei sich. Zurzeit
+  verlinkt die Aufgabe die Bilder direkt aus diesem Repo, das dafür öffentlich ist (`bild_url`); damit sind auch
+  Prompts und Notizen öffentlich. Soll es wieder privat sein: das öffentliche Repo
+  [Marketing-Bilder](https://github.com/umutcantezgel-cpu/Marketing-Bilder) anlegen und `bild_url` löschen. Dann kopiert
+  die Aufgabe jeweils die Bilder der nächsten 7 Tage dorthin, und alles andere bleibt privat.
 
 ## Einstellungen
 

@@ -31,7 +31,8 @@ Netzwerken, dazu Stories. Das Skript liefert jeden Auftrag fertig; du rufst Metr
 4. Überblick: `python3 ~/Marketing/tools/posting.py faellig --kurz`. Sind keine Aufträge offen: weiter mit Schritt 7.
 5. Bilder: `python3 ~/Marketing/tools/posting.py bilder`. Meldet es nicht erreichbare Links, die Aufträge mit diesen
    Bildern heute auslassen.
-6. Einplanen, höchstens die ersten drei Daten mit offenen Aufträgen (der Rest folgt morgen), ein Datum nach dem anderen:
+6. Einplanen, höchstens die ersten drei Daten mit offenen Aufträgen, die sich heute anlegen lassen (Firma mit blogId,
+   Netzwerk bei der Marke verbunden; der Rest folgt morgen), ein Datum nach dem anderen:
    1. `python3 ~/Marketing/tools/posting.py faellig --datum JJJJ-MM-TT` liefert `marken_fuer_getScheduledPosts` und
       `auftraege`.
    2. Für jede Marke aus `marken_fuer_getScheduledPosts` einmal `getScheduledPosts` mit brandId (= blogId), fromDate,
