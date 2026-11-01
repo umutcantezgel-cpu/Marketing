@@ -50,9 +50,19 @@ verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplante
 
 ## Einrichtung
 
-Voraussetzung: In Metricool hat jede Firma eine eigene Marke mit verbundenen Netzwerken (Instagram, Facebook usw.).
-Dann eine neue Claude-Code-Sitzung im Auto-Modus starten, damit die tägliche Aufgabe ohne Rückfragen läuft, und diesen
-Prompt einfügen:
+Voraussetzung: In Metricool hat jede Firma eine eigene Marke mit verbundenen Netzwerken (Instagram, Facebook usw.),
+benannt wie `metricool_marke`: „Coday“, „Bad & Energie“ und „Tezgel“. Dann findet die tägliche Aufgabe die Marken auch
+selbst, falls sie erst nach der Einrichtung verbunden werden. Keine Marke ohne Netzwerk stehen lassen: Für so eine Marke
+meldet Metricool einen Fehler, und bei einem Fehler lässt die Aufgabe den Tag aus.
+
+Dann eine neue Claude-Code-Sitzung starten:
+
+- **Ordner:** den Benutzerordner (`~`), nicht „ohne Ordner“. Die geplante Aufgabe läuft später in dem Ordner, in dem sie
+  angelegt wurde. Ohne Ordner legt die App einen an, der nur zu dieser Sitzung gehört und mit ihr gelöscht wird. Im
+  Benutzerordner liegen außerdem beide Repos (`~/Marketing` und `~/Marketing-Bilder`).
+- **Modus:** Auto, damit die tägliche Aufgabe ohne Rückfragen läuft. Der Metricool-Connector muss eingeschaltet sein.
+
+Diesen Prompt einfügen:
 
 ```text
 Richte das tägliche Social-Media-Posting für Coday, Bad & Energie und Tezgel ein. Arbeite selbstständig und frag nur, wenn du ohne meine Antwort nicht weiterkommst.
@@ -66,6 +76,10 @@ Richte das tägliche Social-Media-Posting für Coday, Bad & Energie und Tezgel e
    Prüf im Ergebnis, ob die Aufgabe ohne Rückfragen laufen darf (Auto-Modus), und sag mir Bescheid, falls nicht.
 6. Arbeite posting/ANLEITUNG.md jetzt einmal komplett ab und zeig mir den Bericht.
 ```
+
+Danach in derselben Sitzung schreiben: „Starte die Aufgabe jetzt einmal zum Test und sag mir, ob sie durchläuft.“ Der
+Testlauf läuft wie die Läufe am Morgen, mit denselben Rechten. So zeigt sich sofort, ob die Aufgabe Metricool erreicht
+und ohne Rückfragen durchkommt. Die Sitzung danach behalten: Nach jedem Lauf meldet sich die Aufgabe dort.
 
 Geplante Aufgaben laufen, solange die Claude-App geöffnet ist. War sie zur geplanten Zeit zu, läuft die Aufgabe beim
 nächsten Start nach. Weil Metricool immer eine Woche im Voraus gefüllt ist, fällt ein ausgelassener Tag nicht auf.
