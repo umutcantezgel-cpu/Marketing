@@ -141,6 +141,8 @@ def image_target(key, entry_id, story=False):
 
 
 def image_url(s, key, entry_id, story=False):
+    if s.get("bild_url"):  # Bilder direkt aus einem öffentlichen Repo verlinken, ohne Kopie ins Bilder-Repo
+        return s["bild_url"].format(pfad=image_file(key, entry_id, story).relative_to(ROOT).as_posix())
     return f"https://raw.githubusercontent.com/{s['bild_repo']}/main/{image_target(key, entry_id, story)}"
 
 
@@ -648,8 +650,9 @@ def reachable(url):
 
 
 def cmd_bilder(s, today):
+    direct = bool(s.get("bild_url"))  # Bilder liegen schon öffentlich: nur die Links prüfen, nichts kopieren
     repo = Path(os.path.expanduser(s["bild_repo_ordner"]))
-    if not (repo / ".git").exists():
+    if not direct and not (repo / ".git").exists():
         sys.exit(f"Bilder-Repo fehlt: {repo}. Einrichtung siehe posting/README.md.")
     files = {}
     for r in due(s, today)[0]:
@@ -657,20 +660,21 @@ def cmd_bilder(s, today):
             story = r["art"] == "story"
             files[image_url(s, r["firma"], i, story)] = (image_file(r["firma"], i, story),
                                                          repo / image_target(r["firma"], i, story))
-    git(repo, "pull", "-q", "--rebase")
     copied = 0
-    for src, dst in files.values():
-        if not dst.exists() or not filecmp.cmp(src, dst, shallow=False):
-            dst.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(src, dst)
-            copied += 1
-    if copied:
-        git(repo, "add", "-A")
-        git(repo, "commit", "-q", "-m", f"Bilder für die Posts bis {today + dt.timedelta(days=s['vorlauf_tage'])}")
-    if git(repo, "rev-list", "--count", "@{u}..HEAD", capture=True) != "0":
-        git(repo, "push", "-q")
+    if not direct:
+        git(repo, "pull", "-q", "--rebase")
+        for src, dst in files.values():
+            if not dst.exists() or not filecmp.cmp(src, dst, shallow=False):
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src, dst)
+                copied += 1
+        if copied:
+            git(repo, "add", "-A")
+            git(repo, "commit", "-q", "-m", f"Bilder für die Posts bis {today + dt.timedelta(days=s['vorlauf_tage'])}")
+        if git(repo, "rev-list", "--count", "@{u}..HEAD", capture=True) != "0":
+            git(repo, "push", "-q")
     # Prüfen mit eigenem Parameter, damit GitHub für den echten Link keine 404 zwischenspeichert
-    version = git(repo, "rev-parse", "--short", "HEAD", capture=True)
+    version = str(int(time.time())) if direct else git(repo, "rev-parse", "--short", "HEAD", capture=True)
     missing = [u for u in files if not reachable(f"{u}?v={version}")]
     for _ in range(8):  # frisch gepushte Dateien brauchen bei GitHub manchmal ein paar Minuten
         if not missing:

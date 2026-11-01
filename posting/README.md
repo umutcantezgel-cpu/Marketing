@@ -42,6 +42,10 @@ verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplante
   widerspricht, `any` = braucht eine Zustimmung).
 - `netzwerke`: wohin gepostet wird, sofern das Netzwerk in Metricool verbunden ist. Pro Firma überschreibbar.
 - `zurueckhalten`: weitere Posts, die erst nach einer Freigabe rausgehen, mit Grund.
+- `bild_url` (optional): Bilder direkt aus einem öffentlichen Repo verlinken, statt sie nach Marketing-Bilder zu
+  kopieren; `{pfad}` ist der Pfad der Bilddatei in diesem Repo, zum Beispiel `Coday/bilder/story-9x16/CD-028.jpg`.
+  Zurzeit zeigt es auf das öffentliche Repo Marketing. Wird Marketing wieder privat: `bild_url` löschen, dann gilt
+  wieder Marketing-Bilder (`bild_repo`, `bild_repo_ordner`).
 - Neue Posts im Repo nimmt die Aufgabe beim nächsten Lauf von selbst in den Plan auf.
 
 ## Einrichtung

@@ -5,6 +5,7 @@
   "zeitzone": "Europe/Berlin",
   "bild_repo": "umutcantezgel-cpu/Marketing-Bilder",
   "bild_repo_ordner": "~/Marketing-Bilder",
+  "bild_url": "https://raw.githubusercontent.com/umutcantezgel-cpu/Marketing/main/{pfad}",
   "ki_kennzeichnung": true,
   "sticker_stories": "manuell",
   "netzwerke": ["instagram", "facebook", "linkedin", "gmb", "threads", "bluesky", "twitter"],
