@@ -16,8 +16,8 @@
   },
   "firmen": {
     "coday": {
-      "metricool_marke": "Coday",
-      "blogId": null,
+      "metricool_marke": "codayweb",
+      "blogId": "7535708",
       "modus": "direkt",
       "link": "https://www.codayweb.de/de/website-check",
       "feed_zeit": {"werktags": "07:30", "wochenende": "10:00"},
