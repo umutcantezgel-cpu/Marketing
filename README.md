@@ -17,6 +17,9 @@ Modell: GPT Image 2.5, Variante Sunburst.
 | [Bad-und-Energie/](Bad-und-Energie/) | Bad & Energie GmbH Lahn-Dill | [Prompts](Bad-und-Energie/prompts.md) · [Captions (CSV)](Bad-und-Energie/captions.csv) · [Bilder](Bad-und-Energie/bilder/) |
 | [Tezgel/](Tezgel/) | Fliesenverlegung Tezgel, Aßlar | [Prompts](Tezgel/prompts.md) · [Captions (CSV)](Tezgel/captions.csv) · [Bilder](Tezgel/bilder/) |
 
+**Tägliches Posten:** Claude Code plant über Metricool jeden Tag einen Post pro Firma ein, eine Woche im Voraus.
+Tagesplan, Einstellungen und Einrichtung: [posting/README.md](posting/README.md).
+
 ## So entsteht ein Bild
 
 1. Prompt aus `<Firma>/prompts.md` kopieren. Jeder Prompt ist komplett: Brand-Block mit Farben und Format, Szene, Text im Bild.
@@ -84,6 +87,7 @@ Die Checkliste mit allen offenen Fragen pro Firma steht in [offene-fragen.md](of
 | `tools/bibliothek.py` | Brand-Blocks, setzt die Prompts zusammen, baut `prompts.md` und `captions.csv`, exportiert Formate |
 | `tools/einsortieren.py` | Downloads per Texterkennung zuordnen, Formate erzeugen, optional pushen |
 | `tools/ocr.swift` | Texterkennung mit Apples Vision-Framework (wird beim ersten Lauf kompiliert) |
+| `tools/posting.py` | Tagesplan für Metricool, fällige Posts, Bild-Links und Log (siehe [posting/README.md](posting/README.md)) |
 
 ```bash
 python3 tools/bibliothek.py build        # prompts.md und captions.csv neu bauen

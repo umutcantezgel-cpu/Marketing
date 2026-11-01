@@ -1,0 +1,4 @@
+# Freigegebene Posts: eine ID pro Zeile, z. B. BE-003.
+# Posts mit Faktencheck (⚠️ in prompts.md), mit einer offenen Frage in offene-fragen.md oder in „zurueckhalten“
+# (posting/einstellungen.json) gehen erst raus, wenn ihre ID hier steht. Bis dahin rücken sie im Tagesplan nach.
+# Was zu prüfen ist: Abschnitt „Wartet auf Freigabe“ im tagesplan.md der Firma.

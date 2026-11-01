@@ -3,6 +3,9 @@
 Die Prompt-Prüfung hat Punkte gesammelt, die nur die jeweilige Firma beantworten kann. Die Bilder sind fertig.
 Diese Fragen betreffen Captions, Fakten und Freigaben. Erst klären, dann den Post veröffentlichen.
 
+Das tägliche Posten über Metricool hält jeden Post zurück, dessen ID in einer offenen Frage steht. Ist die Frage
+geklärt, die ID in [posting/geprueft.txt](posting/geprueft.txt) eintragen (siehe [posting/README.md](posting/README.md)).
+
 ## Alle drei Firmen
 
 - [ ] **Arena-Bilder und Werbung:** CD-001 bis CD-016 stammen aus Arena. Laut Arena-Nutzungsbedingungen

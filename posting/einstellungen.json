@@ -1,0 +1,45 @@
+{
+  "start": "2026-11-02",
+  "readme_plan_ab": "2026-11-02",
+  "vorlauf_tage": 7,
+  "zeitzone": "Europe/Berlin",
+  "bild_repo": "umutcantezgel-cpu/Marketing-Bilder",
+  "bild_repo_ordner": "~/Marketing-Bilder",
+  "ki_kennzeichnung": true,
+  "sticker_stories": "manuell",
+  "netzwerke": ["instagram", "facebook", "linkedin", "gmb", "threads", "bluesky", "twitter"],
+  "zurueckhalten": {
+    "CD-067": "Die Caption verweist auf eine Erklärung im ersten Kommentar, die noch fehlt",
+    "CD-069": "Die Erklärung zu Next.js fehlt noch (in der Caption oder als ersten Kommentar ergänzen)",
+    "CD-082": "Leistungsumfang mit dem aktuellen Wartungsangebot abgleichen",
+    "BE-017": "Offene Stellen mit der Stellenseite abgleichen"
+  },
+  "firmen": {
+    "coday": {
+      "metricool_marke": "Coday",
+      "blogId": null,
+      "modus": "direkt",
+      "link": "https://www.codayweb.de/de/website-check",
+      "feed_zeit": {"werktags": "07:30", "wochenende": "10:00"},
+      "story_zeit": "12:30"
+    },
+    "bad-energie": {
+      "metricool_marke": "Bad & Energie",
+      "blogId": null,
+      "modus": "direkt",
+      "link": "https://bad-energie.de/terminanfrage",
+      "link_recruiting": "https://bad-energie.de/karriere",
+      "feed_zeit": {"werktags": "18:00", "wochenende": "11:00"},
+      "story_zeit": "13:00"
+    },
+    "tezgel": {
+      "metricool_marke": "Tezgel",
+      "blogId": null,
+      "modus": "direkt",
+      "link": "https://www.tezgel.de/termin",
+      "link_recruiting": "https://www.tezgel.de/karriere",
+      "feed_zeit": {"werktags": "18:00", "wochenende": "11:00"},
+      "story_zeit": "13:00"
+    }
+  }
+}
