@@ -126,7 +126,7 @@
      ],
      "titel": "Humor: kein Menü",
      "sticker": false,
-     "quelle": "auffueller",
+     "quelle": "metricool",
      "wartet": []
     },
     {
@@ -140,7 +140,7 @@
      ],
      "titel": "Story: Wie schnell?",
      "sticker": true,
-     "quelle": "auffueller",
+     "quelle": "metricool",
      "wartet": []
     },
     {
@@ -154,11 +154,25 @@
      ],
      "titel": "Schnelle Shops",
      "sticker": false,
-     "quelle": "auffueller",
+     "quelle": "metricool",
      "wartet": []
     },
     {
      "datum": "2026-11-10",
+     "art": "feed",
+     "post": "CD-055",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "CD-055"
+     ],
+     "titel": "Auf dem Handy unlesbar?",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-11-11",
      "art": "feed",
      "post": "CD-044",
      "nr": 1,
@@ -171,22 +185,6 @@
      "quelle": "auffueller",
      "wartet": [
       "CD-044"
-     ]
-    },
-    {
-     "datum": "2026-11-11",
-     "art": "feed",
-     "post": "CD-067",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "CD-067"
-     ],
-     "titel": "Core Web Vitals",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": [
-      "CD-067"
      ]
     },
     {
@@ -208,6 +206,22 @@
     {
      "datum": "2026-11-12",
      "art": "feed",
+     "post": "CD-067",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "CD-067"
+     ],
+     "titel": "Core Web Vitals",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": [
+      "CD-067"
+     ]
+    },
+    {
+     "datum": "2026-11-13",
+     "art": "feed",
      "post": "CD-070",
      "nr": 1,
      "typ": "bild",
@@ -220,20 +234,6 @@
      "wartet": [
       "CD-070"
      ]
-    },
-    {
-     "datum": "2026-11-13",
-     "art": "feed",
-     "post": "CD-055",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "CD-055"
-     ],
-     "titel": "Auf dem Handy unlesbar?",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
     },
     {
      "datum": "2026-11-14",
@@ -340,16 +340,18 @@
     {
      "datum": "2026-11-19",
      "art": "feed",
-     "post": "CD-045",
+     "post": "CD-075",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-045"
+      "CD-075"
      ],
-     "titel": "Updates aufschieben",
+     "titel": "Humor: statische Seiten",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "CD-075"
+     ]
     },
     {
      "datum": "2026-11-20",
@@ -396,18 +398,16 @@
     {
      "datum": "2026-11-22",
      "art": "feed",
-     "post": "CD-068",
+     "post": "CD-051",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-068"
+      "CD-051"
      ],
-     "titel": "PHP-Version ≠ WordPress-Version",
+     "titel": "Lokal gefunden werden",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": [
-      "CD-068"
-     ]
+     "wartet": []
     },
     {
      "datum": "2026-11-23",
@@ -446,18 +446,16 @@
     {
      "datum": "2026-11-24",
      "art": "feed",
-     "post": "CD-071",
+     "post": "CD-045",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-071"
+      "CD-045"
      ],
-     "titel": "Zahlen: Accessibility und SEO",
+     "titel": "Updates aufschieben",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": [
-      "CD-071"
-     ]
+     "wartet": []
     },
     {
      "datum": "2026-11-25",
@@ -520,36 +518,34 @@
     {
      "datum": "2026-11-28",
      "art": "feed",
-     "post": "CD-075",
+     "post": "CD-068",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-075"
+      "CD-068"
      ],
-     "titel": "Humor: statische Seiten",
+     "titel": "PHP-Version ≠ WordPress-Version",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": [
-      "CD-075"
+      "CD-068"
      ]
     },
     {
      "datum": "2026-11-29",
      "art": "feed",
-     "post": "CD-K5",
+     "post": "CD-071",
      "nr": 1,
-     "typ": "karussell",
+     "typ": "bild",
      "ids": [
-      "CD-093",
-      "CD-094",
-      "CD-095",
-      "CD-096",
-      "CD-097"
+      "CD-071"
      ],
-     "titel": "Was der Website-Check prüft",
+     "titel": "Zahlen: Accessibility und SEO",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "CD-071"
+     ]
     },
     {
      "datum": "2026-11-29",
@@ -568,13 +564,17 @@
     {
      "datum": "2026-11-30",
      "art": "feed",
-     "post": "CD-051",
+     "post": "CD-K5",
      "nr": 1,
-     "typ": "bild",
+     "typ": "karussell",
      "ids": [
-      "CD-051"
+      "CD-093",
+      "CD-094",
+      "CD-095",
+      "CD-096",
+      "CD-097"
      ],
-     "titel": "Lokal gefunden werden",
+     "titel": "Was der Website-Check prüft",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -687,6 +687,20 @@
     {
      "datum": "2026-12-06",
      "art": "feed",
+     "post": "CD-052",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "CD-052"
+     ],
+     "titel": "Website und Profil im Einklang",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-12-07",
+     "art": "feed",
      "post": "CD-046",
      "nr": 1,
      "typ": "bild",
@@ -699,7 +713,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-12-07",
+     "datum": "2026-12-08",
      "art": "feed",
      "post": "CD-069",
      "nr": 1,
@@ -713,20 +727,6 @@
      "wartet": [
       "CD-069"
      ]
-    },
-    {
-     "datum": "2026-12-08",
-     "art": "feed",
-     "post": "CD-052",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "CD-052"
-     ],
-     "titel": "Website und Profil im Einklang",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
     },
     {
      "datum": "2026-12-08",
@@ -819,13 +819,13 @@
     {
      "datum": "2026-12-13",
      "art": "feed",
-     "post": "CD-047",
+     "post": "CD-053",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-047"
+      "CD-053"
      ],
-     "titel": "Notfall: Ruhe bewahren",
+     "titel": "Jede Seite führt zur Anfrage",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -833,13 +833,13 @@
     {
      "datum": "2026-12-14",
      "art": "feed",
-     "post": "CD-107",
+     "post": "CD-047",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-107"
+      "CD-047"
      ],
-     "titel": "Wem gehört deine Domain?",
+     "titel": "Notfall: Ruhe bewahren",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -861,13 +861,13 @@
     {
      "datum": "2026-12-15",
      "art": "feed",
-     "post": "CD-053",
+     "post": "CD-107",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-053"
+      "CD-107"
      ],
-     "titel": "Jede Seite führt zur Anfrage",
+     "titel": "Wem gehört deine Domain?",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -931,13 +931,13 @@
     {
      "datum": "2026-12-19",
      "art": "feed",
-     "post": "CD-048",
+     "post": "CD-098",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-048"
+      "CD-098"
      ],
-     "titel": "3 Fragen an deinen Hoster",
+     "titel": "FAQ für Kunden und KI",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -945,13 +945,13 @@
     {
      "datum": "2026-12-20",
      "art": "feed",
-     "post": "CD-108",
+     "post": "CD-048",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-108"
+      "CD-048"
      ],
-     "titel": "Strukturierte Daten",
+     "titel": "3 Fragen an deinen Hoster",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -973,13 +973,13 @@
     {
      "datum": "2026-12-21",
      "art": "feed",
-     "post": "CD-098",
+     "post": "CD-108",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-098"
+      "CD-108"
      ],
-     "titel": "FAQ für Kunden und KI",
+     "titel": "Strukturierte Daten",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -987,13 +987,13 @@
     {
      "datum": "2026-12-22",
      "art": "feed",
-     "post": "CD-081",
+     "post": "CD-099",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-081"
+      "CD-099"
      ],
-     "titel": "Wer macht die Updates?",
+     "titel": "Anfahrt und Parken",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -1043,13 +1043,13 @@
     {
      "datum": "2026-12-26",
      "art": "feed",
-     "post": "CD-109",
+     "post": "CD-081",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-109"
+      "CD-081"
      ],
-     "titel": "Zu große Fotos",
+     "titel": "Wer macht die Updates?",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -1057,13 +1057,13 @@
     {
      "datum": "2026-12-27",
      "art": "feed",
-     "post": "CD-099",
+     "post": "CD-109",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "CD-099"
+      "CD-109"
      ],
-     "titel": "Anfahrt und Parken",
+     "titel": "Zu große Fotos",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -1383,7 +1383,7 @@
   "bad-energie": {
    "eintraege": [
     {
-     "datum": "2026-11-03",
+     "datum": "2026-11-04",
      "art": "feed",
      "post": "BE-014",
      "nr": 1,
@@ -1397,7 +1397,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-03",
+     "datum": "2026-11-04",
      "art": "story",
      "post": "BE-065",
      "nr": 1,
@@ -1411,7 +1411,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-04",
+     "datum": "2026-11-05",
      "art": "feed",
      "post": "BE-049",
      "nr": 1,
@@ -1420,20 +1420,6 @@
       "BE-049"
      ],
      "titel": "Heizungsdruck prüfen",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
-    },
-    {
-     "datum": "2026-11-05",
-     "art": "feed",
-     "post": "BE-050",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "BE-050"
-     ],
-     "titel": "Dusch-WC",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -1469,13 +1455,13 @@
     {
      "datum": "2026-11-07",
      "art": "feed",
-     "post": "BE-054",
+     "post": "BE-050",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-054"
+      "BE-050"
      ],
-     "titel": "Multifunktionsarmatur Küche",
+     "titel": "Dusch-WC",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -1497,6 +1483,20 @@
     {
      "datum": "2026-11-08",
      "art": "feed",
+     "post": "BE-054",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "BE-054"
+     ],
+     "titel": "Multifunktionsarmatur Küche",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-11-09",
+     "art": "feed",
      "post": "BE-055",
      "nr": 1,
      "typ": "bild",
@@ -1509,7 +1509,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-09",
+     "datum": "2026-11-10",
      "art": "feed",
      "post": "BE-058",
      "nr": 1,
@@ -1524,35 +1524,17 @@
     },
     {
      "datum": "2026-11-10",
-     "art": "feed",
-     "post": "BE-001",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "BE-001"
-     ],
-     "titel": "100 Jahre: Hauptmotiv",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": [
-      "BE-001"
-     ]
-    },
-    {
-     "datum": "2026-11-10",
      "art": "story",
-     "post": "BE-120",
+     "post": "BE-067",
      "nr": 1,
      "typ": "story",
      "ids": [
-      "BE-120"
+      "BE-067"
      ],
-     "titel": "Story: 100 Jahre: Hauptmotiv",
-     "sticker": false,
-     "quelle": "zu BE-001",
-     "wartet": [
-      "BE-120"
-     ]
+     "titel": "Story: Termin anfragen",
+     "sticker": true,
+     "quelle": "auffueller",
+     "wartet": []
     },
     {
      "datum": "2026-11-11",
@@ -1585,33 +1567,33 @@
     {
      "datum": "2026-11-12",
      "art": "feed",
-     "post": "BE-003",
+     "post": "BE-001",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-003"
+      "BE-001"
      ],
-     "titel": "Heizungsförderung",
+     "titel": "100 Jahre: Hauptmotiv",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": [
-      "BE-003"
+      "BE-001"
      ]
     },
     {
      "datum": "2026-11-12",
      "art": "story",
-     "post": "BE-121",
+     "post": "BE-120",
      "nr": 1,
      "typ": "story",
      "ids": [
-      "BE-121"
+      "BE-120"
      ],
-     "titel": "Story: Heizungsförderung",
+     "titel": "Story: 100 Jahre: Hauptmotiv",
      "sticker": false,
-     "quelle": "zu BE-003",
+     "quelle": "zu BE-001",
      "wartet": [
-      "BE-121"
+      "BE-120"
      ]
     },
     {
@@ -1649,6 +1631,38 @@
     {
      "datum": "2026-11-14",
      "art": "feed",
+     "post": "BE-003",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "BE-003"
+     ],
+     "titel": "Heizungsförderung",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": [
+      "BE-003"
+     ]
+    },
+    {
+     "datum": "2026-11-14",
+     "art": "story",
+     "post": "BE-121",
+     "nr": 1,
+     "typ": "story",
+     "ids": [
+      "BE-121"
+     ],
+     "titel": "Story: Heizungsförderung",
+     "sticker": false,
+     "quelle": "zu BE-003",
+     "wartet": [
+      "BE-121"
+     ]
+    },
+    {
+     "datum": "2026-11-15",
+     "art": "feed",
      "post": "BE-006",
      "nr": 1,
      "typ": "bild",
@@ -1663,32 +1677,20 @@
      ]
     },
     {
-     "datum": "2026-11-14",
+     "datum": "2026-11-15",
      "art": "story",
-     "post": "BE-067",
+     "post": "BE-068",
      "nr": 1,
      "typ": "story",
      "ids": [
-      "BE-067"
+      "BE-068"
      ],
-     "titel": "Story: Termin anfragen",
+     "titel": "Story: 100 Jahre Bad & Energie",
      "sticker": true,
      "quelle": "auffueller",
-     "wartet": []
-    },
-    {
-     "datum": "2026-11-15",
-     "art": "feed",
-     "post": "BE-060",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "BE-060"
-     ],
-     "titel": "Objekt- und Anlagenbau",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "BE-068"
+     ]
     },
     {
      "datum": "2026-11-16",
@@ -1721,32 +1723,16 @@
     {
      "datum": "2026-11-17",
      "art": "feed",
-     "post": "BE-097",
+     "post": "BE-060",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-097"
+      "BE-060"
      ],
-     "titel": "Vom 70er-Jahre-Bad zum Wohlfühlbad",
+     "titel": "Objekt- und Anlagenbau",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
-    },
-    {
-     "datum": "2026-11-17",
-     "art": "story",
-     "post": "BE-068",
-     "nr": 1,
-     "typ": "story",
-     "ids": [
-      "BE-068"
-     ],
-     "titel": "Story: 100 Jahre Bad & Energie",
-     "sticker": true,
-     "quelle": "auffueller",
-     "wartet": [
-      "BE-068"
-     ]
     },
     {
      "datum": "2026-11-18",
@@ -1777,15 +1763,31 @@
      ]
     },
     {
+     "datum": "2026-11-18",
+     "art": "story",
+     "post": "BE-089",
+     "nr": 1,
+     "typ": "story",
+     "ids": [
+      "BE-089"
+     ],
+     "titel": "Story-Quiz: Förderantrag vor Baubeginn",
+     "sticker": true,
+     "quelle": "auffueller",
+     "wartet": [
+      "BE-089"
+     ]
+    },
+    {
      "datum": "2026-11-19",
      "art": "feed",
-     "post": "BE-110",
+     "post": "BE-097",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-110"
+      "BE-097"
      ],
-     "titel": "Fachbetrieb in Wetzlar und Umgebung",
+     "titel": "Vom 70er-Jahre-Bad zum Wohlfühlbad",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -1825,6 +1827,34 @@
     {
      "datum": "2026-11-21",
      "art": "feed",
+     "post": "BE-110",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "BE-110"
+     ],
+     "titel": "Fachbetrieb in Wetzlar und Umgebung",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-11-21",
+     "art": "story",
+     "post": "BE-099",
+     "nr": 1,
+     "typ": "story",
+     "ids": [
+      "BE-099"
+     ],
+     "titel": "Story-Umfrage: Fliesen hell oder dunkel",
+     "sticker": true,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-11-22",
+     "art": "feed",
      "post": "BE-112",
      "nr": 1,
      "typ": "bild",
@@ -1839,23 +1869,23 @@
      ]
     },
     {
-     "datum": "2026-11-21",
-     "art": "story",
-     "post": "BE-089",
+     "datum": "2026-11-23",
+     "art": "feed",
+     "post": "BE-010",
      "nr": 1,
-     "typ": "story",
+     "typ": "bild",
      "ids": [
-      "BE-089"
+      "BE-010"
      ],
-     "titel": "Story-Quiz: Förderantrag vor Baubeginn",
-     "sticker": true,
-     "quelle": "auffueller",
+     "titel": "Zuschuss der Pflegekasse",
+     "sticker": false,
+     "quelle": "plan",
      "wartet": [
-      "BE-089"
+      "BE-010"
      ]
     },
     {
-     "datum": "2026-11-22",
+     "datum": "2026-11-24",
      "art": "feed",
      "post": "BE-K1",
      "nr": 1,
@@ -1883,50 +1913,20 @@
      ]
     },
     {
-     "datum": "2026-11-23",
-     "art": "feed",
-     "post": "BE-010",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "BE-010"
-     ],
-     "titel": "Zuschuss der Pflegekasse",
-     "sticker": false,
-     "quelle": "plan",
-     "wartet": [
-      "BE-010"
-     ]
-    },
-    {
-     "datum": "2026-11-24",
-     "art": "feed",
-     "post": "BE-083",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "BE-083"
-     ],
-     "titel": "Klimageschwindigkeitsbonus: Wer ihn bekommt",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": [
-      "BE-083"
-     ]
-    },
-    {
      "datum": "2026-11-24",
      "art": "story",
-     "post": "BE-099",
+     "post": "BE-100",
      "nr": 1,
      "typ": "story",
      "ids": [
-      "BE-099"
+      "BE-100"
      ],
-     "titel": "Story-Umfrage: Fliesen hell oder dunkel",
+     "titel": "Story: Zuschuss mit Pflegegrad",
      "sticker": true,
      "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "BE-100"
+     ]
     },
     {
      "datum": "2026-11-25",
@@ -1945,16 +1945,18 @@
     {
      "datum": "2026-11-26",
      "art": "feed",
-     "post": "BE-042",
+     "post": "BE-083",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-042"
+      "BE-083"
      ],
-     "titel": "Heizungsanfrage online",
+     "titel": "Klimageschwindigkeitsbonus: Wer ihn bekommt",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "BE-083"
+     ]
     },
     {
      "datum": "2026-11-27",
@@ -1973,29 +1975,27 @@
     {
      "datum": "2026-11-27",
      "art": "story",
-     "post": "BE-100",
+     "post": "BE-105",
      "nr": 1,
      "typ": "story",
      "ids": [
-      "BE-100"
+      "BE-105"
      ],
-     "titel": "Story: Zuschuss mit Pflegegrad",
+     "titel": "Story-Umfrage: Photovoltaik",
      "sticker": true,
      "quelle": "auffueller",
-     "wartet": [
-      "BE-100"
-     ]
+     "wartet": []
     },
     {
      "datum": "2026-11-28",
      "art": "feed",
-     "post": "BE-056",
+     "post": "BE-042",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-056"
+      "BE-042"
      ],
-     "titel": "Dezentrale Lüftung",
+     "titel": "Heizungsanfrage online",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2033,27 +2033,29 @@
     {
      "datum": "2026-11-30",
      "art": "story",
-     "post": "BE-105",
+     "post": "BE-108",
      "nr": 1,
      "typ": "story",
      "ids": [
-      "BE-105"
+      "BE-108"
      ],
-     "titel": "Story-Umfrage: Photovoltaik",
+     "titel": "Story-Quiz: Seit wann gibt es uns",
      "sticker": true,
      "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "BE-108"
+     ]
     },
     {
      "datum": "2026-12-01",
      "art": "feed",
-     "post": "BE-086",
+     "post": "BE-056",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-086"
+      "BE-056"
      ],
-     "titel": "Laub weg, Wärmepumpe frei",
+     "titel": "Dezentrale Lüftung",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2089,17 +2091,17 @@
     {
      "datum": "2026-12-03",
      "art": "story",
-     "post": "BE-108",
+     "post": "BE-109",
      "nr": 1,
      "typ": "story",
      "ids": [
-      "BE-108"
+      "BE-109"
      ],
-     "titel": "Story-Quiz: Seit wann gibt es uns",
+     "titel": "Story: Handwerk mit Zukunft",
      "sticker": true,
      "quelle": "auffueller",
      "wartet": [
-      "BE-108"
+      "BE-109"
      ]
     },
     {
@@ -2119,6 +2121,20 @@
     {
      "datum": "2026-12-05",
      "art": "feed",
+     "post": "BE-086",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "BE-086"
+     ],
+     "titel": "Laub weg, Wärmepumpe frei",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-12-06",
+     "art": "feed",
      "post": "BE-051",
      "nr": 1,
      "typ": "bild",
@@ -2129,36 +2145,6 @@
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
-    },
-    {
-     "datum": "2026-12-06",
-     "art": "feed",
-     "post": "BE-101",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "BE-101"
-     ],
-     "titel": "Photovoltaik auf dem eigenen Dach",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
-    },
-    {
-     "datum": "2026-12-06",
-     "art": "story",
-     "post": "BE-109",
-     "nr": 1,
-     "typ": "story",
-     "ids": [
-      "BE-109"
-     ],
-     "titel": "Story: Handwerk mit Zukunft",
-     "sticker": true,
-     "quelle": "auffueller",
-     "wartet": [
-      "BE-109"
-     ]
     },
     {
      "datum": "2026-12-07",
@@ -2191,13 +2177,13 @@
     {
      "datum": "2026-12-08",
      "art": "feed",
-     "post": "BE-059",
+     "post": "BE-101",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-059"
+      "BE-101"
      ],
-     "titel": "In der Region unterwegs",
+     "titel": "Photovoltaik auf dem eigenen Dach",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2219,13 +2205,13 @@
     {
      "datum": "2026-12-10",
      "art": "feed",
-     "post": "BE-106",
+     "post": "BE-059",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-106"
+      "BE-059"
      ],
-     "titel": "Sanitär für Behörden und Kommunen",
+     "titel": "In der Region unterwegs",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2249,13 +2235,13 @@
     {
      "datum": "2026-12-12",
      "art": "feed",
-     "post": "BE-115",
+     "post": "BE-106",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-115"
+      "BE-106"
      ],
-     "titel": "Wärmepumpe ohne Winterschlaf",
+     "titel": "Sanitär für Behörden und Kommunen",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2263,19 +2249,13 @@
     {
      "datum": "2026-12-13",
      "art": "feed",
-     "post": "BE-K4",
+     "post": "BE-115",
      "nr": 1,
-     "typ": "karussell",
+     "typ": "bild",
      "ids": [
-      "BE-069",
-      "BE-070",
-      "BE-071",
-      "BE-072",
-      "BE-073",
-      "BE-074",
-      "BE-075"
+      "BE-115"
      ],
-     "titel": "Ihr Weg zum neuen Bad",
+     "titel": "Wärmepumpe ohne Winterschlaf",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2327,13 +2307,19 @@
     {
      "datum": "2026-12-17",
      "art": "feed",
-     "post": "BE-044",
+     "post": "BE-K4",
      "nr": 1,
-     "typ": "bild",
+     "typ": "karussell",
      "ids": [
-      "BE-044"
+      "BE-069",
+      "BE-070",
+      "BE-071",
+      "BE-072",
+      "BE-073",
+      "BE-074",
+      "BE-075"
      ],
-     "titel": "Hybridheizung",
+     "titel": "Ihr Weg zum neuen Bad",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2355,13 +2341,13 @@
     {
      "datum": "2026-12-19",
      "art": "feed",
-     "post": "BE-102",
+     "post": "BE-044",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-102"
+      "BE-044"
      ],
-     "titel": "Zentrale Wohnraumlüftung",
+     "titel": "Hybridheizung",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2369,13 +2355,13 @@
     {
      "datum": "2026-12-20",
      "art": "feed",
-     "post": "BE-087",
+     "post": "BE-102",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-087"
+      "BE-102"
      ],
-     "titel": "Heizkörper freihalten",
+     "titel": "Zentrale Wohnraumlüftung",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2443,13 +2429,13 @@
     {
      "datum": "2026-12-26",
      "art": "feed",
-     "post": "BE-052",
+     "post": "BE-087",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-052"
+      "BE-087"
      ],
-     "titel": "Kleines Bad, clever geplant",
+     "titel": "Heizkörper freihalten",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2501,13 +2487,13 @@
     {
      "datum": "2026-12-29",
      "art": "feed",
-     "post": "BE-103",
+     "post": "BE-052",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-103"
+      "BE-052"
      ],
-     "titel": "Kalk und hartes Wasser",
+     "titel": "Kleines Bad, clever geplant",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2529,13 +2515,13 @@
     {
      "datum": "2026-12-31",
      "art": "feed",
-     "post": "BE-113",
+     "post": "BE-103",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-113"
+      "BE-103"
      ],
-     "titel": "Vom Einfamilienhaus bis zum Gewerbeobjekt",
+     "titel": "Kalk und hartes Wasser",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2556,6 +2542,20 @@
     },
     {
      "datum": "2027-01-02",
+     "art": "feed",
+     "post": "BE-113",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "BE-113"
+     ],
+     "titel": "Vom Einfamilienhaus bis zum Gewerbeobjekt",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2027-01-03",
      "art": "feed",
      "post": "BE-K5",
      "nr": 1,
@@ -2583,20 +2583,6 @@
      ]
     },
     {
-     "datum": "2027-01-03",
-     "art": "feed",
-     "post": "BE-045",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "BE-045"
-     ],
-     "titel": "Brennstoffzellenheizung",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
-    },
-    {
      "datum": "2027-01-04",
      "art": "feed",
      "post": "BE-004",
@@ -2615,13 +2601,13 @@
     {
      "datum": "2027-01-05",
      "art": "feed",
-     "post": "BE-088",
+     "post": "BE-045",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "BE-088"
+      "BE-045"
      ],
-     "titel": "Stoßlüften im Winter",
+     "titel": "Brennstoffzellenheizung",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2671,6 +2657,20 @@
     {
      "datum": "2027-01-09",
      "art": "feed",
+     "post": "BE-088",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "BE-088"
+     ],
+     "titel": "Stoßlüften im Winter",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2027-01-10",
+     "art": "feed",
      "post": "BE-053",
      "nr": 1,
      "typ": "bild",
@@ -2683,7 +2683,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-10",
+     "datum": "2027-01-11",
      "art": "feed",
      "post": "BE-046",
      "nr": 1,
@@ -2692,20 +2692,6 @@
       "BE-046"
      ],
      "titel": "BHKW fürs Gewerbe",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
-    },
-    {
-     "datum": "2027-01-11",
-     "art": "feed",
-     "post": "BE-098",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "BE-098"
-     ],
-     "titel": "Silikonfugen erneuern",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -2729,6 +2715,20 @@
     {
      "datum": "2027-01-12",
      "art": "feed",
+     "post": "BE-098",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "BE-098"
+     ],
+     "titel": "Silikonfugen erneuern",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2027-01-13",
+     "art": "feed",
      "post": "BE-057",
      "nr": 1,
      "typ": "bild",
@@ -2741,7 +2741,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-13",
+     "datum": "2027-01-14",
      "art": "feed",
      "post": "BE-047",
      "nr": 1,
@@ -2755,7 +2755,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-14",
+     "datum": "2027-01-15",
      "art": "feed",
      "post": "BE-092",
      "nr": 1,
@@ -2769,7 +2769,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-15",
+     "datum": "2027-01-16",
      "art": "feed",
      "post": "BE-084",
      "nr": 1,
@@ -2785,7 +2785,7 @@
      ]
     },
     {
-     "datum": "2027-01-16",
+     "datum": "2027-01-17",
      "art": "feed",
      "post": "BE-093",
      "nr": 1,
@@ -2799,7 +2799,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-17",
+     "datum": "2027-01-18",
      "art": "feed",
      "post": "BE-085",
      "nr": 1,
@@ -2813,7 +2813,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-18",
+     "datum": "2027-01-19",
      "art": "feed",
      "post": "BE-094",
      "nr": 1,
@@ -2827,7 +2827,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-19",
+     "datum": "2027-01-20",
      "art": "feed",
      "post": "BE-091",
      "nr": 1,
@@ -2841,7 +2841,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-20",
+     "datum": "2027-01-21",
      "art": "feed",
      "post": "BE-095",
      "nr": 1,
@@ -2855,7 +2855,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-21",
+     "datum": "2027-01-22",
      "art": "feed",
      "post": "BE-096",
      "nr": 1,
@@ -2874,7 +2874,7 @@
   "tezgel": {
    "eintraege": [
     {
-     "datum": "2026-11-03",
+     "datum": "2026-11-04",
      "art": "feed",
      "post": "TZ-005",
      "nr": 1,
@@ -2888,7 +2888,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-03",
+     "datum": "2026-11-04",
      "art": "story",
      "post": "TZ-065",
      "nr": 1,
@@ -2902,7 +2902,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-04",
+     "datum": "2026-11-05",
      "art": "feed",
      "post": "TZ-045",
      "nr": 1,
@@ -2916,7 +2916,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-05",
+     "datum": "2026-11-06",
      "art": "feed",
      "post": "TZ-047",
      "nr": 1,
@@ -2930,7 +2930,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-06",
+     "datum": "2026-11-07",
      "art": "feed",
      "post": "TZ-048",
      "nr": 1,
@@ -2944,7 +2944,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-06",
+     "datum": "2026-11-07",
      "art": "story",
      "post": "TZ-113",
      "nr": 1,
@@ -2958,7 +2958,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-07",
+     "datum": "2026-11-08",
      "art": "feed",
      "post": "TZ-053",
      "nr": 1,
@@ -2972,7 +2972,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-08",
+     "datum": "2026-11-09",
      "art": "feed",
      "post": "TZ-060",
      "nr": 1,
@@ -2986,7 +2986,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-09",
+     "datum": "2026-11-10",
      "art": "feed",
      "post": "TZ-063",
      "nr": 1,
@@ -3000,7 +3000,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-11-09",
+     "datum": "2026-11-10",
      "art": "story",
      "post": "TZ-114",
      "nr": 1,
@@ -3012,38 +3012,6 @@
      "sticker": true,
      "quelle": "auffueller",
      "wartet": []
-    },
-    {
-     "datum": "2026-11-10",
-     "art": "feed",
-     "post": "TZ-001",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "TZ-001"
-     ],
-     "titel": "Termin vor Ort, fester Preis",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": [
-      "TZ-001"
-     ]
-    },
-    {
-     "datum": "2026-11-10",
-     "art": "story",
-     "post": "TZ-121",
-     "nr": 1,
-     "typ": "story",
-     "ids": [
-      "TZ-121"
-     ],
-     "titel": "Story: Termin vor Ort, fester Preis",
-     "sticker": false,
-     "quelle": "zu TZ-001",
-     "wartet": [
-      "TZ-121"
-     ]
     },
     {
      "datum": "2026-11-11",
@@ -3064,33 +3032,33 @@
     {
      "datum": "2026-11-12",
      "art": "feed",
-     "post": "TZ-002",
+     "post": "TZ-001",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "TZ-002"
+      "TZ-001"
      ],
-     "titel": "Dusche ohne Stufe",
+     "titel": "Termin vor Ort, fester Preis",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": [
-      "TZ-002"
+      "TZ-001"
      ]
     },
     {
      "datum": "2026-11-12",
      "art": "story",
-     "post": "TZ-122",
+     "post": "TZ-121",
      "nr": 1,
      "typ": "story",
      "ids": [
-      "TZ-122"
+      "TZ-121"
      ],
-     "titel": "Story: Dusche ohne Stufe",
+     "titel": "Story: Termin vor Ort, fester Preis",
      "sticker": false,
-     "quelle": "zu TZ-002",
+     "quelle": "zu TZ-001",
      "wartet": [
-      "TZ-122"
+      "TZ-121"
      ]
     },
     {
@@ -3128,6 +3096,38 @@
     {
      "datum": "2026-11-14",
      "art": "feed",
+     "post": "TZ-002",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "TZ-002"
+     ],
+     "titel": "Dusche ohne Stufe",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": [
+      "TZ-002"
+     ]
+    },
+    {
+     "datum": "2026-11-14",
+     "art": "story",
+     "post": "TZ-122",
+     "nr": 1,
+     "typ": "story",
+     "ids": [
+      "TZ-122"
+     ],
+     "titel": "Story: Dusche ohne Stufe",
+     "sticker": false,
+     "quelle": "zu TZ-002",
+     "wartet": [
+      "TZ-122"
+     ]
+    },
+    {
+     "datum": "2026-11-15",
+     "art": "feed",
      "post": "TZ-003",
      "nr": 1,
      "typ": "bild",
@@ -3142,7 +3142,7 @@
      ]
     },
     {
-     "datum": "2026-11-14",
+     "datum": "2026-11-15",
      "art": "story",
      "post": "TZ-123",
      "nr": 1,
@@ -3156,20 +3156,6 @@
      "wartet": [
       "TZ-123"
      ]
-    },
-    {
-     "datum": "2026-11-15",
-     "art": "feed",
-     "post": "TZ-075",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "TZ-075"
-     ],
-     "titel": "Vorher/Nachher als Symbolbild",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
     },
     {
      "datum": "2026-11-16",
@@ -3206,13 +3192,13 @@
     {
      "datum": "2026-11-17",
      "art": "feed",
-     "post": "TZ-084",
+     "post": "TZ-075",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "TZ-084"
+      "TZ-075"
      ],
-     "titel": "Großformat an der Wand",
+     "titel": "Vorher/Nachher als Symbolbild",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -3264,13 +3250,13 @@
     {
      "datum": "2026-11-19",
      "art": "feed",
-     "post": "TZ-100",
+     "post": "TZ-084",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "TZ-100"
+      "TZ-084"
      ],
-     "titel": "Ausschnitt ums Rohr",
+     "titel": "Großformat an der Wand",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -3310,13 +3296,13 @@
     {
      "datum": "2026-11-21",
      "art": "feed",
-     "post": "TZ-101",
+     "post": "TZ-100",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "TZ-101"
+      "TZ-100"
      ],
-     "titel": "Silikonfuge erneuern",
+     "titel": "Ausschnitt ums Rohr",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -3338,6 +3324,20 @@
     {
      "datum": "2026-11-22",
      "art": "feed",
+     "post": "TZ-101",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "TZ-101"
+     ],
+     "titel": "Silikonfuge erneuern",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-11-23",
+     "art": "feed",
      "post": "TZ-102",
      "nr": 1,
      "typ": "bild",
@@ -3352,7 +3352,7 @@
      ]
     },
     {
-     "datum": "2026-11-23",
+     "datum": "2026-11-24",
      "art": "feed",
      "post": "TZ-104",
      "nr": 1,
@@ -3366,20 +3366,6 @@
      "wartet": [
       "TZ-104"
      ]
-    },
-    {
-     "datum": "2026-11-24",
-     "art": "feed",
-     "post": "TZ-112",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "TZ-112"
-     ],
-     "titel": "Nach dem Duschen abziehen",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
     },
     {
      "datum": "2026-11-24",
@@ -3412,24 +3398,16 @@
     {
      "datum": "2026-11-26",
      "art": "feed",
-     "post": "TZ-K1",
+     "post": "TZ-112",
      "nr": 1,
-     "typ": "karussell",
+     "typ": "bild",
      "ids": [
-      "TZ-021",
-      "TZ-022",
-      "TZ-023",
-      "TZ-024",
-      "TZ-025",
-      "TZ-026",
-      "TZ-027"
+      "TZ-112"
      ],
-     "titel": "Von der Wanne zur Dusche",
+     "titel": "Nach dem Duschen abziehen",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": [
-      "TZ-024"
-     ]
+     "wartet": []
     },
     {
      "datum": "2026-11-27",
@@ -3462,16 +3440,24 @@
     {
      "datum": "2026-11-28",
      "art": "feed",
-     "post": "TZ-054",
+     "post": "TZ-K1",
      "nr": 1,
-     "typ": "bild",
+     "typ": "karussell",
      "ids": [
-      "TZ-054"
+      "TZ-021",
+      "TZ-022",
+      "TZ-023",
+      "TZ-024",
+      "TZ-025",
+      "TZ-026",
+      "TZ-027"
      ],
-     "titel": "Erst messen, dann fliesen",
+     "titel": "Von der Wanne zur Dusche",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "TZ-024"
+     ]
     },
     {
      "datum": "2026-11-29",
@@ -3520,13 +3506,13 @@
     {
      "datum": "2026-12-01",
      "art": "feed",
-     "post": "TZ-041",
+     "post": "TZ-054",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "TZ-041"
+      "TZ-054"
      ],
-     "titel": "Kleines Gäste-WC",
+     "titel": "Erst messen, dann fliesen",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -3550,13 +3536,13 @@
     {
      "datum": "2026-12-03",
      "art": "feed",
-     "post": "TZ-085",
+     "post": "TZ-041",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "TZ-085"
+      "TZ-041"
      ],
-     "titel": "Sockel aus derselben Fliese",
+     "titel": "Kleines Gäste-WC",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -3594,6 +3580,20 @@
     {
      "datum": "2026-12-05",
      "art": "feed",
+     "post": "TZ-085",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "TZ-085"
+     ],
+     "titel": "Sockel aus derselben Fliese",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-12-06",
+     "art": "feed",
      "post": "TZ-052",
      "nr": 1,
      "typ": "bild",
@@ -3606,7 +3606,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-12-06",
+     "datum": "2026-12-07",
      "art": "feed",
      "post": "TZ-046",
      "nr": 1,
@@ -3620,7 +3620,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-12-07",
+     "datum": "2026-12-08",
      "art": "feed",
      "post": "TZ-049",
      "nr": 1,
@@ -3634,20 +3634,6 @@
      "wartet": [
       "TZ-049"
      ]
-    },
-    {
-     "datum": "2026-12-08",
-     "art": "feed",
-     "post": "TZ-083",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "TZ-083"
-     ],
-     "titel": "Naturstein als Unikat",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
     },
     {
      "datum": "2026-12-09",
@@ -3666,13 +3652,13 @@
     {
      "datum": "2026-12-10",
      "art": "feed",
-     "post": "TZ-061",
+     "post": "TZ-083",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "TZ-061"
+      "TZ-083"
      ],
-     "titel": "Große Formate",
+     "titel": "Naturstein als Unikat",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -3696,6 +3682,20 @@
     {
      "datum": "2026-12-12",
      "art": "feed",
+     "post": "TZ-061",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "TZ-061"
+     ],
+     "titel": "Große Formate",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-12-13",
+     "art": "feed",
      "post": "TZ-108",
      "nr": 1,
      "typ": "bild",
@@ -3706,22 +3706,6 @@
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
-    },
-    {
-     "datum": "2026-12-13",
-     "art": "feed",
-     "post": "TZ-105",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "TZ-105"
-     ],
-     "titel": "Was du als Fliesenleger lernst",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": [
-      "TZ-105"
-     ]
     },
     {
      "datum": "2026-12-14",
@@ -3740,21 +3724,18 @@
     {
      "datum": "2026-12-15",
      "art": "feed",
-     "post": "TZ-K4",
+     "post": "TZ-105",
      "nr": 1,
-     "typ": "karussell",
+     "typ": "bild",
      "ids": [
-      "TZ-076",
-      "TZ-077",
-      "TZ-078",
-      "TZ-079",
-      "TZ-080",
-      "TZ-081"
+      "TZ-105"
      ],
-     "titel": "Dusche ohne Stufe im Detail",
+     "titel": "Was du als Fliesenleger lernst",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "TZ-105"
+     ]
     },
     {
      "datum": "2026-12-16",
@@ -3773,18 +3754,21 @@
     {
      "datum": "2026-12-17",
      "art": "feed",
-     "post": "TZ-055",
+     "post": "TZ-K4",
      "nr": 1,
-     "typ": "bild",
+     "typ": "karussell",
      "ids": [
-      "TZ-055"
+      "TZ-076",
+      "TZ-077",
+      "TZ-078",
+      "TZ-079",
+      "TZ-080",
+      "TZ-081"
      ],
-     "titel": "Projekt-Check",
+     "titel": "Dusche ohne Stufe im Detail",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": [
-      "TZ-055"
-     ]
+     "wartet": []
     },
     {
      "datum": "2026-12-18",
@@ -3803,6 +3787,22 @@
     {
      "datum": "2026-12-19",
      "art": "feed",
+     "post": "TZ-055",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "TZ-055"
+     ],
+     "titel": "Projekt-Check",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": [
+      "TZ-055"
+     ]
+    },
+    {
+     "datum": "2026-12-20",
+     "art": "feed",
      "post": "TZ-042",
      "nr": 1,
      "typ": "bild",
@@ -3815,7 +3815,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-12-20",
+     "datum": "2026-12-21",
      "art": "feed",
      "post": "TZ-086",
      "nr": 1,
@@ -3829,7 +3829,7 @@
      "wartet": []
     },
     {
-     "datum": "2026-12-21",
+     "datum": "2026-12-22",
      "art": "feed",
      "post": "TZ-094",
      "nr": 1,
@@ -3838,20 +3838,6 @@
       "TZ-094"
      ],
      "titel": "Drinnen und draußen, ein Boden",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": []
-    },
-    {
-     "datum": "2026-12-22",
-     "art": "feed",
-     "post": "TZ-082",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "TZ-082"
-     ],
-     "titel": "Die Stufenkante",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -3873,6 +3859,20 @@
     {
      "datum": "2026-12-24",
      "art": "feed",
+     "post": "TZ-082",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "TZ-082"
+     ],
+     "titel": "Die Stufenkante",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2026-12-26",
+     "art": "feed",
      "post": "TZ-050",
      "nr": 1,
      "typ": "bild",
@@ -3887,7 +3887,7 @@
      ]
     },
     {
-     "datum": "2026-12-26",
+     "datum": "2026-12-27",
      "art": "feed",
      "post": "TZ-087",
      "nr": 1,
@@ -3899,22 +3899,6 @@
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
-    },
-    {
-     "datum": "2026-12-27",
-     "art": "feed",
-     "post": "TZ-106",
-     "nr": 1,
-     "typ": "bild",
-     "ids": [
-      "TZ-106"
-     ],
-     "titel": "Der Inhaber kommt selbst",
-     "sticker": false,
-     "quelle": "auffueller",
-     "wartet": [
-      "TZ-106"
-     ]
     },
     {
      "datum": "2026-12-27",
@@ -3947,21 +3931,18 @@
     {
      "datum": "2026-12-29",
      "art": "feed",
-     "post": "TZ-K5",
+     "post": "TZ-106",
      "nr": 1,
-     "typ": "karussell",
+     "typ": "bild",
      "ids": [
-      "TZ-088",
-      "TZ-089",
-      "TZ-090",
-      "TZ-091",
-      "TZ-092",
-      "TZ-093"
+      "TZ-106"
      ],
-     "titel": "So liegen große Fliesen eben",
+     "titel": "Der Inhaber kommt selbst",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "TZ-106"
+     ]
     },
     {
      "datum": "2026-12-30",
@@ -4026,18 +4007,21 @@
     {
      "datum": "2027-01-03",
      "art": "feed",
-     "post": "TZ-056",
+     "post": "TZ-K5",
      "nr": 1,
-     "typ": "bild",
+     "typ": "karussell",
      "ids": [
-      "TZ-056"
+      "TZ-088",
+      "TZ-089",
+      "TZ-090",
+      "TZ-091",
+      "TZ-092",
+      "TZ-093"
      ],
-     "titel": "Fliesen-Konfigurator",
+     "titel": "So liegen große Fliesen eben",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": [
-      "TZ-056"
-     ]
+     "wartet": []
     },
     {
      "datum": "2027-01-04",
@@ -4063,16 +4047,18 @@
     {
      "datum": "2027-01-05",
      "art": "feed",
-     "post": "TZ-043",
+     "post": "TZ-056",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "TZ-043"
+      "TZ-056"
      ],
-     "titel": "Nischen statt Regal",
+     "titel": "Fliesen-Konfigurator",
      "sticker": false,
      "quelle": "auffueller",
-     "wartet": []
+     "wartet": [
+      "TZ-056"
+     ]
     },
     {
      "datum": "2027-01-06",
@@ -4105,13 +4091,13 @@
     {
      "datum": "2027-01-07",
      "art": "feed",
-     "post": "TZ-095",
+     "post": "TZ-043",
      "nr": 1,
      "typ": "bild",
      "ids": [
-      "TZ-095"
+      "TZ-043"
      ],
-     "titel": "Balkon im Winter planen",
+     "titel": "Nischen statt Regal",
      "sticker": false,
      "quelle": "auffueller",
      "wartet": []
@@ -4133,6 +4119,20 @@
     {
      "datum": "2027-01-09",
      "art": "feed",
+     "post": "TZ-095",
+     "nr": 1,
+     "typ": "bild",
+     "ids": [
+      "TZ-095"
+     ],
+     "titel": "Balkon im Winter planen",
+     "sticker": false,
+     "quelle": "auffueller",
+     "wartet": []
+    },
+    {
+     "datum": "2027-01-10",
+     "art": "feed",
      "post": "TZ-051",
      "nr": 1,
      "typ": "bild",
@@ -4145,7 +4145,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-10",
+     "datum": "2027-01-11",
      "art": "feed",
      "post": "TZ-057",
      "nr": 1,
@@ -4161,7 +4161,7 @@
      ]
     },
     {
-     "datum": "2027-01-11",
+     "datum": "2027-01-12",
      "art": "feed",
      "post": "TZ-044",
      "nr": 1,
@@ -4175,7 +4175,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-12",
+     "datum": "2027-01-13",
      "art": "feed",
      "post": "TZ-096",
      "nr": 1,
@@ -4189,7 +4189,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-13",
+     "datum": "2027-01-14",
      "art": "feed",
      "post": "TZ-107",
      "nr": 1,
@@ -4203,7 +4203,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-14",
+     "datum": "2027-01-15",
      "art": "feed",
      "post": "TZ-058",
      "nr": 1,
@@ -4219,7 +4219,7 @@
      ]
     },
     {
-     "datum": "2027-01-15",
+     "datum": "2027-01-16",
      "art": "feed",
      "post": "TZ-068",
      "nr": 1,
@@ -4233,7 +4233,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-16",
+     "datum": "2027-01-17",
      "art": "feed",
      "post": "TZ-097",
      "nr": 1,
@@ -4247,7 +4247,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-17",
+     "datum": "2027-01-18",
      "art": "feed",
      "post": "TZ-098",
      "nr": 1,
@@ -4261,7 +4261,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-18",
+     "datum": "2027-01-19",
      "art": "feed",
      "post": "TZ-069",
      "nr": 1,
@@ -4275,7 +4275,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-19",
+     "datum": "2027-01-20",
      "art": "feed",
      "post": "TZ-099",
      "nr": 1,
@@ -4289,7 +4289,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-20",
+     "datum": "2027-01-21",
      "art": "feed",
      "post": "TZ-070",
      "nr": 1,
@@ -4303,7 +4303,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-21",
+     "datum": "2027-01-22",
      "art": "feed",
      "post": "TZ-103",
      "nr": 1,
@@ -4319,7 +4319,7 @@
      ]
     },
     {
-     "datum": "2027-01-22",
+     "datum": "2027-01-23",
      "art": "feed",
      "post": "TZ-071",
      "nr": 1,
@@ -4333,7 +4333,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-23",
+     "datum": "2027-01-24",
      "art": "feed",
      "post": "TZ-072",
      "nr": 1,
@@ -4347,7 +4347,7 @@
      "wartet": []
     },
     {
-     "datum": "2027-01-24",
+     "datum": "2027-01-25",
      "art": "feed",
      "post": "TZ-073",
      "nr": 1,
@@ -4363,7 +4363,7 @@
      ]
     },
     {
-     "datum": "2027-01-25",
+     "datum": "2027-01-26",
      "art": "feed",
      "post": "TZ-074",
      "nr": 1,
