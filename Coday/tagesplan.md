@@ -1,23 +1,22 @@
 # Tagesplan Coday
 
-Stand 04.11.2026: ein Feed-Post pro Tag, dazu Stories. Die geplante Aufgabe in Claude Code baut den Plan jeden Morgen neu und stellt die Posts eine Woche im Voraus in Metricool ein, siehe [posting/README.md](../posting/README.md).
+Stand 05.11.2026: ein Feed-Post pro Tag, dazu Stories. Die geplante Aufgabe in Claude Code baut den Plan jeden Morgen neu und stellt die Posts eine Woche im Voraus in Metricool ein, siehe [posting/README.md](../posting/README.md).
 
 ⚠️ Wartet auf Freigabe (Gründe unten): Der Termin ist vorläufig. Der Post geht erst raus, wenn seine ID in `posting/geprueft.txt` steht, und rückt bis dahin jeden Tag nach.  
 ✋ Story mit Sticker (Umfrage, Quiz, Link): Metricool erinnert in der App, der Sticker kommt von Hand dazu.
 
 | Datum | Feed-Post | Text | Story |
 | --- | --- | --- | --- |
-| Do 05.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-060.jpg" width="90"><br>[CD-060](prompts.md#cd-060) Café: gut sichtbar auf der Karte | So wird dein Café für Spontangäste sichtbar. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) | [CD-078](prompts.md#cd-078) Story: PHP-Version (Umfrage) ✋ |
 | Fr 06.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-065.jpg" width="90"><br>[CD-065](prompts.md#cd-065) Aus dem Lahntal | Ich bin für dich vor Ort erreichbar. Kostenloser Check: Link in Bio. |  |
 | Sa 07.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-072.jpg" width="90"><br>[CD-072](prompts.md#cd-072) Erst Skizze, dann Code | So startet jedes Projekt. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) |  |
 | So 08.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-074.jpg" width="90"><br>[CD-074](prompts.md#cd-074) Humor: kein Menü | Tag jemanden 😄 Kostenloser Check: Link in Bio. | [CD-079](prompts.md#cd-079) Story: Wie schnell? ✋ |
 | Mo 09.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-050.jpg" width="90"><br>[CD-050](prompts.md#cd-050) Schnelle Shops | Ich baue E-Commerce ohne Plugin-Ballast. Kostenloser Check: Link in Bio. |  |
 | Di 10.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-055.jpg" width="90"><br>[CD-055](prompts.md#cd-055) Auf dem Handy unlesbar? | Ich baue Websites mobile-first. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) |  |
 | Mi 11.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-059.jpg" width="90"><br>[CD-059](prompts.md#cd-059) 30 Plugins zu 0 | Das ist ein Symbolbild, kein Kundenprojekt; die Zahlen sind ein Beispiel. Kostenloser Check: Link in Bio. | [CD-080](prompts.md#cd-080) Story: ChatGPT-Frage (Umfrage) ✋ |
-| Do 12.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-044.jpg" width="90"><br>[CD-044](prompts.md#cd-044) Server aktuell? ⚠️ | Die PHP-Version zählt mehr als das Theme. Kostenloser Check: Link in Bio. |  |
-| Fr 13.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-067.jpg" width="90"><br>[CD-067](prompts.md#cd-067) Core Web Vitals ⚠️ | Ich erkläre es kurz in den Kommentaren. Kostenloser Check: Link in Bio. |  |
-| Sa 14.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-070.jpg" width="90"><br>[CD-070](prompts.md#cd-070) Zahlen: Mobile Performance ⚠️ | Der Wert wurde auf codayweb.de gemessen. Kostenloser Check: Link in Bio. | [CD-077](prompts.md#cd-077) Story: PHP-Update ⚠️ ✋ |
-| So 15.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-061.jpg" width="90"><br>[CD-061](prompts.md#cd-061) Branche Handwerk: Konfigurator | Mit einem Konfigurator kommen Anfragen gleich mit allen Infos. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) |  |
+| Do 12.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-061.jpg" width="90"><br>[CD-061](prompts.md#cd-061) Branche Handwerk: Konfigurator | Mit einem Konfigurator kommen Anfragen gleich mit allen Infos. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) |  |
+| Fr 13.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-044.jpg" width="90"><br>[CD-044](prompts.md#cd-044) Server aktuell? ⚠️ | Die PHP-Version zählt mehr als das Theme. Kostenloser Check: Link in Bio. |  |
+| Sa 14.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-067.jpg" width="90"><br>[CD-067](prompts.md#cd-067) Core Web Vitals ⚠️ | Ich erkläre es kurz in den Kommentaren. Kostenloser Check: Link in Bio. | [CD-077](prompts.md#cd-077) Story: PHP-Update ⚠️ ✋ |
+| So 15.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-070.jpg" width="90"><br>[CD-070](prompts.md#cd-070) Zahlen: Mobile Performance ⚠️ | Der Wert wurde auf codayweb.de gemessen. Kostenloser Check: Link in Bio. |  |
 | Mo 16.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-066.jpg" width="90"><br>[CD-066](prompts.md#cd-066) Einzugsgebiet | Das ist mein Einzugsgebiet. Kostenloser Check: Link in Bio. |  |
 | Di 17.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-073.jpg" width="90"><br>[CD-073](prompts.md#cd-073) Montag, 8 Uhr ⚠️ | Du erreichst mich Mo–Fr von 9 bis 18 Uhr. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) | [CD-115](prompts.md#cd-115) Story: Quiz PHP-Lücke ⚠️ ✋ |
 | Mi 18.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-102.jpg" width="90"><br>[CD-102](prompts.md#cd-102) Blumenladen: Adventskranz vorbestellen | Ob Blumenladen oder Hofladen: Mit Vorbestellung und Abholtag direkt über die Website sparst du dir Zettelwirtschaft am Tresen (KI-generiertes Symbolbild). Kostenloser Check: Link in Bio. |  |
