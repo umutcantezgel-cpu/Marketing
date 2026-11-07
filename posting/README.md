@@ -44,6 +44,11 @@ verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplante
   widerspricht, `any` = braucht eine Zustimmung).
 - `netzwerke`: wohin gepostet wird, sofern das Netzwerk in Metricool verbunden ist. Pro Firma überschreibbar.
 - `zurueckhalten`: weitere Posts, die erst nach einer Freigabe rausgehen, mit Grund.
+- `bis` pro Firma (optional): Frist, bis zu der alle freigegebenen Feed-Posts draußen sein sollen. Reichen die Tage nicht,
+  bekommen so viele Tage wie nötig einen zweiten oder dritten Feed-Post, gleichmäßig verteilt; die Uhrzeiten dafür stehen
+  in `feed_zeit_extra`, höchstens `max_pro_tag` (Standard 3) Feed-Posts pro Tag. Wartende Posts belegen dabei keinen Tag:
+  Gibt man sie frei, verdichtet der nächste Lauf den Plan. Posts, deren Zeitfenster erst nach der Frist beginnt (zum
+  Beispiel Januar-Posts), kommen danach. Zurzeit bei Coday: `2026-12-31`.
 - `bild_url` (optional): Bilder direkt aus einem öffentlichen Repo verlinken, statt sie nach Marketing-Bilder zu
   kopieren; `{pfad}` ist der Pfad der Bilddatei in diesem Repo, zum Beispiel `Coday/bilder/story-9x16/CD-028.jpg`.
   Zurzeit zeigt es auf das öffentliche Repo Marketing. Wird Marketing wieder privat: `bild_url` löschen, dann gilt

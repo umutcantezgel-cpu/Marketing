@@ -6,6 +6,8 @@ Die Termine aus dem Posting-Plan im README der Firma (Mo/Mi/Fr, 10 Wochen) bleib
 restlichen Posts im Wechsel der Kategorien. Saisonale Posts laufen nur in ihrem Zeitfenster (ZEITFENSTER).
 Was schon in Metricool liegt (log.csv), behält seinen Tag. Posts, die auf eine Freigabe warten (Faktencheck, offene
 Frage, zurueckhalten), kommen erst nach dem Vorlauf dran und rücken jeden Tag nach, bis ihre ID in geprueft.txt steht.
+Mit einer Frist ("bis" in den Einstellungen der Firma) gehen alle freigegebenen Feed-Posts bis zu diesem Tag raus,
+an so vielen Tagen wie nötig mehrere ("feed2", "feed3" mit den Uhrzeiten aus feed_zeit_extra).
 Die geplante Aufgabe in Claude Code arbeitet posting/ANLEITUNG.md ab und ruft dieses Skript auf.
 
 Aufruf:
@@ -24,6 +26,7 @@ import csv
 import datetime as dt
 import filecmp
 import json
+import math
 import os
 import re
 import shutil
@@ -51,6 +54,9 @@ DONE = {"geplant", "entwurf", "manuell", "freigabe"}  # liegt schon in Metricool
 MAX_ERRORS = 2                                        # danach lässt die Aufgabe den Auftrag liegen
 STORY_GAP = 3                                         # Tage zwischen Stories, die nicht zu einem Feed-Post gehören
 URGENT_DAYS = 10                                      # Saison-Posts gehen vor, wenn ihr Zeitfenster bald endet
+MAX_PRO_TAG = 3                                       # mit Frist ("bis") höchstens so viele Feed-Posts pro Tag
+FEED_ZEIT_EXTRA = {"werktags": ["17:30", "12:00"],    # Uhrzeiten für den 2. und 3. Feed-Post eines Tages
+                   "wochenende": ["15:30", "13:00"]}
 STORY_NETWORKS = ("instagram", "facebook")
 STICKER_NETWORKS = ("instagram",)                     # Sticker gibt es nur in Instagram-Stories
 WEEKDAYS = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
@@ -61,7 +67,7 @@ NO_GBP = re.compile(r"\bDMs?\b|kommentar|kommentier", re.I)  # Google-Profile ha
 
 # Saisonale Posts: (frühestens, spätestens) für Tage außerhalb ihres README-Termins. Schlüssel: ID bzw. Karussell.
 ZEITFENSTER = {
-    "CD-076": ("2027-01-01", "2027-01-31"),  # PHP 8.2 nach Silvester
+    "CD-076": ("2026-12-01", "2026-12-31"),  # PHP 8.2 nach Silvester: laut prompts.md vor dem 31.12. posten
     "CD-087": ("2027-01-01", "2027-02-28"),  # PHP 8.2 ausgelaufen
     "CD-K4": ("2026-11-23", "2026-12-18"),   # Karussell: Vor den Feiertagen
     "CD-100": ("2026-11-02", "2026-12-04"),  # Gastro: Weihnachtsfeier-Anfragen
@@ -308,10 +314,70 @@ def take(pool, when, allowed):
     return p["post"] if p else None
 
 
-def row(p, when, nr, source, held):
-    return {"datum": when.isoformat(), "art": p["art"], "post": p["post"], "nr": nr, "typ": p["typ"],
+def row(p, when, nr, source, held, art=None):
+    return {"datum": when.isoformat(), "art": art or p["art"], "post": p["post"], "nr": nr, "typ": p["typ"],
             "ids": p["ids"], "titel": p["titel"], "sticker": p["sticker"], "quelle": source,
             "wartet": [i for i in p["ids"] if i in held]}
+
+
+def is_feed(art):
+    """Feed-Post des Tages ("feed") oder weiterer Feed-Post am selben Tag ("feed2", "feed3")."""
+    return art.startswith("feed")
+
+
+def feed_art(slot):
+    return "feed" if slot == 0 else f"feed{slot + 1}"
+
+
+def slot_of(art):
+    return int(art[4:]) - 1 if art[4:] else 0
+
+
+def spread(free, extra, most, origin):
+    """Zusätzliche Feed-Posts gleichmäßig auf die freien Tage verteilen, höchstens most pro Tag.
+
+    Das Muster hängt am Kalender (origin), nicht am ersten freien Tag: Sonst rechnete der tägliche Neubau die
+    Zusatz-Posts immer wieder ein Stück nach hinten, und sie häuften sich kurz vor der Frist."""
+    slots, n = {d: 1 for d in free}, len(free)
+    extra = min(max(extra, 0), n * (most - 1))
+    placed, rate = 0, extra / n if n else 0
+    for d in free:
+        t = (d - origin).days
+        k = min(math.floor((t + 1) * rate) - math.floor(t * rate), most - 1, extra - placed)
+        slots[d] += k
+        placed += k
+    for d in reversed(free):  # Rundungsrest von hinten auffüllen
+        while placed < extra and slots[d] < most:
+            slots[d] += 1
+            placed += 1
+    return slots
+
+
+def fill_until(pool, deadline, free, held, most, origin):
+    """Freigegebene Posts bis zur Frist auf die freien Tage legen, an so vielen Tagen doppelt wie nötig.
+
+    Gibt die Belegung [(tag, slot, post)] und die verpassten Posts zurück. Wartende Posts bleiben im Pool."""
+    ready = [p for p in pool if not any(i in held for i in p["ids"])]
+
+    def before(ps):
+        return sum(1 for p in ps if not p["fenster"] or window(p)[0] <= deadline)
+
+    extra = before(ready) - len(free)
+    for _ in range(6):  # bleiben Posts wegen ihrer Zeitfenster übrig, mehr Zusatz-Posts verteilen
+        trial, placed, lost = list(ready), [], []
+        slots = spread(free, extra, most, origin)
+        for d in free:
+            lost += expire(trial, d)
+            for k in range(slots[d]):
+                pid = take(trial, d, lambda p: True)
+                if not pid:
+                    break
+                placed.append((d, k, pid))
+        left = before(trial)
+        if not left or extra >= len(free) * (most - 1):
+            break
+        extra = max(extra, 0) + left
+    return placed, lost
 
 
 def build_plan(key, s, today, log, held):
@@ -319,6 +385,15 @@ def build_plan(key, s, today, log, held):
     start = max(day(s["start"]), today + dt.timedelta(days=1))
     horizon = today + dt.timedelta(days=s["vorlauf_tage"])
     monday = day(s["readme_plan_ab"])  # Woche 1 im README-Plan; bleibt fest, auch wenn der Start sich verschiebt
+    cfg = s["firmen"][key]
+    deadline = day(cfg["bis"]) if cfg.get("bis") else None  # alle freigegebenen Feed-Posts bis zu diesem Tag
+    if deadline and deadline < start:
+        deadline = None  # Frist vorbei: wieder ein Feed-Post pro Tag
+    extra_times = cfg.get("feed_zeit_extra", FEED_ZEIT_EXTRA)
+    most = min(cfg.get("max_pro_tag", MAX_PRO_TAG), 1 + min(len(t) for t in extra_times.values()))
+
+    def waits(p):
+        return any(i in held for i in p["ids"])
 
     def allowed_on(when):
         # Wartende Posts nie in den Vorlauf legen, sonst bliebe der Tag leer
@@ -331,10 +406,11 @@ def build_plan(key, s, today, log, held):
         if firma == key and r["status"] in DONE and r["datum"]:
             pinned[(art, post, int(nr))] = day(r["datum"])
     for (art, post, nr), when in sorted(pinned.items(), key=lambda kv: kv[1]):
-        (feed_taken if art == "feed" else story_taken).add(when)
-        p = (feed if art == "feed" else stories).get(post)
+        (feed_taken if is_feed(art) else story_taken).add(when)
+        p = (feed if is_feed(art) else stories).get(post)
         if p:
-            rows.append(row(p, when, nr, "metricool", held))
+            rows.append(row(p, when, nr, "metricool", held, art))
+    pinned_feed = {(post, nr) for (art, post, nr) in pinned if is_feed(art)}
 
     # Termine aus dem README, soweit noch offen
     fixed, notes, seen = {}, [], Counter()
@@ -352,17 +428,30 @@ def build_plan(key, s, today, log, held):
         if pid not in feed or feed[pid]["sperre"]:
             continue
         seen[pid] += 1
-        if ("feed", pid, seen[pid]) in pinned or when < start or when in feed_taken \
+        if (pid, seen[pid]) in pinned_feed or when < start or when in feed_taken \
                 or not allowed_on(when)(feed[pid]):
             continue  # vorbei, belegt oder wartet: der Post kommt (falls noch offen) in den Rest
+        if deadline and (waits(feed[pid]) or when > deadline):
+            continue  # mit Frist: wartende Posts blockieren keinen Termin, späte Termine rücken vor die Frist
         fixed[when] = (pid, seen[pid])
 
-    first_done = {post for (art, post, nr) in pinned if art == "feed" and nr == 1}
+    first_done = {post for (post, nr) in pinned_feed if nr == 1}
     first_done |= {v[0] for v in fixed.values() if v and v[1] == 1}
     recent = [feed[post]["kategorie"] for (art, post, nr), when in sorted(pinned.items(), key=lambda kv: kv[1])
-              if art == "feed" and post in feed]
+              if is_feed(art) and post in feed]
     pool = rotate([p for pid, p in feed.items() if not p["sperre"] and pid not in first_done], recent)
     lost = []
+    if deadline:
+        # Alle freigegebenen Posts bis zur Frist, notfalls mehrere am Tag; wartende und spätere danach wie üblich
+        free = [start + dt.timedelta(days=k) for k in range((deadline - start).days + 1)]
+        free = [d for d in free if d not in feed_taken and d not in fixed]
+        placed, missed = fill_until(pool, deadline, free, held, most, day(s["start"]))
+        lost += missed
+        for d, k, pid in placed:
+            rows.append(row(feed[pid], d, 1, "auffueller", held, feed_art(k)))
+            feed_taken.add(d)
+        gone = {pid for _, _, pid in placed} | {p["post"] for p in missed}
+        pool = [p for p in pool if p["post"] not in gone]
     when, last = start, max(list(fixed) + [start])
     while (pool or when <= last) and when <= start + dt.timedelta(days=400):
         lost += expire(pool, when)
@@ -380,7 +469,7 @@ def build_plan(key, s, today, log, held):
     # Stories: Story-Versionen am Tag ihres Feed-Posts, die übrigen mit Abstand an Tagen ohne Story
     first_day, post_of = {}, {i: p["post"] for p in feed.values() for i in p["ids"]}
     for r in sorted(rows, key=lambda r: r["datum"]):
-        if r["art"] == "feed":
+        if is_feed(r["art"]):
             first_day.setdefault(r["post"], day(r["datum"]))
     story_pool = []
     for p in stories.values():
@@ -395,7 +484,7 @@ def build_plan(key, s, today, log, held):
             rows.append(row(p, when, 1, f"zu {post_of[p['eltern']]}", held))
         else:
             story_pool.append(p)
-    feed_days = [day(r["datum"]) for r in rows if r["art"] == "feed"]
+    feed_days = [day(r["datum"]) for r in rows if is_feed(r["art"])]
     end = max(feed_days) if feed_days else start
     # Der Abstand gilt auch zu Stories, die schon in Metricool liegen (außer Story-Versionen am Tag ihres Feed-Posts)
     pinned_fill = {when for (art, post, nr), when in pinned.items() if art == "story" and post in stories
@@ -418,7 +507,7 @@ def build_plan(key, s, today, log, held):
     lost = [{"post": p["post"], "titel": p["titel"], "grund": f"Zeitfenster bis {p['fenster'][1]} verpasst"}
             for p in lost]
     left = [{"post": p["post"], "titel": p["titel"], "grund": "kein freier Story-Tag mehr"} for p in story_pool]
-    entries = sorted(rows, key=lambda r: (r["datum"], r["art"] != "feed"))
+    entries = sorted(rows, key=lambda r: (r["datum"], not is_feed(r["art"]), r["art"]))
     return {"eintraege": entries, "nicht_eingeplant": blocked + notes + lost + left}
 
 
@@ -432,7 +521,11 @@ def write_md(key, s, fp, today, held):
     days = {}
     for r in fp["eintraege"]:
         if day(r["datum"]) > today:
-            days.setdefault(r["datum"], {})[r["art"]] = r
+            slot = days.setdefault(r["datum"], {"feed": []})
+            if is_feed(r["art"]):
+                slot["feed"].append(r)
+            else:
+                slot[r["art"]] = r
 
     def link(i):
         return f"[{i}](prompts.md#{i.lower()})"
@@ -440,8 +533,11 @@ def write_md(key, s, fp, today, held):
     def flags(r):
         return (" ⚠️" if r["wartet"] else "") + (" ✋" if r["sticker"] else "") + (" (Wiederholung)" if r["nr"] > 1 else "")
 
+    bis = s["firmen"][key].get("bis")
+    rhythm = (f"pro Tag ein Feed-Post, bis {day(bis).strftime('%d.%m.%Y')} alle freigegebenen Posts und dafür an "
+              "manchen Tagen mehrere" if bis else "ein Feed-Post pro Tag")
     lines = [f"# Tagesplan {c['name']}", "",
-             f"Stand {today.strftime('%d.%m.%Y')}: ein Feed-Post pro Tag, dazu Stories. Die geplante Aufgabe in Claude Code "
+             f"Stand {today.strftime('%d.%m.%Y')}: {rhythm}, dazu Stories. Die geplante Aufgabe in Claude Code "
              "baut den Plan jeden Morgen neu und stellt die Posts eine Woche im Voraus in Metricool ein, siehe "
              "[posting/README.md](../posting/README.md).", "",
              "⚠️ Wartet auf Freigabe (Gründe unten): Der Termin ist vorläufig. Der Post geht erst raus, wenn seine ID in "
@@ -449,18 +545,19 @@ def write_md(key, s, fp, today, held):
              "✋ Story mit Sticker (Umfrage, Quiz, Link): Metricool erinnert in der App, der Sticker kommt von Hand dazu.", "",
              "| Datum | Feed-Post | Text | Story |", "| --- | --- | --- | --- |"]
     for d in sorted(days):
-        f, st = days[d].get("feed"), days[d].get("story")
-        label = f"{WEEKDAYS[day(d).weekday()]} {day(d).strftime('%d.%m.%Y')}"
-        feed_cell = text_cell = story_cell = ""
-        if f:
-            first = f["ids"][0]
-            extra = f" (Karussell, {len(f['ids'])} Bilder)" if f["typ"] == "karussell" else ""
-            feed_cell = (f'<img src="bilder/facebook-linkedin-4x5/{first}.jpg" width="90"><br>'
-                         f"{link(first)} {md_cell(f['titel'])}{extra}{flags(f)}")
-            text_cell = md_cell(entries[first]["caption"])
-        if st:
-            story_cell = f"{link(st['ids'][0])} {md_cell(st['titel'])}{flags(st)}"
-        lines.append(f"| {label} | {feed_cell} | {text_cell} | {story_cell} |")
+        feeds, st = sorted(days[d]["feed"], key=lambda r: r["art"]), days[d].get("story")
+        for n, f in enumerate(feeds or [None]):
+            label = f"{WEEKDAYS[day(d).weekday()]} {day(d).strftime('%d.%m.%Y')}" + (f" ({n + 1}. Post)" if n else "")
+            feed_cell = text_cell = story_cell = ""
+            if f:
+                first = f["ids"][0]
+                extra = f" (Karussell, {len(f['ids'])} Bilder)" if f["typ"] == "karussell" else ""
+                feed_cell = (f'<img src="bilder/facebook-linkedin-4x5/{first}.jpg" width="90"><br>'
+                             f"{link(first)} {md_cell(f['titel'])}{extra}{flags(f)}")
+                text_cell = md_cell(entries[first]["caption"])
+            if st and not n:
+                story_cell = f"{link(st['ids'][0])} {md_cell(st['titel'])}{flags(st)}"
+            lines.append(f"| {label} | {feed_cell} | {text_cell} | {story_cell} |")
     waiting = sorted({i for r in fp["eintraege"] if day(r["datum"]) > today for i in r["wartet"]})
     lines += ["", "## Wartet auf Freigabe", "", "Zum Freigeben die ID in `posting/geprueft.txt` eintragen.", "",
               "| ID | Grund |", "| --- | --- |"]
@@ -476,12 +573,13 @@ def cmd_plan(s, today):
     for key in bib.COMPANIES:
         fp = plan["firmen"][key] = build_plan(key, s, today, log, held)
         write_md(key, s, fp, today, held)
-        feed = [r for r in fp["eintraege"] if r["art"] == "feed" and day(r["datum"]) > today]
+        feed = [r for r in fp["eintraege"] if is_feed(r["art"]) and day(r["datum"]) > today]
         waiting = sum(1 for r in fp["eintraege"] if r["wartet"] and day(r["datum"]) > today)
         reasons = Counter(n["grund"].split(":")[0].split(",")[0] for n in fp["nicht_eingeplant"])
         span = f"von {feed[0]['datum']} bis {feed[-1]['datum']}" if feed else "keine"
-        print(f"{key}: {len(feed)} Feed-Posts {span}, davon {waiting} Posts mit Wartegrund; "
-              f"nicht eingeplant: {dict(reasons)}")
+        multi = len({r["datum"] for r in feed if r["art"] != "feed"})
+        print(f"{key}: {len(feed)} Feed-Posts {span}" + (f" ({multi} Tage mit mehreren)" if multi else "") +
+              f", davon {waiting} Posts mit Wartegrund; nicht eingeplant: {dict(reasons)}")
     PLAN.write_text(json.dumps(plan, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
@@ -556,7 +654,9 @@ def request(key, cfg, s, r, network, entries, tz):
     if mode == "freigabe" and not cfg.get("freigabe_mails"):
         mode = "entwurf"
     status = {"freigabe": "freigabe", "entwurf": "entwurf"}.get(mode, "manuell" if r["sticker"] else "geplant")
-    clock = cfg["story_zeit"] if story else cfg["feed_zeit"]["wochenende" if day(r["datum"]).weekday() >= 5 else "werktags"]
+    kind, slot = "wochenende" if day(r["datum"]).weekday() >= 5 else "werktags", 0 if story else slot_of(r["art"])
+    clock = (cfg["story_zeit"] if story else cfg["feed_zeit"][kind] if not slot
+             else cfg.get("feed_zeit_extra", FEED_ZEIT_EXTRA)[kind][slot - 1])
     when = dt.datetime.combine(day(r["datum"]), dt.time.fromisoformat(clock), tzinfo=tz)
     info = {"autoPublish": not r["sticker"],  # Sticker setzt Instagram nicht automatisch: Metricool erinnert in der App
             "draft": mode == "entwurf", "descendants": [], "firstCommentText": "", "hasNotReadNotes": False,
@@ -633,7 +733,7 @@ def cmd_vorrat(s, today):
     plan, held = load_json(PLAN), holds(s)
     for key, fp in plan["firmen"].items():
         rest = [r for r in fp["eintraege"] if day(r["datum"]) > today]
-        feed = [r for r in rest if r["art"] == "feed"]
+        feed = [r for r in rest if is_feed(r["art"])]
         if not feed:
             print(f"{key}: Plan aufgebraucht, neue Posts nötig")
             continue
