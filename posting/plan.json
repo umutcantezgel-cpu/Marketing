@@ -1378,7 +1378,9 @@
      "titel": "Edit: Smartphone-Mockup Referenz (eigenes Foto)",
      "grund": "eigenes Foto nötig, Termin 2027-01-01 ging an einen anderen Post"
     }
-   ]
+   ],
+   "wartet_ohne_termin": [],
+   "nach_frist": []
   },
   "bad-energie": {
    "eintraege": [
@@ -2869,7 +2871,9 @@
      "wartet": []
     }
    ],
-   "nicht_eingeplant": []
+   "nicht_eingeplant": [],
+   "wartet_ohne_termin": [],
+   "nach_frist": []
   },
   "tezgel": {
    "eintraege": [
@@ -4393,7 +4397,9 @@
      "titel": "Projektfoto Instagram-fertig (eigenes Foto)",
      "grund": "eigenes Foto nötig, Termin 2026-12-21 ging an einen anderen Post"
     }
-   ]
+   ],
+   "wartet_ohne_termin": [],
+   "nach_frist": []
   }
  }
 }

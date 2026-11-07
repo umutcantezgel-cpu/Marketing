@@ -26,7 +26,6 @@ import csv
 import datetime as dt
 import filecmp
 import json
-import math
 import os
 import re
 import shutil
@@ -34,7 +33,7 @@ import subprocess
 import sys
 import time
 import urllib.request
-from collections import Counter
+from collections import Counter, defaultdict
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -56,7 +55,7 @@ STORY_GAP = 3                                         # Tage zwischen Stories, d
 URGENT_DAYS = 10                                      # Saison-Posts gehen vor, wenn ihr Zeitfenster bald endet
 MAX_PRO_TAG = 3                                       # mit Frist ("bis") höchstens so viele Feed-Posts pro Tag
 FEED_ZEIT_EXTRA = {"werktags": ["17:30", "12:00"],    # Uhrzeiten für den 2. und 3. Feed-Post eines Tages
-                   "wochenende": ["15:30", "13:00"]}
+                   "wochenende": ["15:30", "14:00"]}  # (nicht 13:00: Story-Zeit von Bad & Energie und Tezgel)
 STORY_NETWORKS = ("instagram", "facebook")
 STICKER_NETWORKS = ("instagram",)                     # Sticker gibt es nur in Instagram-Stories
 WEEKDAYS = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
@@ -333,57 +332,33 @@ def slot_of(art):
     return int(art[4:]) - 1 if art[4:] else 0
 
 
-def spread(free, extra, most, origin):
-    """Zusätzliche Feed-Posts gleichmäßig auf die freien Tage verteilen, höchstens most pro Tag.
+def extra_counts(days, cap, needed, scheduled, origin, deadline):
+    """Zusatz-Posts (2. und 3. Feed-Post) pro Tag, gleichmäßig über die Spanne von origin bis zur Frist.
 
-    Das Muster hängt am Kalender (origin), nicht am ersten freien Tag: Sonst rechnete der tägliche Neubau die
-    Zusatz-Posts immer wieder ein Stück nach hinten, und sie häuften sich kurz vor der Frist."""
-    slots, n = {d: 1 for d in free}, len(free)
-    extra = min(max(extra, 0), n * (most - 1))
-    placed, rate = 0, extra / n if n else 0
-    for d in free:
-        t = (d - origin).days
-        k = min(math.floor((t + 1) * rate) - math.floor(t * rate), most - 1, extra - placed)
-        slots[d] += k
+    scheduled Zusatz-Posts liegen schon in Metricool und zählen für das Muster mit; origin ist der Tag des ersten davon,
+    sonst morgen. So bleibt das Muster von Tag zu Tag gleich, statt beim täglichen Neubau nach hinten zu rutschen.
+    Was an Kapazitätsgrenzen (cap) hängen bleibt, wird möglichst früh nachgeholt."""
+    out = {d: 0 for d in days}
+    if needed <= 0 or not days:
+        return out
+    total, span, placed = scheduled + needed, (deadline - origin).days + 1, 0
+    for d in days:
+        want = -(-(total * ((d - origin).days + 1)) // span) - scheduled  # aufgerundet, kumulativ bis d
+        k = max(0, min(want - placed, cap[d], needed - placed))
+        out[d] += k
         placed += k
-    for d in reversed(free):  # Rundungsrest von hinten auffüllen
-        while placed < extra and slots[d] < most:
-            slots[d] += 1
-            placed += 1
-    return slots
+    for d in days:
+        k = max(0, min(cap[d] - out[d], needed - placed))
+        out[d] += k
+        placed += k
+    return out
 
 
-def fill_until(pool, deadline, free, held, most, origin):
-    """Freigegebene Posts bis zur Frist auf die freien Tage legen, an so vielen Tagen doppelt wie nötig.
-
-    Gibt die Belegung [(tag, slot, post)] und die verpassten Posts zurück. Wartende Posts bleiben im Pool."""
-    ready = [p for p in pool if not any(i in held for i in p["ids"])]
-
-    def before(ps):
-        return sum(1 for p in ps if not p["fenster"] or window(p)[0] <= deadline)
-
-    extra = before(ready) - len(free)
-    for _ in range(6):  # bleiben Posts wegen ihrer Zeitfenster übrig, mehr Zusatz-Posts verteilen
-        trial, placed, lost = list(ready), [], []
-        slots = spread(free, extra, most, origin)
-        for d in free:
-            lost += expire(trial, d)
-            for k in range(slots[d]):
-                pid = take(trial, d, lambda p: True)
-                if not pid:
-                    break
-                placed.append((d, k, pid))
-        left = before(trial)
-        if not left or extra >= len(free) * (most - 1):
-            break
-        extra = max(extra, 0) + left
-    return placed, lost
-
-
-def build_plan(key, s, today, log, held):
+def build_plan(key, s, today, log, held, previous=None):
     feed, stories = posts_of(key)
     start = max(day(s["start"]), today + dt.timedelta(days=1))
     horizon = today + dt.timedelta(days=s["vorlauf_tage"])
+    soon = today + dt.timedelta(days=1)  # morgen: ist beim nächsten Lauf schon heute
     monday = day(s["readme_plan_ab"])  # Woche 1 im README-Plan; bleibt fest, auch wenn der Start sich verschiebt
     cfg = s["firmen"][key]
     deadline = day(cfg["bis"]) if cfg.get("bis") else None  # alle freigegebenen Feed-Posts bis zu diesem Tag
@@ -391,6 +366,12 @@ def build_plan(key, s, today, log, held):
         deadline = None  # Frist vorbei: wieder ein Feed-Post pro Tag
     extra_times = cfg.get("feed_zeit_extra", FEED_ZEIT_EXTRA)
     most = min(cfg.get("max_pro_tag", MAX_PRO_TAG), 1 + min(len(t) for t in extra_times.values()))
+    if deadline:
+        for kind in ("werktags", "wochenende"):
+            clocks = [cfg["feed_zeit"][kind], cfg["story_zeit"]] + extra_times[kind][:most - 1]
+            if len(set(clocks)) < len(clocks):
+                sys.exit(f"Fehler: {key}: Uhrzeiten in feed_zeit, story_zeit und feed_zeit_extra ({kind}) "
+                         f"überschneiden sich: {clocks}. posting/einstellungen.json korrigieren.")
 
     def waits(p):
         return any(i in held for i in p["ids"])
@@ -443,15 +424,60 @@ def build_plan(key, s, today, log, held):
     lost = []
     if deadline:
         # Alle freigegebenen Posts bis zur Frist, notfalls mehrere am Tag; wartende und spätere danach wie üblich
-        free = [start + dt.timedelta(days=k) for k in range((deadline - start).days + 1)]
-        free = [d for d in free if d not in feed_taken and d not in fixed]
-        placed, missed = fill_until(pool, deadline, free, held, most, day(s["start"]))
-        lost += missed
-        for d, k, pid in placed:
-            rows.append(row(feed[pid], d, 1, "auffueller", held, feed_art(k)))
-            feed_taken.add(d)
-        gone = {pid for _, _, pid in placed} | {p["post"] for p in missed}
-        pool = [p for p in pool if p["post"] not in gone]
+        days = [start + dt.timedelta(days=k) for k in range((deadline - start).days + 1)]
+        days = [d for d in days if not (d in fixed and fixed[d] is None)]  # Pausen aus dem README bleiben frei
+        used = defaultdict(set)  # belegte Slots je Tag
+        for r in rows:
+            if is_feed(r["art"]):
+                used[day(r["datum"])].add(slot_of(r["art"]))
+        for d in [d for d in fixed if fixed[d] and start <= d <= deadline]:
+            pid, nr = fixed.pop(d)
+            rows.append(row(feed[pid], d, nr, "plan", held))
+            used[d].add(0)
+        # Was schon im Vorlauf stand, behält Tag und Slot: Sonst könnte ein angelegter, aber noch nicht eingetragener
+        # Post beim nächsten Lauf an einem anderen Tag ein zweites Mal angelegt werden
+        in_pool = {p["post"]: p for p in pool}
+        for r in previous or []:
+            d, p = day(r["datum"]), in_pool.get(r["post"])
+            if p and is_feed(r["art"]) and start <= d <= min(horizon, deadline) and not waits(p) \
+                    and slot_of(r["art"]) < most and slot_of(r["art"]) not in used[d] \
+                    and (not p["fenster"] or window(p)[0] <= d <= window(p)[1]):
+                rows.append(row(p, d, r["nr"], r["quelle"], held, r["art"]))
+                used[d].add(slot_of(r["art"]))
+                pool.remove(p)
+                del in_pool[p["post"]]
+        ready = [p for p in pool if not waits(p)]
+        need = sum(1 for p in ready if not p["fenster"] or window(p)[0] <= deadline)
+        # Zusatz-Posts frühestens übermorgen: Bräche ein Lauf nach dem Anlegen eines Posts für morgen ab, sähe der
+        # nächste Lauf (dann ist morgen heute) ihn nicht mehr und legte ihn an einem anderen Tag noch einmal an
+        cap = {d: 0 if d <= soon else most - max(len(used[d]), 1) for d in days}
+        done = sorted(day(r["datum"]) for r in rows if is_feed(r["art"]) and slot_of(r["art"]) and day(r["datum"]) <= deadline)
+        extras = extra_counts(days, cap, need - sum(1 for d in days if not used[d]), len(done),
+                              done[0] if done else max(start, soon + dt.timedelta(days=1)), deadline)
+
+        def put(p, d):
+            slot = min(set(range(most)) - used[d])
+            rows.append(row(p, d, 1, "auffueller", held, feed_art(slot)))
+            used[d].add(slot)
+            ready.remove(p)
+            pool.remove(p)
+
+        for d in days:
+            for p in expire(ready, d):
+                pool.remove(p)
+                lost.append(p)
+            for _ in range((0 if used[d] else 1) + extras[d]):
+                pid = take(list(ready), d, lambda q: True)  # take() wählt aus einer Kopie, put() trägt aus
+                if not pid:
+                    break
+                put(next(q for q in ready if q["post"] == pid), d)
+        for p in [p for p in ready if p["fenster"] and window(p)[0] <= deadline]:
+            # Spätes Zeitfenster, für das das Muster keinen Platz ließ: frühester Tag im Fenster mit freiem Slot
+            d = next((d for d in days if window(p)[0] <= d <= window(p)[1] and len(used[d]) < most
+                      and (d > soon or not used[d])), None)
+            if d:
+                put(p, d)
+        feed_taken |= {d for d in days if used[d]}
     when, last = start, max(list(fixed) + [start])
     while (pool or when <= last) and when <= start + dt.timedelta(days=400):
         lost += expire(pool, when)
@@ -471,9 +497,19 @@ def build_plan(key, s, today, log, held):
     for r in sorted(rows, key=lambda r: r["datum"]):
         if is_feed(r["art"]):
             first_day.setdefault(r["post"], day(r["datum"]))
+    kept = {}  # mit Frist: Stories aus dem Vorlauf behalten ihren Tag (wie die Feed-Posts, siehe oben)
+    for r in previous or [] if deadline else []:
+        p, d = stories.get(r["post"]), day(r["datum"])
+        if p and r["art"] == "story" and ("story", p["post"], 1) not in pinned and p["post"] not in kept \
+                and start <= d <= horizon and d not in story_taken and not waits(p) and not p["sperre"] \
+                and not (p["sticker"] and s.get("sticker_stories", "manuell") == "aus") \
+                and (not p["fenster"] or window(p)[0] <= d <= window(p)[1]):
+            kept[p["post"]] = d
+            story_taken.add(d)
+            rows.append(row(p, d, 1, r["quelle"], held))
     story_pool = []
     for p in stories.values():
-        if p["sperre"] or ("story", p["post"], 1) in pinned:
+        if p["sperre"] or ("story", p["post"], 1) in pinned or p["post"] in kept:
             continue
         if p["sticker"] and s.get("sticker_stories", "manuell") == "aus":
             notes.append({"post": p["post"], "titel": p["titel"], "grund": "Story mit Sticker, sticker_stories ist aus"})
@@ -485,30 +521,67 @@ def build_plan(key, s, today, log, held):
         else:
             story_pool.append(p)
     feed_days = [day(r["datum"]) for r in rows if is_feed(r["art"])]
-    end = max(feed_days) if feed_days else start
-    # Der Abstand gilt auch zu Stories, die schon in Metricool liegen (außer Story-Versionen am Tag ihres Feed-Posts)
+    end = max(feed_days + ([deadline] if deadline else [])) if feed_days or deadline else start
+    # Der Abstand gilt auch zu Stories, die schon in Metricool liegen (außer Story-Versionen am Tag ihres Feed-Posts),
+    # und zwar zur vorigen wie zur nächsten
     pinned_fill = {when for (art, post, nr), when in pinned.items() if art == "story" and post in stories
                    and first_day.get(post_of.get(stories[post]["eltern"])) != when}
-    when, previous = start, max((d for d in pinned_fill if d < start), default=None)
-    while story_pool and when <= end:
-        lost += expire(story_pool, when)
-        if when in pinned_fill:
-            previous = when
-        elif when not in story_taken and (previous is None or (when - previous).days >= STORY_GAP):
-            pid = take(story_pool, when, allowed_on(when))
-            if pid:
-                story_taken.add(when)
-                rows.append(row(stories[pid], when, 1, "auffueller", held))
-                previous = when
-        when += dt.timedelta(days=1)
+    pinned_fill |= {d for post, d in kept.items() if first_day.get(post_of.get(stories[post]["eltern"])) != d}
 
+    candidates = list(story_pool)
+
+    def fill_stories(gap):
+        trial, taken, placed, gone = list(candidates), set(story_taken), [], []
+        # Mit Frist neue Auffüller-Stories frühestens übermorgen (wie bei den Zusatz-Posts, siehe oben)
+        first = max(start, soon + dt.timedelta(days=1)) if deadline else start
+        when, previous = first, max((d for d in pinned_fill if d < first), default=None)
+        while trial and when <= end:
+            gone += expire(trial, when)
+            nxt = min((d for d in pinned_fill if d > when), default=None)
+            if when in pinned_fill:
+                previous = when
+            elif when not in taken and (previous is None or (when - previous).days >= gap) \
+                    and (nxt is None or (nxt - when).days >= gap):
+                pid = take(trial, when, allowed_on(when))
+                if pid:
+                    taken.add(when)
+                    placed.append((when, pid))
+                    previous = when
+            when += dt.timedelta(days=1)
+        return placed, trial, gone
+
+    # Mit Frist rücken Stories enger zusammen, wenn sonst freigegebene Stories erst nach der Frist kämen
+    must = {p["post"] for p in candidates if deadline and not waits(p)
+            and (not p["fenster"] or window(p)[0] <= deadline and window(p)[1] >= start)}
+    for gap in range(STORY_GAP, 0 if deadline else STORY_GAP - 1, -1):
+        placed, story_pool, gone = fill_stories(gap)
+        if not deadline or must <= {pid for d, pid in placed if d <= deadline}:
+            break
+    for when, pid in placed:
+        story_taken.add(when)
+        rows.append(row(stories[pid], when, 1, "auffueller", held))
+    lost += gone
+
+    # Wartende Posts, deren Zeitfenster noch offen ist, sind nicht verpasst: Eine Freigabe hilft noch
+    still = [p for p in lost + story_pool if waits(p) and (not p["fenster"] or window(p)[1] >= start)]
     blocked = [{"post": p["post"], "titel": p["titel"], "grund": p["sperre"]}
                for p in list(feed.values()) + list(stories.values()) if p["sperre"]]
     lost = [{"post": p["post"], "titel": p["titel"], "grund": f"Zeitfenster bis {p['fenster'][1]} verpasst"}
-            for p in lost]
-    left = [{"post": p["post"], "titel": p["titel"], "grund": "kein freier Story-Tag mehr"} for p in story_pool]
+            for p in lost if p not in still]
+    left = [{"post": p["post"], "titel": p["titel"], "grund": "kein freier Story-Tag mehr"}
+            for p in story_pool if p not in still]
     entries = sorted(rows, key=lambda r: (r["datum"], not is_feed(r["art"]), r["art"]))
-    return {"eintraege": entries, "nicht_eingeplant": blocked + notes + lost + left}
+
+    def belongs_before_deadline(r):
+        p = feed[r["post"]] if is_feed(r["art"]) else stories[r["post"]]
+        return not r["wartet"] and (not p["fenster"] or window(p)[0] <= deadline)
+
+    late = [{"post": r["post"], "datum": r["datum"]} for r in entries
+            if deadline and day(r["datum"]) > deadline and belongs_before_deadline(r)]
+    return {"eintraege": entries, "nicht_eingeplant": blocked + notes + lost + left,
+            "wartet_ohne_termin": [{"post": p["post"], "titel": p["titel"], "ids": [i for i in p["ids"] if i in held],
+                                    "bis": p["fenster"][1] if p["fenster"] else None} for p in still],
+            "nach_frist": late}
 
 
 def md_cell(text):
@@ -558,10 +631,16 @@ def write_md(key, s, fp, today, held):
             if st and not n:
                 story_cell = f"{link(st['ids'][0])} {md_cell(st['titel'])}{flags(st)}"
             lines.append(f"| {label} | {feed_cell} | {text_cell} | {story_cell} |")
-    waiting = sorted({i for r in fp["eintraege"] if day(r["datum"]) > today for i in r["wartet"]})
+    waiting = {i for r in fp["eintraege"] if day(r["datum"]) > today for i in r["wartet"]}
+    no_date = {i: w for w in fp.get("wartet_ohne_termin", []) for i in w["ids"] if i in held}
     lines += ["", "## Wartet auf Freigabe", "", "Zum Freigeben die ID in `posting/geprueft.txt` eintragen.", "",
               "| ID | Grund |", "| --- | --- |"]
-    lines += [f"| {link(i)} | {md_cell(' / '.join(held[i]))} |" for i in waiting]
+    lines += [f"| {link(i)} | {md_cell(' / '.join(held[i]))}" +
+              (f" (noch ohne Termin{', Zeitfenster bis ' + no_date[i]['bis'] if no_date[i]['bis'] else ''})"
+               if i in no_date and i not in waiting else "") + " |" for i in sorted(waiting | set(no_date))]
+    if fp.get("nach_frist"):
+        lines += ["", "## Nach der Frist", "", f"Für diese freigegebenen Posts war bis {s['firmen'][key].get('bis')} "
+                  "kein Platz mehr:", ""] + [f"- {x['post']} am {x['datum']}" for x in fp["nach_frist"]]
     lines += ["", "## Nicht eingeplant", "", "| Post | Titel | Grund |", "| --- | --- | --- |"]
     lines += [f"| {n['post']} | {md_cell(n['titel'])} | {md_cell(n['grund'])} |" for n in fp["nicht_eingeplant"]]
     (ROOT / c["folder"] / "tagesplan.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -569,9 +648,10 @@ def write_md(key, s, fp, today, held):
 
 def cmd_plan(s, today):
     log, held = read_log(), holds(s)
+    old = load_json(PLAN).get("firmen", {}) if PLAN.exists() else {}
     plan = {"start": s["start"], "firmen": {}}
     for key in bib.COMPANIES:
-        fp = plan["firmen"][key] = build_plan(key, s, today, log, held)
+        fp = plan["firmen"][key] = build_plan(key, s, today, log, held, old.get(key, {}).get("eintraege"))
         write_md(key, s, fp, today, held)
         feed = [r for r in fp["eintraege"] if is_feed(r["art"]) and day(r["datum"]) > today]
         waiting = sum(1 for r in fp["eintraege"] if r["wartet"] and day(r["datum"]) > today)
@@ -580,6 +660,9 @@ def cmd_plan(s, today):
         multi = len({r["datum"] for r in feed if r["art"] != "feed"})
         print(f"{key}: {len(feed)} Feed-Posts {span}" + (f" ({multi} Tage mit mehreren)" if multi else "") +
               f", davon {waiting} Posts mit Wartegrund; nicht eingeplant: {dict(reasons)}")
+        if fp.get("nach_frist"):
+            print(f"  Achtung, Frist {s['firmen'][key]['bis']} verpasst (zu wenig Platz): " +
+                  ", ".join(f"{x['post']} am {x['datum']}" for x in fp["nach_frist"]))
     PLAN.write_text(json.dumps(plan, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
@@ -745,6 +828,14 @@ def cmd_vorrat(s, today):
             print(f"  wartet: {r['post']} (vorläufig {r['datum']}): " + " / ".join(held[ids[0]])[:240])
         if len(waiting) > 12:
             print(f"  … und {len(waiting) - 12} weitere, siehe {bib.COMPANIES[key]['folder']}/tagesplan.md")
+        for w in fp.get("wartet_ohne_termin", []):
+            ids = [i for i in w["ids"] if i in held]
+            if ids:
+                print(f"  wartet: {w['post']} (noch ohne Termin" + (f", Zeitfenster bis {w['bis']}" if w["bis"] else "") +
+                      "): " + " / ".join(held[ids[0]])[:240])
+        if fp.get("nach_frist"):
+            print(f"  Achtung, Frist {s['firmen'][key].get('bis')} verpasst (zu wenig Platz): " +
+                  ", ".join(f"{x['post']} am {x['datum']}" for x in fp["nach_frist"]))
 
 
 # ---------------------------------------------------------------- Bilder und Log
