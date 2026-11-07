@@ -2,3 +2,24 @@
 # Posts mit Faktencheck (⚠️ in prompts.md), mit einer offenen Frage in offene-fragen.md oder in „zurueckhalten“
 # (posting/einstellungen.json) gehen erst raus, wenn ihre ID hier steht. Bis dahin rücken sie im Tagesplan nach.
 # Was zu prüfen ist: Abschnitt „Wartet auf Freigabe“ im tagesplan.md der Firma.
+
+# 2026-11-07: alle wartenden Coday-Posts freigegeben (Anweisung im Chat: „gib alle frei“)
+CD-017
+CD-044
+CD-067
+CD-068
+CD-069
+CD-070
+CD-071
+CD-073
+CD-075
+CD-076
+CD-082
+CD-086
+CD-087
+CD-041
+CD-077
+CD-115
+CD-121
+CD-123
+CD-124
