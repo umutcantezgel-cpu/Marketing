@@ -477,7 +477,7 @@ def build_plan(key, s, today, log, held, previous=None, previous_today=None):
             spent[r["datum"][:7]] += 1
     for (art, post, nr), nets in nets_of.items():
         failed, ok = sorted(n for n, st in nets.items() if st in FAILED), sorted(n for n, st in nets.items() if st in DONE)
-        if failed and ok:
+        if failed and ok and pinned[(art, post, nr)] < start:  # neu eingeplante Posts tragen alte Fehlschläge mit
             p = (feed if is_feed(art) else stories).get(post)
             notes.append({"post": post, "titel": p["titel"] if p else post,
                           "grund": f"auf {', '.join(failed)} nicht veröffentlicht, auf {', '.join(ok)} schon: "
@@ -605,15 +605,15 @@ def build_plan(key, s, today, log, held, previous=None, previous_today=None):
                   if r["art"] == "feed" and start <= day(r["datum"]) <= min(horizon, reach)}
         slots, (y, m) = [], (start.year, start.month)
         while per_post and budget // per_post and dt.date(y, m, 1) <= start + dt.timedelta(days=400):
-            free = [d for d in posting_days(y, m, budget // per_post)
-                    if d not in feed_taken and (d > soon or (d >= start and d in before))]
+            free = [d for d in posting_days(y, m, budget // per_post) if d >= start and d not in feed_taken
+                    and (d > soon or d in before or s["vorlauf_tage"] < 2)]
             slots += free[:max(0, budget - spent[f"{y:04d}-{m:02d}"]) // per_post]
             y, m = y + m // 12, m % 12 + 1
         for when in slots:
             lost += expire(pool, when)
             p = next((q for q in pool if q["post"] == before.get(when) and allowed_on(when)(q)
                       and (not q["fenster"] or window(q)[0] <= when)), None)
-            if not p and when > soon:
+            if not p and (when > soon or s["vorlauf_tage"] < 2):
                 p = pick(pool, when, allowed_on(when))
             if p and spent[month_of(when)] + cost[p["post"]] <= budget:
                 pool.remove(p)
@@ -854,7 +854,11 @@ def cmd_plan(s, today):
     log, held = read_log(), holds(s)
     old_plan = load_json(PLAN) if PLAN.exists() else {}
     old, old_today = old_plan.get("firmen", {}), old_plan.get("heute")
-    plan = {"start": s["start"], "heute": today.isoformat(), "firmen": {}}
+    # Zeitpunkt dieses und des vorigen Laufs: vorrat meldet, was die Kontrolle seit dem vorigen Lauf eingetragen hat
+    # (ein zweiter plan am selben Tag behält den vorigen Lauf vom Vortag)
+    before_run = old_plan.get("voriger_lauf") if old_today == today.isoformat() else old_plan.get("lauf")
+    plan = {"start": s["start"], "heute": today.isoformat(), "lauf": dt.datetime.now().isoformat(timespec="seconds"),
+            "voriger_lauf": before_run, "firmen": {}}
     for key in bib.COMPANIES:
         fp = plan["firmen"][key] = build_plan(key, s, today, log, held, old.get(key, {}).get("eintraege"),
                                               day(old_today) if old_today else None)
@@ -903,6 +907,16 @@ def short(e, url, limit):
     return url
 
 
+def mode_of(cfg):
+    mode = cfg.get("modus", "direkt")
+    return "entwurf" if mode == "freigabe" and not cfg.get("freigabe_mails") else mode
+
+
+def status_for(cfg, r):
+    """Status im Log, wenn Metricool den Post angenommen hat."""
+    return {"freigabe": "freigabe", "entwurf": "entwurf"}.get(mode_of(cfg), "manuell" if r["sticker"] else "geplant")
+
+
 def request(key, cfg, s, r, network, entries, tz):
     """Fertiger Auftrag für einen Post auf einem Netzwerk, oder None, wenn das Netzwerk den Post auslässt."""
     e = entries[r["ids"][0]]
@@ -941,10 +955,8 @@ def request(key, cfg, s, r, network, entries, tz):
     else:
         return None
 
-    mode = cfg.get("modus", "direkt")
-    if mode == "freigabe" and not cfg.get("freigabe_mails"):
-        mode = "entwurf"
-    status = {"freigabe": "freigabe", "entwurf": "entwurf"}.get(mode, "manuell" if r["sticker"] else "geplant")
+    mode = mode_of(cfg)
+    status = status_for(cfg, r)
     clock = clock_for(cfg, r["art"], day(r["datum"]))
     when = dt.datetime.combine(day(r["datum"]), dt.time.fromisoformat(clock), tzinfo=tz)
     info = {"autoPublish": not r["sticker"],  # Sticker setzt Instagram nicht automatisch: Metricool erinnert in der App
@@ -1037,7 +1049,7 @@ def cmd_vorrat(s, today):
     """Reichweite, Wartende, Monatslimit (frisch aus dem Log) und was die Kontrolle in den letzten 24 Stunden als
     nicht veröffentlicht eingetragen hat, mit neuem Termin oder Grund."""
     plan, held, log = load_json(PLAN), holds(s), read_log()
-    recent = (dt.datetime.now() - dt.timedelta(hours=24)).isoformat(timespec="seconds")
+    recent = plan.get("voriger_lauf") or (dt.datetime.now() - dt.timedelta(hours=24)).isoformat(timespec="seconds")
     for key, fp in plan["firmen"].items():
         rest = [r for r in fp["eintraege"] if day(r["datum"]) > today]
         feed = [r for r in rest if is_feed(r["art"])]
@@ -1065,16 +1077,18 @@ def cmd_vorrat(s, today):
             print(f"  {limit_text(lim)}")
         failed = {}
         for k, r in state(log).items():
-            if k.startswith(key + "|") and r["status"] in FAILED and r["zeit"] >= recent:
+            if k.startswith(key + "|") and r["status"] in FAILED and r["zeit"] > recent:
                 f = failed.setdefault((k.split("|")[1], k.split("|")[2]), {"datum": r["datum"], "netze": [], "status": set()})
                 f["netze"].append(k.split("|")[4])
                 f["status"].add(r["status"])
         for (art, post), f in sorted(failed.items(), key=lambda kv: kv[1]["datum"]):
-            new = [r["datum"] for r in fp["eintraege"] if r["post"] == post and is_feed(r["art"]) == is_feed(art)
+            new = [r for r in fp["eintraege"] if r["post"] == post and is_feed(r["art"]) == is_feed(art)
                    and day(r["datum"]) > today and r["quelle"] != "metricool"]
             why = next((n["grund"] for n in fp["nicht_eingeplant"] if n["post"] == post), "")
-            print(f"  {'/'.join(sorted(f['status']))}: {post} ({f['datum']}, {', '.join(sorted(f['netze']))}): " +
-                  (f"neu eingeplant am {new[0]}" if new else f"nicht neu eingeplant{' (' + why + ')' if why else ''}"))
+            outcome = (f"wartet auf Freigabe (vorläufig {new[0]['datum']})" if new and new[0]["wartet"]
+                       else f"neu eingeplant am {new[0]['datum']}" if new
+                       else f"nicht neu eingeplant{' (' + why + ')' if why else ''}")
+            print(f"  {'/'.join(sorted(f['status']))}: {post} ({f['datum']}, {', '.join(sorted(f['netze']))}): {outcome}")
 
 
 # ---------------------------------------------------------------- Bilder und Log
@@ -1179,19 +1193,41 @@ def cmd_eintragen(s, lines):
 
 
 def cmd_kontrolle(s, today):
-    """Posts bis gestern, die laut Log in Metricool liegen: wurden sie wirklich veröffentlicht?"""
-    tz = ZoneInfo(s["zeitzone"])
+    """Posts bis gestern, die laut Log in Metricool liegen: wurden sie wirklich veröffentlicht?
+
+    Dazu "verwaist": Posts aus dem Plan des vorigen Laufs bis heute, ohne Eintrag im Log. Brach ein Lauf zwischen Anlegen
+    und Eintragen ab, liegt so ein Post vielleicht trotzdem in Metricool; gefunden wird er als geplant eingetragen."""
+    tz, log = ZoneInfo(s["zeitzone"]), read_log()
+    current = state(log)
     posts = sorted(({"schluessel": k, "metricool_id": r["metricool_id"], "datum": r["datum"],
                      "uhrzeit": clock_for(s["firmen"][k.split("|")[0]], k.split("|")[1], day(r["datum"])),
                      "netzwerk": k.split("|")[4], "status_im_log": r["status"]}
-                    for k, r in state(read_log()).items()
+                    for k, r in current.items()
                     if r["status"] in CHECKABLE and r["datum"] and day(r["datum"]) < today
                     and k.split("|")[0] in s["firmen"]),
                    key=lambda p: (p["datum"], p["uhrzeit"], p["schluessel"]))
+    orphans = []
+    plan = load_json(PLAN) if PLAN.exists() else {}
+    if plan.get("heute"):
+        for key, fp in plan.get("firmen", {}).items():
+            cfg = s["firmen"].get(key, {})
+            if not cfg.get("blogId"):
+                continue
+            entries = {e["id"]: e for e in entries_of(key)}
+            for r in fp["eintraege"]:
+                if not day(plan["heute"]) < day(r["datum"]) <= today or r["wartet"]:
+                    continue
+                nets = (feed_networks(s, cfg, {"ids": r["ids"]}, entries) if is_feed(r["art"])
+                        else networks_for(s, cfg, r))
+                for n in nets:
+                    k = f"{key}|{r['art']}|{r['post']}|{r['nr']}|{n}"
+                    if k not in current:
+                        orphans.append({"schluessel": k, "datum": r["datum"], "uhrzeit": clock_for(cfg, r["art"], day(r["datum"])),
+                                        "netzwerk": n, "status_bei_fund": status_for(cfg, r)})
     brands = []
-    for key in sorted({p["schluessel"].split("|")[0] for p in posts}):
+    for key in sorted({p["schluessel"].split("|")[0] for p in posts + orphans}):
         cfg = s["firmen"].get(key, {})
-        dates = sorted({day(p["datum"]) for p in posts if p["schluessel"].startswith(key + "|")})
+        dates = sorted({day(p["datum"]) for p in posts + orphans if p["schluessel"].startswith(key + "|")})
         while cfg.get("blogId") and dates:  # höchstens 7 Tage pro Abfrage, damit die Antwort handlich bleibt
             chunk = [d for d in dates if d < dates[0] + dt.timedelta(days=7)]
             dates = dates[len(chunk):]
@@ -1200,7 +1236,7 @@ def cmd_kontrolle(s, today):
             brands.append({"firma": key, "blogId": cfg["blogId"], "fromDate": midnight.isoformat(),
                            "toDate": end.isoformat(), "timezone": s["zeitzone"]})
     print(json.dumps({"bis": (today - dt.timedelta(days=1)).isoformat(), "marken_fuer_getScheduledPosts": brands,
-                      "posts": posts}, ensure_ascii=False, indent=1))
+                      "posts": posts, "verwaist": orphans}, ensure_ascii=False, indent=1))
 
 
 def main():

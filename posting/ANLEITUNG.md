@@ -30,7 +30,7 @@ fertig; du rufst Metricool auf und trägst sofort ins Log ein.
 1. Aktualisieren: `GIT_TERMINAL_PROMPT=0 git -C ~/Marketing pull --rebase --autostash`. Schlägt das fehl: aufhören,
    Bericht.
 2. Kontrolle: `python3 ~/Marketing/tools/posting.py kontrolle` listet unter `posts` die Posts bis gestern, die laut Log
-   in Metricool liegen. Ist die Liste leer: weiter mit Schritt 3. Sonst für jeden Eintrag aus
+   in Metricool liegen. Sind `posts` und `verwaist` leer: weiter mit Schritt 3. Sonst für jeden Eintrag aus
    `marken_fuer_getScheduledPosts` einmal `getScheduledPosts` mit brandId (= blogId), fromDate, toDate und timezone von
    dort aufrufen und jeden Post aus `posts` über seine `metricool_id` suchen (bei Metricool `id`). Findet sich die ID
    nicht, gilt ein Post mit demselben Netzwerk, demselben Datum und derselben Uhrzeit (`uhrzeit`,
@@ -41,6 +41,10 @@ fertig; du rufst Metricool auf und trägst sofort ins Log ein.
    - gar nicht gefunden, obwohl die Abfrage für dieses Datum ohne Fehler zurückkam (zum Beispiel in Metricool gelöscht):
      `SCHLUESSEL;fehlt;POST-ID;in Metricool nicht gefunden`
    - anderer Status (zum Beispiel noch `PENDING`): nichts eintragen, im Bericht melden; morgen wird wieder geprüft
+
+   Dazu `verwaist`: Posts aus dem Plan des vorigen Laufs bis heute, die nicht im Log stehen (ein Lauf brach vielleicht
+   zwischen Anlegen und Eintragen ab). Hat Metricool einen Post mit demselben Netzwerk, Datum und derselben Uhrzeit:
+   `SCHLUESSEL;STATUS;POST-ID;` mit STATUS aus `status_bei_fund`; sonst nichts eintragen. Verwaiste Posts nie anlegen.
 
    Alle Zeilen in einem Aufruf über stdin eintragen (siehe Regeln). Ganz gescheiterte oder fehlende Feed-Posts plant
    Schritt 3 neu ein, mit Meldung „account limit“ erst im nächsten Monat. Schlägt `getScheduledPosts` fehl: Kontrolle

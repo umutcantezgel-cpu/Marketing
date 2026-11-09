@@ -22,7 +22,8 @@ kostenlosen Metricool-Plans eingestellt: etwa alle 5 Tage ein Post, keine Storie
   Posts von Tagen, an denen nichts rausging (zum Beispiel weil die Netzwerke noch nicht verbunden waren), rücken nach.
 - **Kontrolle:** Jeden Morgen prüft die Aufgabe in Metricool, ob die Posts der Vortage wirklich veröffentlicht wurden,
   und trägt das ins Log ein: `veroeffentlicht`, `gescheitert` (mit der Meldung von Metricool) oder `fehlt` (in Metricool
-  nicht mehr da, zum Beispiel gelöscht). Ganz gescheiterte oder fehlende Feed-Posts plant sie neu ein; meldet Metricool
+  nicht mehr da, zum Beispiel gelöscht). Posts, die ein abgebrochener Lauf angelegt, aber nicht eingetragen hat, findet
+  sie dabei ebenfalls. Ganz gescheiterte oder fehlende Feed-Posts plant sie neu ein; meldet Metricool
   das Monatslimit, im selben Monat nichts mehr. Nicht neu eingeplant werden Stories (zurzeit aus), Posts mit
   abgelaufenem Zeitfenster und Posts, die nur auf einem Teil der Netzwerke gescheitert sind (zum Beispiel bei einer
   abgelaufenen Facebook-Verbindung); der Bericht nennt sie. Ein Post, der zweimal ohne Limit-Meldung scheitert, bleibt
