@@ -1,7 +1,8 @@
 # Tägliches Posten über Metricool
 
 Claude Code plant jeden Morgen die Posts der nächsten 7 Tage in Metricool ein: pro Firma und Tag ein Feed-Post auf allen
-verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplanten Zeit.
+verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplanten Zeit. Coday ist auf das Limit des
+kostenlosen Metricool-Plans eingestellt: etwa alle 5 Tage ein Post, keine Stories (siehe Monatslimit).
 
 | Datei | Inhalt |
 | --- | --- |
@@ -9,7 +10,7 @@ verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplante
 | [plan.json](plan.json) | Tagesplan aller Firmen |
 | Tagesplan pro Firma | [Coday](../Coday/tagesplan.md) · [Bad & Energie](../Bad-und-Energie/tagesplan.md) · [Tezgel](../Tezgel/tagesplan.md): Bild und Text pro Tag, dazu alle Posts, die auf eine Freigabe warten |
 | [geprueft.txt](geprueft.txt) | freigegebene Posts |
-| [log.csv](log.csv) | was schon in Metricool liegt (schreibt die Aufgabe) |
+| [log.csv](log.csv) | was in Metricool liegt und ob es veröffentlicht wurde (schreibt die Aufgabe; der letzte Eintrag pro Post und Netzwerk zählt) |
 | [ANLEITUNG.md](ANLEITUNG.md) | Ablauf der täglichen Aufgabe |
 
 ## Was die Automation macht
@@ -19,6 +20,15 @@ verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplante
   laufen nur in ihrem Zeitfenster. Am 25.12. pausieren Bad & Energie und Tezgel, wie im Plan vorgesehen.
 - **Täglich neu geplant:** Die Aufgabe baut den Plan jeden Morgen neu. Was schon in Metricool liegt, behält seinen Tag;
   Posts von Tagen, an denen nichts rausging (zum Beispiel weil die Netzwerke noch nicht verbunden waren), rücken nach.
+- **Kontrolle:** Jeden Morgen prüft die Aufgabe in Metricool, ob die Posts der Vortage wirklich veröffentlicht wurden,
+  und trägt das ins Log ein (`veroeffentlicht`). Was Metricool nicht veröffentlicht hat (`gescheitert`, zum Beispiel
+  „You have reached your Metricool account limit“), plant sie neu ein und meldet es im Bericht.
+- **Monatslimit (Coday):** Der kostenlose Metricool-Plan veröffentlicht höchstens 20 Posts pro Kalendermonat, und jedes
+  Netzwerk zählt einzeln; was darüber hinausgeht, scheitert. Deshalb plant die Aufgabe für Coday nur 6 Posts im Monat auf
+  Instagram, Facebook und Google (18 Veröffentlichungen), etwa alle 5 Tage, und keine Stories. Saison-Posts gehen in
+  ihrem Zeitfenster vor, die übrigen Posts kommen im Wechsel der Themen. Am 1. jedes Monats ist das Limit wieder frei.
+  Posts, die man selbst in Metricool anlegt, zählen mit und können dann geplanten Posts den Platz nehmen. Mit einem
+  bezahlten Plan (ab Starter) gibt es kein Monatslimit: dann `max_pro_monat` löschen und `stories` wieder auf `an`.
 - **Freigaben:** Posts mit Faktencheck (⚠️ in `prompts.md`), mit einer offenen Frage in [offene-fragen.md](../offene-fragen.md)
   oder in `zurueckhalten` gehen erst raus, wenn ihre ID in `geprueft.txt` steht. Bis dahin rücken sie nach, und andere
   Posts füllen die Tage. Was zu prüfen ist, steht im Tagesplan unter „Wartet auf Freigabe“.
@@ -44,8 +54,15 @@ verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplante
   widerspricht, `any` = braucht eine Zustimmung).
 - `netzwerke`: wohin gepostet wird, sofern das Netzwerk in Metricool verbunden ist. Pro Firma überschreibbar.
 - `zurueckhalten`: weitere Posts, die erst nach einer Freigabe rausgehen, mit Grund.
-- `bis` pro Firma (optional): Frist, bis zu der alle freigegebenen Feed-Posts und Stories draußen sein sollen. Reichen die
-  Tage nicht, bekommen so viele Tage wie nötig einen zweiten oder dritten Feed-Post (auch Tage, die schon in Metricool
+- `max_pro_monat` pro Firma (optional): höchstens so viele Veröffentlichungen pro Kalendermonat, wie Metricool zulässt
+  (kostenloser Plan: 20); jedes Netzwerk zählt einzeln. Die Aufgabe verteilt dann so viele Posts gleichmäßig über den
+  Monat, wie auf allen Netzwerken ins Limit passen, plant keine Stories und hält sich nicht an die Termine aus dem README
+  (Mo/Mi/Fr). `netzwerke` muss dafür genau die bei der Marke verbundenen Netzwerke nennen, sonst stimmt die Rechnung
+  nicht. `plan`, `vorrat` und der Tagesplan zeigen pro Monat, was veröffentlicht ist, was in Metricool liegt und was neu
+  geplant ist. Zurzeit bei Coday: 20, mit `netzwerke` Instagram, Facebook und Google.
+- `stories` pro Firma: `an` (Standard) oder `aus`. Zurzeit bei Coday: `aus`.
+- `bis` pro Firma (optional, nicht zusammen mit `max_pro_monat`): Frist, bis zu der alle freigegebenen Feed-Posts und
+  Stories draußen sein sollen. Reichen die Tage nicht, bekommen so viele Tage wie nötig einen zweiten oder dritten Feed-Post (auch Tage, die schon in Metricool
   liegen), gleichmäßig verteilt und frühestens übermorgen; die Uhrzeiten dafür stehen in `feed_zeit_extra` und dürfen
   sich nicht mit `feed_zeit` oder `story_zeit` überschneiden, höchstens `max_pro_tag` (Standard 3) Feed-Posts pro Tag.
   Stories rücken bei Bedarf auf 2 oder 1 Tag Abstand zusammen. Was im Vorlauf steht, behält Tag und Uhrzeit, damit ein
@@ -53,7 +70,7 @@ verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplante
   Lauf den Plan; sie bleiben auch dann unter „Wartet auf Freigabe“, wenn ihr Zeitfenster bald endet. Reicht der Platz
   trotzdem nicht (zum Beispiel bei Freigaben wenige Tage vor der Frist), melden `plan`, `vorrat` und der Tagesplan, welche
   Posts erst nach der Frist kommen. Posts, deren Zeitfenster erst nach der Frist beginnt (Januar-Posts), kommen danach.
-  Zurzeit bei Coday: `2026-12-31`.
+  Zurzeit bei keiner Firma gesetzt (bei Coday passt sie nicht zum Monatslimit).
 - `bild_url` (optional): Bilder direkt aus einem öffentlichen Repo verlinken, statt sie nach Marketing-Bilder zu
   kopieren; `{pfad}` ist der Pfad der Bilddatei in diesem Repo, zum Beispiel `Coday/bilder/story-9x16/CD-028.jpg`.
   Zurzeit zeigt es auf das öffentliche Repo Marketing. Wird Marketing wieder privat: `bild_url` löschen, dann gilt
@@ -63,7 +80,9 @@ verbundenen Netzwerken, dazu Stories. Metricool veröffentlicht sie zur geplante
 ## Einrichtung
 
 Voraussetzung: In Metricool hat jede Firma eine eigene Marke mit verbundenen Netzwerken (Instagram, Facebook usw.),
-benannt wie `metricool_marke`: „Coday“, „Bad & Energie“ und „Tezgel“. Dann findet die tägliche Aufgabe die Marken auch
+benannt wie `metricool_marke`: „Coday“, „Bad & Energie“ und „Tezgel“. Der kostenlose Metricool-Plan erlaubt nur eine
+Marke, ohne LinkedIn und X; für Bad & Energie und Tezgel braucht es einen bezahlten Plan (Starter: bis zu 5 Marken).
+Dann findet die tägliche Aufgabe die Marken auch
 selbst, falls sie erst nach der Einrichtung verbunden werden. Keine Marke ohne Netzwerk stehen lassen: Für so eine Marke
 meldet Metricool einen Fehler, und bei einem Fehler lässt die Aufgabe den Tag aus.
 

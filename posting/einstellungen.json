@@ -23,8 +23,9 @@
       "link": "https://www.codayweb.de/de/website-check",
       "feed_zeit": {"werktags": "07:30", "wochenende": "10:00"},
       "story_zeit": "12:30",
-      "bis": "2026-12-31",
-      "feed_zeit_extra": {"werktags": ["17:30", "12:00"], "wochenende": ["15:30", "13:00"]}
+      "netzwerke": ["instagram", "facebook", "gmb"],
+      "max_pro_monat": 20,
+      "stories": "aus"
     },
     "bad-energie": {
       "metricool_marke": "Bad & Energie",
