@@ -1,5 +1,6 @@
 {
  "start": "2026-11-02",
+ "heute": "2026-11-09",
  "firmen": {
   "coday": {
    "eintraege": [
@@ -1109,12 +1110,12 @@
     {
      "post": "CD-U01",
      "titel": "Edit: Laptop-Mockup mit eigenem Screenshot (eigenes Foto)",
-     "grund": "eigenes Foto nötig, Termin 2026-12-09 ging an einen anderen Post"
+     "grund": "eigenes Foto nötig"
     },
     {
      "post": "CD-U02",
      "titel": "Edit: Smartphone-Mockup Referenz (eigenes Foto)",
-     "grund": "eigenes Foto nötig, Termin 2027-01-01 ging an einen anderen Post"
+     "grund": "eigenes Foto nötig"
     },
     {
      "post": "CD-077",
@@ -1203,52 +1204,62 @@
      "2026-11": {
       "veroeffentlicht": 20,
       "in_metricool": 25,
-      "neu": 0
+      "neu": 0,
+      "limit_gemeldet": true
      },
      "2026-12": {
       "veroeffentlicht": 0,
       "in_metricool": 0,
-      "neu": 17
+      "neu": 17,
+      "limit_gemeldet": false
      },
      "2027-01": {
       "veroeffentlicht": 0,
       "in_metricool": 0,
-      "neu": 17
+      "neu": 17,
+      "limit_gemeldet": false
      },
      "2027-02": {
       "veroeffentlicht": 0,
       "in_metricool": 0,
-      "neu": 17
+      "neu": 17,
+      "limit_gemeldet": false
      },
      "2027-03": {
       "veroeffentlicht": 0,
       "in_metricool": 0,
-      "neu": 18
+      "neu": 18,
+      "limit_gemeldet": false
      },
      "2027-04": {
       "veroeffentlicht": 0,
       "in_metricool": 0,
-      "neu": 17
+      "neu": 17,
+      "limit_gemeldet": false
      },
      "2027-05": {
       "veroeffentlicht": 0,
       "in_metricool": 0,
-      "neu": 18
+      "neu": 18,
+      "limit_gemeldet": false
      },
      "2027-06": {
       "veroeffentlicht": 0,
       "in_metricool": 0,
-      "neu": 18
+      "neu": 18,
+      "limit_gemeldet": false
      },
      "2027-07": {
       "veroeffentlicht": 0,
       "in_metricool": 0,
-      "neu": 18
+      "neu": 18,
+      "limit_gemeldet": false
      },
      "2027-08": {
       "veroeffentlicht": 0,
       "in_metricool": 0,
-      "neu": 18
+      "neu": 18,
+      "limit_gemeldet": false
      }
     }
    },
