@@ -11,8 +11,9 @@ an so vielen Tagen wie nötig mehrere ("feed2", "feed3" mit den Uhrzeiten aus fe
 Mit einem Monatslimit ("max_pro_monat", zum Beispiel 20 im kostenlosen Metricool-Plan) plant das Skript nur so viele
 Feed-Posts pro Kalendermonat, wie Metricool veröffentlicht; jedes Netzwerk zählt einzeln. Die Posting-Tage liegen
 gleichmäßig über den Monat verteilt, Saison-Posts kommen in ihrem Zeitfenster dran, Stories gibt es dann keine.
-Log: der letzte Eintrag pro Schlüssel zählt. "kontrolle" listet, was laut Log veröffentlicht sein müsste; was Metricool
-nicht veröffentlicht hat ("gescheitert"), plant der nächste "plan" neu ein.
+Log: der letzte Eintrag pro Schlüssel zählt. "kontrolle" listet, was laut Log veröffentlicht sein müsste. Feed-Posts,
+die Metricool auf keinem Netzwerk veröffentlicht hat ("gescheitert", "fehlt"), plant der nächste "plan" neu ein, nach
+einer Limit-Meldung erst im nächsten Monat; teilweise gescheiterte Posts und Stories nennt er unter "Nicht eingeplant".
 Die geplante Aufgabe in Claude Code arbeitet posting/ANLEITUNG.md ab und ruft dieses Skript auf.
 
 Aufruf:
@@ -58,7 +59,9 @@ LOG_FIELDS = ["zeit", "schluessel", "datum", "status", "metricool_id", "bemerkun
 
 DONE = {"geplant", "entwurf", "manuell", "freigabe", "veroeffentlicht"}  # liegt schon in Metricool, nicht neu anlegen
 CHECKABLE = {"geplant", "manuell", "freigabe"}        # "kontrolle" prüft, ob Metricool sie veröffentlicht hat
-CHECKED_STATUS = {"veroeffentlicht", "gescheitert"}   # Ergebnis der Kontrolle; gescheiterte plant "plan" neu ein
+CHECKED_STATUS = {"veroeffentlicht", "gescheitert", "fehlt"}  # Ergebnis der Kontrolle
+FAILED = {"gescheitert", "fehlt"}                     # nicht veröffentlicht: der Post kommt wieder in den Plan
+LIMIT_HIT = re.compile(r"account limit", re.I)         # Metricool: "You have reached your Metricool account limit."
 MAX_ERRORS = 2                                        # danach lässt die Aufgabe den Auftrag liegen
 STORY_GAP = 3                                         # Tage zwischen Stories, die nicht zu einem Feed-Post gehören
 URGENT_DAYS = 10                                      # Saison-Posts gehen vor, wenn ihr Zeitfenster bald endet
@@ -230,6 +233,15 @@ def feed_networks(s, cfg, p, entries):
 
 def month_of(d):
     return d.strftime("%Y-%m")
+
+
+def clock_for(cfg, art, when):
+    """Uhrzeit eines Posts: story_zeit, feed_zeit (werktags/wochenende) oder feed_zeit_extra für feed2/feed3."""
+    kind = "wochenende" if when.weekday() >= 5 else "werktags"
+    if art == "story":
+        return cfg["story_zeit"]
+    slot = slot_of(art)
+    return cfg["feed_zeit"][kind] if not slot else cfg.get("feed_zeit_extra", FEED_ZEIT_EXTRA)[kind][slot - 1]
 
 
 def posting_days(year, month, n):
@@ -404,8 +416,26 @@ def extra_counts(days, cap, needed, scheduled, origin, deadline):
     return out
 
 
-def build_plan(key, s, today, log, held, previous=None):
+def log_facts(key, log):
+    """Stand pro Schlüssel einer Firma, Fehler beim Anlegen in Folge, Fehlschläge beim Veröffentlichen (ohne die am
+    Monatslimit) und die Monate, in denen Metricool das Limit gemeldet hat."""
+    current = {k: r for k, r in state(log).items() if k.split("|")[0] == key}
+    streak, broken, limit_hit = Counter(), Counter(), set()
+    for r in log:
+        k = r["schluessel"]
+        if k.split("|")[0] != key:
+            continue
+        streak[k] = streak[k] + 1 if r["status"] == "fehler" else 0
+        if r["status"] in FAILED and LIMIT_HIT.search(r["bemerkung"] or ""):
+            limit_hit.add(r["datum"][:7])
+        elif r["status"] in FAILED:
+            broken[k] += 1
+    return current, streak, broken, limit_hit
+
+
+def build_plan(key, s, today, log, held, previous=None, previous_today=None):
     feed, stories = posts_of(key)
+    by_id = {e["id"]: e for e in entries_of(key)}
     start = max(day(s["start"]), today + dt.timedelta(days=1))
     horizon = today + dt.timedelta(days=s["vorlauf_tage"])
     soon = today + dt.timedelta(days=1)  # morgen: ist beim nächsten Lauf schon heute
@@ -432,15 +462,26 @@ def build_plan(key, s, today, log, held, previous=None):
         # Wartende Posts nie in den Vorlauf legen, sonst bliebe der Tag leer
         return lambda p: when > horizon or not any(i in held for i in p["ids"])
 
-    # Was schon in Metricool liegt, behält seinen Tag (gescheiterte nicht: die kommen wieder in den Wechsel)
-    pinned, rows, feed_taken, story_taken = {}, [], set(), set()
+    # Was schon in Metricool liegt, behält seinen Tag. Ganz gescheiterte Posts kommen wieder in den Wechsel; ist ein Post
+    # auf einem Netzwerk gescheitert und auf einem anderen draußen, bleibt er (Hinweis unter "Nicht eingeplant")
+    pinned, rows, feed_taken, story_taken, notes = {}, [], set(), set(), []
     spent = Counter()  # Veröffentlichungen je Monat, die schon in Metricool liegen oder veröffentlicht sind
-    current = {k: r for k, r in state(log).items() if k.split("|")[0] == key}
+    current, streak, broken, limit_hit = log_facts(key, log)
+    nets_of = defaultdict(dict)
     for k, r in current.items():
-        firma, art, post, nr, _ = k.split("|")
+        firma, art, post, nr, net = k.split("|")
+        nets_of[(art, post, int(nr))][net] = r["status"]
         if r["status"] in DONE and r["datum"]:
-            pinned[(art, post, int(nr))] = day(r["datum"])
+            when = day(r["datum"])
+            pinned[(art, post, int(nr))] = max(when, pinned.get((art, post, int(nr)), when))
             spent[r["datum"][:7]] += 1
+    for (art, post, nr), nets in nets_of.items():
+        failed, ok = sorted(n for n, st in nets.items() if st in FAILED), sorted(n for n, st in nets.items() if st in DONE)
+        if failed and ok:
+            p = (feed if is_feed(art) else stories).get(post)
+            notes.append({"post": post, "titel": p["titel"] if p else post,
+                          "grund": f"auf {', '.join(failed)} nicht veröffentlicht, auf {', '.join(ok)} schon: "
+                                   "nicht neu eingeplant"})
     for (art, post, nr), when in sorted(pinned.items(), key=lambda kv: kv[1]):
         (feed_taken if is_feed(art) else story_taken).add(when)
         p = (feed if is_feed(art) else stories).get(post)
@@ -449,13 +490,14 @@ def build_plan(key, s, today, log, held, previous=None):
     pinned_feed = {(post, nr) for (art, post, nr) in pinned if is_feed(art)}
 
     # Termine aus dem README, soweit noch offen
-    fixed, notes, seen = {}, [], Counter()
+    fixed, seen = {}, Counter()
     for (week, col), (pid, cell) in sorted(readme_plan(key).items()):
         when = monday + dt.timedelta(days=7 * (week - 1) + 2 * col)
         if pid is None:
             if when >= start:
                 notes.append({"post": cell.split("]")[0].lstrip("["), "titel": cell.split(") ", 1)[-1],
-                              "grund": f"eigenes Foto nötig, Termin {when.isoformat()} ging an einen anderen Post"})
+                              "grund": "eigenes Foto nötig" if budget else
+                              f"eigenes Foto nötig, Termin {when.isoformat()} ging an einen anderen Post"})
             continue
         if pid == "frei":
             if when >= start and when not in feed_taken:
@@ -478,6 +520,14 @@ def build_plan(key, s, today, log, held, previous=None):
     recent = [feed[post]["kategorie"] for (art, post, nr), when in sorted(pinned.items(), key=lambda kv: kv[1])
               if is_feed(art) and post in feed]
     pool = rotate([p for pid, p in feed.items() if not p["sperre"] and pid not in first_done], recent)
+    for p in list(pool):
+        # Lässt sich nicht anlegen (Fehler in Folge) oder wird nicht veröffentlicht (ohne Limit-Meldung): Platz für andere
+        keys = [f"{key}|feed|{p['post']}|1|{n}" for n in feed_networks(s, cfg, p, by_id)]
+        keys = [k for k in keys if not (k in current and current[k]["status"] in DONE)]
+        if keys and all(streak[k] >= MAX_ERRORS or broken[k] >= MAX_ERRORS for k in keys):
+            pool.remove(p)
+            notes.append({"post": p["post"], "titel": p["titel"],
+                          "grund": "zweimal gescheitert (beim Anlegen oder Veröffentlichen), nicht neu eingeplant"})
     lost = []
     if deadline:
         # Alle freigegebenen Posts bis zur Frist, notfalls mehrere am Tag; wartende und spätere danach wie üblich
@@ -537,23 +587,34 @@ def build_plan(key, s, today, log, held, previous=None):
         feed_taken |= {d for d in days if used[d]}
     if budget:
         # Monatslimit: pro Monat so viele Posting-Tage, wie volle Posts (alle Netzwerke) ins Limit passen
-        entries = {e["id"]: e for e in entries_of(key)}
-        cost = {pid: len(feed_networks(s, cfg, p, entries)) for pid, p in feed.items()}
+        cost = {pid: len(feed_networks(s, cfg, p, by_id)) for pid, p in feed.items()}
         per_post = len(networks_for(s, cfg, {"art": "feed", "sticker": False}))
+        for (art, post, nr), when in pinned.items():
+            if is_feed(art) and post in feed and when >= start:
+                # Netzwerke, die due() bei schon angelegten Posts noch ergänzt (zum Beispiel nach neuen "netzwerke")
+                spent[month_of(when)] += sum(1 for n in feed_networks(s, cfg, feed[post], by_id)
+                                             if current.get(f"{key}|{art}|{post}|{nr}|{n}", {}).get("status") not in DONE
+                                             and streak[f"{key}|{art}|{post}|{nr}|{n}"] < MAX_ERRORS)
+        for month in limit_hit:
+            spent[month] = max(spent[month], budget)  # Metricool meldet das Limit: in diesem Monat nichts mehr anlegen
+        # Was der letzte Lauf schon anlegen konnte, behält seinen Tag (wie mit Frist): Sonst könnte ein angelegter, aber
+        # noch nicht eingetragener Post beim nächsten Lauf an einem anderen Tag ein zweites Mal angelegt werden.
+        # Neue Posts frühestens übermorgen: Einen Post für morgen sähe der nächste Lauf nach einem Abbruch nicht mehr.
+        reach = previous_today + dt.timedelta(days=s["vorlauf_tage"]) if previous_today else horizon
+        before = {day(r["datum"]): r["post"] for r in previous or []
+                  if r["art"] == "feed" and start <= day(r["datum"]) <= min(horizon, reach)}
         slots, (y, m) = [], (start.year, start.month)
         while per_post and budget // per_post and dt.date(y, m, 1) <= start + dt.timedelta(days=400):
-            free = [d for d in posting_days(y, m, budget // per_post) if d >= start and d not in feed_taken]
+            free = [d for d in posting_days(y, m, budget // per_post)
+                    if d not in feed_taken and (d > soon or (d >= start and d in before))]
             slots += free[:max(0, budget - spent[f"{y:04d}-{m:02d}"]) // per_post]
             y, m = y + m // 12, m % 12 + 1
-        # Was schon im Vorlauf stand, behält seinen Tag (wie mit Frist): Sonst könnte ein angelegter, aber noch nicht
-        # eingetragener Post beim nächsten Lauf an einem anderen Tag ein zweites Mal angelegt werden
-        before = {day(r["datum"]): r["post"] for r in previous or []
-                  if r["art"] == "feed" and start <= day(r["datum"]) <= horizon}
         for when in slots:
             lost += expire(pool, when)
             p = next((q for q in pool if q["post"] == before.get(when) and allowed_on(when)(q)
                       and (not q["fenster"] or window(q)[0] <= when)), None)
-            p = p or pick(pool, when, allowed_on(when))
+            if not p and when > soon:
+                p = pick(pool, when, allowed_on(when))
             if p and spent[month_of(when)] + cost[p["post"]] <= budget:
                 pool.remove(p)
                 spent[month_of(when)] += cost[p["post"]]
@@ -666,19 +727,8 @@ def build_plan(key, s, today, log, held, previous=None):
 
     late = [{"post": r["post"], "datum": r["datum"]} for r in entries
             if deadline and day(r["datum"]) > deadline and belongs_before_deadline(r)]
-    limit = {}
-    if budget:  # Stand des Monatslimits ab dem laufenden Monat, solange Posts geplant sind
-        for r in entries:
-            if day(r["datum"]) >= today.replace(day=1):
-                limit.setdefault(r["datum"][:7], {"veroeffentlicht": 0, "in_metricool": 0, "neu": 0})
-        for k, r in current.items():
-            if r["datum"][:7] in limit and r["status"] in DONE:
-                limit[r["datum"][:7]]["veroeffentlicht" if r["status"] == "veroeffentlicht" else "in_metricool"] += 1
-        for r in entries:
-            if r["quelle"] != "metricool" and r["datum"][:7] in limit:
-                limit[r["datum"][:7]]["neu"] += cost[r["post"]]
-        limit = {"max": budget, "monate": dict(sorted(limit.items()))}
-    return {"eintraege": entries, "nicht_eingeplant": blocked + notes + lost + left, "monatslimit": limit,
+    return {"eintraege": entries, "nicht_eingeplant": blocked + notes + lost + left,
+            "monatslimit": limit_info(key, s, entries, log, today),
             "wartet_ohne_termin": [{"post": p["post"], "titel": p["titel"], "ids": [i for i in p["ids"] if i in held],
                                     "bis": p["fenster"][1] if p["fenster"] else None} for p in still],
             "nach_frist": late}
@@ -748,8 +798,8 @@ def write_md(key, s, fp, today, held):
     lines += [f"| {link(i)} | {md_cell(' / '.join(held[i]))}" +
               (f" (noch ohne Termin{', Zeitfenster bis ' + no_date[i]['bis'] if no_date[i]['bis'] else ''})"
                if i in no_date and i not in waiting else "") + " |" for i in sorted(waiting | set(no_date))]
-    if limit_text(fp):
-        lines += ["", "## Monatslimit", "", limit_text(fp) + "."]
+    if limit_text(fp.get("monatslimit")):
+        lines += ["", "## Monatslimit", "", limit_text(fp["monatslimit"]) + "."]
     if fp.get("nach_frist"):
         lines += ["", "## Nach der Frist", "", f"Für diese freigegebenen Posts war bis {s['firmen'][key].get('bis')} "
                   "kein Platz mehr:", ""] + [f"- {x['post']} am {x['datum']}" for x in fp["nach_frist"]]
@@ -758,24 +808,56 @@ def write_md(key, s, fp, today, held):
     (ROOT / c["folder"] / "tagesplan.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def limit_text(fp):
+def limit_info(key, s, rows, log, today):
+    """Monatslimit ab dem laufenden Monat: veröffentlicht, in Metricool (noch nicht veröffentlicht) und noch nicht in
+    Metricool (geplante Netzwerke ab morgen), jeweils Veröffentlichungen; dazu, ob Metricool das Limit gemeldet hat."""
+    cfg = s["firmen"][key]
+    if not cfg.get("max_pro_monat"):
+        return {}
+    current, streak, broken, limit_hit = log_facts(key, log)
+    by_id = {e["id"]: e for e in entries_of(key)}
+    feed = posts_of(key)[0]
+    first = today.replace(day=1).isoformat()
+    months = {}
+
+    def slot(month):
+        return months.setdefault(month, {"veroeffentlicht": 0, "in_metricool": 0, "neu": 0,
+                                         "limit_gemeldet": month in limit_hit})
+    for k, r in current.items():
+        if r["datum"] >= first and r["status"] in DONE:
+            slot(r["datum"][:7])["veroeffentlicht" if r["status"] == "veroeffentlicht" else "in_metricool"] += 1
+    for r in rows:
+        if is_feed(r["art"]) and day(r["datum"]) > today and r["post"] in feed:
+            for n in feed_networks(s, cfg, feed[r["post"]], by_id):
+                k = f"{key}|{r['art']}|{r['post']}|{r['nr']}|{n}"
+                if current.get(k, {}).get("status") not in DONE and streak[k] < MAX_ERRORS:
+                    slot(r["datum"][:7])["neu"] += 1
+    return {"max": cfg["max_pro_monat"], "monate": dict(sorted(months.items()))}
+
+
+def limit_text(lim):
     """Monatslimit in einer Zeile, mit Warnung, wenn mehr in Metricool liegt, als veröffentlicht werden kann."""
-    lim = fp.get("monatslimit") or {}
     parts = []
-    for month, v in lim.get("monate", {}).items():
+    for month, v in (lim or {}).get("monate", {}).items():
         total = v["veroeffentlicht"] + v["in_metricool"] + v["neu"]
-        parts.append(f"{month}: {v['veroeffentlicht']} veröffentlicht, {v['in_metricool']} in Metricool, {v['neu']} neu "
-                     f"geplant" + (f" (Achtung: {total - lim['max']} mehr als das Limit, die gehen nicht raus)"
-                                   if total > lim["max"] else ""))
-    return f"Monatslimit {lim['max']} Veröffentlichungen: " + "; ".join(parts) if lim else ""
+        warn = []
+        if v["limit_gemeldet"]:
+            warn.append("Metricool meldet das Limit als erreicht, in diesem Monat geht nichts mehr raus")
+        if total > lim["max"]:
+            warn.append(f"{total - lim['max']} mehr als das Limit, die gehen nicht raus")
+        parts.append(f"{month}: {v['veroeffentlicht']} veröffentlicht, {v['in_metricool']} in Metricool, {v['neu']} noch "
+                     "nicht in Metricool" + (f" (Achtung: {'; '.join(warn)})" if warn else ""))
+    return f"Monatslimit {lim['max']} Veröffentlichungen: " + "; ".join(parts) if parts else ""
 
 
 def cmd_plan(s, today):
     log, held = read_log(), holds(s)
-    old = load_json(PLAN).get("firmen", {}) if PLAN.exists() else {}
-    plan = {"start": s["start"], "firmen": {}}
+    old_plan = load_json(PLAN) if PLAN.exists() else {}
+    old, old_today = old_plan.get("firmen", {}), old_plan.get("heute")
+    plan = {"start": s["start"], "heute": today.isoformat(), "firmen": {}}
     for key in bib.COMPANIES:
-        fp = plan["firmen"][key] = build_plan(key, s, today, log, held, old.get(key, {}).get("eintraege"))
+        fp = plan["firmen"][key] = build_plan(key, s, today, log, held, old.get(key, {}).get("eintraege"),
+                                              day(old_today) if old_today else None)
         write_md(key, s, fp, today, held)
         feed = [r for r in fp["eintraege"] if is_feed(r["art"]) and day(r["datum"]) > today]
         waiting = sum(1 for r in fp["eintraege"] if r["wartet"] and day(r["datum"]) > today)
@@ -787,8 +869,8 @@ def cmd_plan(s, today):
         if fp.get("nach_frist"):
             print(f"  Achtung, Frist {s['firmen'][key]['bis']} verpasst (zu wenig Platz): " +
                   ", ".join(f"{x['post']} am {x['datum']}" for x in fp["nach_frist"]))
-        if limit_text(fp):
-            print(f"  {limit_text(fp)}")
+        if limit_text(fp.get("monatslimit")):
+            print(f"  {limit_text(fp['monatslimit'])}")
     PLAN.write_text(json.dumps(plan, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
@@ -863,9 +945,7 @@ def request(key, cfg, s, r, network, entries, tz):
     if mode == "freigabe" and not cfg.get("freigabe_mails"):
         mode = "entwurf"
     status = {"freigabe": "freigabe", "entwurf": "entwurf"}.get(mode, "manuell" if r["sticker"] else "geplant")
-    kind, slot = "wochenende" if day(r["datum"]).weekday() >= 5 else "werktags", 0 if story else slot_of(r["art"])
-    clock = (cfg["story_zeit"] if story else cfg["feed_zeit"][kind] if not slot
-             else cfg.get("feed_zeit_extra", FEED_ZEIT_EXTRA)[kind][slot - 1])
+    clock = clock_for(cfg, r["art"], day(r["datum"]))
     when = dt.datetime.combine(day(r["datum"]), dt.time.fromisoformat(clock), tzinfo=tz)
     info = {"autoPublish": not r["sticker"],  # Sticker setzt Instagram nicht automatisch: Metricool erinnert in der App
             "draft": mode == "entwurf", "descendants": [], "firstCommentText": "", "hasNotReadNotes": False,
@@ -893,6 +973,11 @@ def due(s, today, only=None):
         errors[r["schluessel"]] = errors[r["schluessel"]] + 1 if r["status"] == "fehler" else 0
     # Monatslimit als zweite Sicherung neben dem Plan: nie mehr anlegen, als Metricool im Monat veröffentlicht
     spent = Counter((k.split("|")[0], r["datum"][:7]) for k, r in current.items() if r["status"] in DONE)
+    for r in log:  # Metricool hat das Limit gemeldet: in diesem Monat nichts mehr anlegen
+        if r["status"] in FAILED and LIMIT_HIT.search(r["bemerkung"] or ""):
+            firma = r["schluessel"].split("|")[0]
+            spent[(firma, r["datum"][:7])] = max(spent[(firma, r["datum"][:7])],
+                                                 s["firmen"].get(firma, {}).get("max_pro_monat") or 0)
     tz = ZoneInfo(s["zeitzone"])
     first, last = today + dt.timedelta(days=1), today + dt.timedelta(days=s["vorlauf_tage"])
     out, given_up, waiting, over = [], [], [], []
@@ -949,7 +1034,10 @@ def cmd_faellig(s, today, args):
 
 
 def cmd_vorrat(s, today):
-    plan, held = load_json(PLAN), holds(s)
+    """Reichweite, Wartende, Monatslimit (frisch aus dem Log) und was die Kontrolle in den letzten 24 Stunden als
+    nicht veröffentlicht eingetragen hat, mit neuem Termin oder Grund."""
+    plan, held, log = load_json(PLAN), holds(s), read_log()
+    recent = (dt.datetime.now() - dt.timedelta(hours=24)).isoformat(timespec="seconds")
     for key, fp in plan["firmen"].items():
         rest = [r for r in fp["eintraege"] if day(r["datum"]) > today]
         feed = [r for r in rest if is_feed(r["art"])]
@@ -972,8 +1060,21 @@ def cmd_vorrat(s, today):
         if fp.get("nach_frist"):
             print(f"  Achtung, Frist {s['firmen'][key].get('bis')} verpasst (zu wenig Platz): " +
                   ", ".join(f"{x['post']} am {x['datum']}" for x in fp["nach_frist"]))
-        if limit_text(fp):
-            print(f"  {limit_text(fp)}")
+        lim = limit_info(key, s, fp["eintraege"], log, today)
+        if limit_text(lim):
+            print(f"  {limit_text(lim)}")
+        failed = {}
+        for k, r in state(log).items():
+            if k.startswith(key + "|") and r["status"] in FAILED and r["zeit"] >= recent:
+                f = failed.setdefault((k.split("|")[1], k.split("|")[2]), {"datum": r["datum"], "netze": [], "status": set()})
+                f["netze"].append(k.split("|")[4])
+                f["status"].add(r["status"])
+        for (art, post), f in sorted(failed.items(), key=lambda kv: kv[1]["datum"]):
+            new = [r["datum"] for r in fp["eintraege"] if r["post"] == post and is_feed(r["art"]) == is_feed(art)
+                   and day(r["datum"]) > today and r["quelle"] != "metricool"]
+            why = next((n["grund"] for n in fp["nicht_eingeplant"] if n["post"] == post), "")
+            print(f"  {'/'.join(sorted(f['status']))}: {post} ({f['datum']}, {', '.join(sorted(f['netze']))}): " +
+                  (f"neu eingeplant am {new[0]}" if new else f"nicht neu eingeplant{' (' + why + ')' if why else ''}"))
 
 
 # ---------------------------------------------------------------- Bilder und Log
@@ -1061,6 +1162,8 @@ def cmd_eintragen(s, lines):
             bad.append(f"unbekannter Schlüssel: {line}")
         elif status not in (DONE - CHECKED_STATUS) | {"fehler"}:
             bad.append(f"unbekannter Status: {line}")
+        elif status != "fehler" and not mid:
+            bad.append(f"Post-ID fehlt: {line}")
         else:
             rows.append([now, k, dates[k], status, mid, " ".join(note.split())])
         seen.add(k)
@@ -1078,10 +1181,13 @@ def cmd_eintragen(s, lines):
 def cmd_kontrolle(s, today):
     """Posts bis gestern, die laut Log in Metricool liegen: wurden sie wirklich veröffentlicht?"""
     tz = ZoneInfo(s["zeitzone"])
-    posts = sorted(({"schluessel": k, "metricool_id": r["metricool_id"], "datum": r["datum"], "status_im_log": r["status"]}
+    posts = sorted(({"schluessel": k, "metricool_id": r["metricool_id"], "datum": r["datum"],
+                     "uhrzeit": clock_for(s["firmen"][k.split("|")[0]], k.split("|")[1], day(r["datum"])),
+                     "netzwerk": k.split("|")[4], "status_im_log": r["status"]}
                     for k, r in state(read_log()).items()
-                    if r["status"] in CHECKABLE and r["datum"] and day(r["datum"]) < today),
-                   key=lambda p: (p["datum"], p["schluessel"]))
+                    if r["status"] in CHECKABLE and r["datum"] and day(r["datum"]) < today
+                    and k.split("|")[0] in s["firmen"]),
+                   key=lambda p: (p["datum"], p["uhrzeit"], p["schluessel"]))
     brands = []
     for key in sorted({p["schluessel"].split("|")[0] for p in posts}):
         cfg = s["firmen"].get(key, {})

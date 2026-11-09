@@ -79,7 +79,7 @@ Zum Freigeben die ID in `posting/geprueft.txt` eintragen.
 
 ## Monatslimit
 
-Monatslimit 20 Veröffentlichungen: 2026-11: 20 veröffentlicht, 25 in Metricool, 0 neu geplant (Achtung: 25 mehr als das Limit, die gehen nicht raus); 2026-12: 0 veröffentlicht, 0 in Metricool, 17 neu geplant; 2027-01: 0 veröffentlicht, 0 in Metricool, 17 neu geplant; 2027-02: 0 veröffentlicht, 0 in Metricool, 17 neu geplant; 2027-03: 0 veröffentlicht, 0 in Metricool, 18 neu geplant; 2027-04: 0 veröffentlicht, 0 in Metricool, 17 neu geplant; 2027-05: 0 veröffentlicht, 0 in Metricool, 18 neu geplant; 2027-06: 0 veröffentlicht, 0 in Metricool, 18 neu geplant; 2027-07: 0 veröffentlicht, 0 in Metricool, 18 neu geplant; 2027-08: 0 veröffentlicht, 0 in Metricool, 18 neu geplant.
+Monatslimit 20 Veröffentlichungen: 2026-11: 20 veröffentlicht, 25 in Metricool, 0 noch nicht in Metricool (Achtung: Metricool meldet das Limit als erreicht, in diesem Monat geht nichts mehr raus; 25 mehr als das Limit, die gehen nicht raus); 2026-12: 0 veröffentlicht, 0 in Metricool, 17 noch nicht in Metricool; 2027-01: 0 veröffentlicht, 0 in Metricool, 17 noch nicht in Metricool; 2027-02: 0 veröffentlicht, 0 in Metricool, 17 noch nicht in Metricool; 2027-03: 0 veröffentlicht, 0 in Metricool, 18 noch nicht in Metricool; 2027-04: 0 veröffentlicht, 0 in Metricool, 17 noch nicht in Metricool; 2027-05: 0 veröffentlicht, 0 in Metricool, 18 noch nicht in Metricool; 2027-06: 0 veröffentlicht, 0 in Metricool, 18 noch nicht in Metricool; 2027-07: 0 veröffentlicht, 0 in Metricool, 18 noch nicht in Metricool; 2027-08: 0 veröffentlicht, 0 in Metricool, 18 noch nicht in Metricool.
 
 ## Nicht eingeplant
 
@@ -101,8 +101,8 @@ Monatslimit 20 Veröffentlichungen: 2026-11: 20 veröffentlicht, 25 in Metricool
 | CD-016 | Gastro | Arena-Bild: ohne schriftliche Freigabe von Arena nicht für Werbung nutzen |
 | CD-K1 | PHP-Version prüfen | Arena-Bild: ohne schriftliche Freigabe von Arena nicht für Werbung nutzen |
 | CD-K2 | GEO in 5 Slides | Arena-Bild: ohne schriftliche Freigabe von Arena nicht für Werbung nutzen |
-| CD-U01 | Edit: Laptop-Mockup mit eigenem Screenshot (eigenes Foto) | eigenes Foto nötig, Termin 2026-12-09 ging an einen anderen Post |
-| CD-U02 | Edit: Smartphone-Mockup Referenz (eigenes Foto) | eigenes Foto nötig, Termin 2027-01-01 ging an einen anderen Post |
+| CD-U01 | Edit: Laptop-Mockup mit eigenem Screenshot (eigenes Foto) | eigenes Foto nötig |
+| CD-U02 | Edit: Smartphone-Mockup Referenz (eigenes Foto) | eigenes Foto nötig |
 | CD-077 | Story: PHP-Update | Stories aus |
 | CD-079 | Story: Wie schnell? | Stories aus |
 | CD-115 | Story: Quiz PHP-Lücke | Stories aus |

@@ -10,7 +10,7 @@ kostenlosen Metricool-Plans eingestellt: etwa alle 5 Tage ein Post, keine Storie
 | [plan.json](plan.json) | Tagesplan aller Firmen |
 | Tagesplan pro Firma | [Coday](../Coday/tagesplan.md) · [Bad & Energie](../Bad-und-Energie/tagesplan.md) · [Tezgel](../Tezgel/tagesplan.md): Bild und Text pro Tag, dazu alle Posts, die auf eine Freigabe warten |
 | [geprueft.txt](geprueft.txt) | freigegebene Posts |
-| [log.csv](log.csv) | was in Metricool liegt und ob es veröffentlicht wurde (schreibt die Aufgabe; der letzte Eintrag pro Post und Netzwerk zählt) |
+| [log.csv](log.csv) | was in Metricool liegt und ob es veröffentlicht wurde (schreibt die Aufgabe; pro Post und Netzwerk zählt der letzte Eintrag: `geplant`, `veroeffentlicht`, `gescheitert`, `fehlt`, `fehler` beim Anlegen) |
 | [ANLEITUNG.md](ANLEITUNG.md) | Ablauf der täglichen Aufgabe |
 
 ## Was die Automation macht
@@ -21,14 +21,20 @@ kostenlosen Metricool-Plans eingestellt: etwa alle 5 Tage ein Post, keine Storie
 - **Täglich neu geplant:** Die Aufgabe baut den Plan jeden Morgen neu. Was schon in Metricool liegt, behält seinen Tag;
   Posts von Tagen, an denen nichts rausging (zum Beispiel weil die Netzwerke noch nicht verbunden waren), rücken nach.
 - **Kontrolle:** Jeden Morgen prüft die Aufgabe in Metricool, ob die Posts der Vortage wirklich veröffentlicht wurden,
-  und trägt das ins Log ein (`veroeffentlicht`). Was Metricool nicht veröffentlicht hat (`gescheitert`, zum Beispiel
-  „You have reached your Metricool account limit“), plant sie neu ein und meldet es im Bericht.
+  und trägt das ins Log ein: `veroeffentlicht`, `gescheitert` (mit der Meldung von Metricool) oder `fehlt` (in Metricool
+  nicht mehr da, zum Beispiel gelöscht). Ganz gescheiterte oder fehlende Feed-Posts plant sie neu ein; meldet Metricool
+  das Monatslimit, im selben Monat nichts mehr. Nicht neu eingeplant werden Stories (zurzeit aus), Posts mit
+  abgelaufenem Zeitfenster und Posts, die nur auf einem Teil der Netzwerke gescheitert sind (zum Beispiel bei einer
+  abgelaufenen Facebook-Verbindung); der Bericht nennt sie. Ein Post, der zweimal ohne Limit-Meldung scheitert, bleibt
+  liegen. Ein in Metricool gelöschter Post kommt wieder in den Plan; soll er gar nicht kommen, seine ID unter
+  `zurueckhalten` eintragen.
 - **Monatslimit (Coday):** Der kostenlose Metricool-Plan veröffentlicht höchstens 20 Posts pro Kalendermonat, und jedes
   Netzwerk zählt einzeln; was darüber hinausgeht, scheitert. Deshalb plant die Aufgabe für Coday nur 6 Posts im Monat auf
   Instagram, Facebook und Google (18 Veröffentlichungen), etwa alle 5 Tage, und keine Stories. Saison-Posts gehen in
   ihrem Zeitfenster vor, die übrigen Posts kommen im Wechsel der Themen. Am 1. jedes Monats ist das Limit wieder frei.
   Posts, die man selbst in Metricool anlegt, zählen mit und können dann geplanten Posts den Platz nehmen. Mit einem
-  bezahlten Plan (ab Starter) gibt es kein Monatslimit: dann `max_pro_monat` löschen und `stories` wieder auf `an`.
+  bezahlten Plan (ab Starter) gibt es kein Monatslimit: dann bei Coday `max_pro_monat` und `netzwerke` löschen (oder
+  `netzwerke` auf die gewünschten Netzwerke setzen) und `stories` wieder auf `an`.
 - **Freigaben:** Posts mit Faktencheck (⚠️ in `prompts.md`), mit einer offenen Frage in [offene-fragen.md](../offene-fragen.md)
   oder in `zurueckhalten` gehen erst raus, wenn ihre ID in `geprueft.txt` steht. Bis dahin rücken sie nach, und andere
   Posts füllen die Tage. Was zu prüfen ist, steht im Tagesplan unter „Wartet auf Freigabe“.
