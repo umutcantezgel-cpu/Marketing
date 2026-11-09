@@ -1,14 +1,12 @@
 # Tagesplan Coday
 
-Stand 08.11.2026: pro Tag ein Feed-Post, bis 31.12.2026 alle freigegebenen Posts und dafür an manchen Tagen mehrere, dazu Stories. Die geplante Aufgabe in Claude Code baut den Plan jeden Morgen neu und stellt die Posts eine Woche im Voraus in Metricool ein, siehe [posting/README.md](../posting/README.md).
+Stand 09.11.2026: pro Tag ein Feed-Post, bis 31.12.2026 alle freigegebenen Posts und dafür an manchen Tagen mehrere, dazu Stories. Die geplante Aufgabe in Claude Code baut den Plan jeden Morgen neu und stellt die Posts eine Woche im Voraus in Metricool ein, siehe [posting/README.md](../posting/README.md).
 
 ⚠️ Wartet auf Freigabe (Gründe unten): Der Termin ist vorläufig. Der Post geht erst raus, wenn seine ID in `posting/geprueft.txt` steht, und rückt bis dahin jeden Tag nach.  
 ✋ Story mit Sticker (Umfrage, Quiz, Link): Metricool erinnert in der App, der Sticker kommt von Hand dazu.
 
 | Datum | Feed-Post | Text | Story |
 | --- | --- | --- | --- |
-| Mo 09.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-050.jpg" width="90"><br>[CD-050](prompts.md#cd-050) Schnelle Shops | Ich baue E-Commerce ohne Plugin-Ballast. Kostenloser Check: Link in Bio. |  |
-| Mo 09.11.2026 (2. Post) | <img src="bilder/facebook-linkedin-4x5/CD-044.jpg" width="90"><br>[CD-044](prompts.md#cd-044) Server aktuell? | Die PHP-Version zählt mehr als das Theme. Kostenloser Check: Link in Bio. |  |
 | Di 10.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-055.jpg" width="90"><br>[CD-055](prompts.md#cd-055) Auf dem Handy unlesbar? | Ich baue Websites mobile-first. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) |  |
 | Mi 11.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-059.jpg" width="90"><br>[CD-059](prompts.md#cd-059) 30 Plugins zu 0 | Das ist ein Symbolbild, kein Kundenprojekt; die Zahlen sind ein Beispiel. Kostenloser Check: Link in Bio. | [CD-080](prompts.md#cd-080) Story: ChatGPT-Frage (Umfrage) ✋ |
 | Do 12.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-061.jpg" width="90"><br>[CD-061](prompts.md#cd-061) Branche Handwerk: Konfigurator | Mit einem Konfigurator kommen Anfragen gleich mit allen Infos. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) |  |
