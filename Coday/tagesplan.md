@@ -1,13 +1,12 @@
 # Tagesplan Coday
 
-Stand 09.11.2026: höchstens 20 Veröffentlichungen pro Monat (Limit von Metricool, jedes Netzwerk zählt), also etwa 6 Feed-Posts im Monat, gleichmäßig verteilt, ohne Stories. Die geplante Aufgabe in Claude Code baut den Plan jeden Morgen neu und stellt die Posts eine Woche im Voraus in Metricool ein, siehe [posting/README.md](../posting/README.md).
+Stand 10.11.2026: höchstens 20 Veröffentlichungen pro Monat (Limit von Metricool, jedes Netzwerk zählt), also etwa 6 Feed-Posts im Monat, gleichmäßig verteilt, ohne Stories. Die geplante Aufgabe in Claude Code baut den Plan jeden Morgen neu und stellt die Posts eine Woche im Voraus in Metricool ein, siehe [posting/README.md](../posting/README.md).
 
 ⚠️ Wartet auf Freigabe (Gründe unten): Der Termin ist vorläufig. Der Post geht erst raus, wenn seine ID in `posting/geprueft.txt` steht, und rückt bis dahin jeden Tag nach.  
 ✋ Story mit Sticker (Umfrage, Quiz, Link): Metricool erinnert in der App, der Sticker kommt von Hand dazu.
 
 | Datum | Feed-Post | Text | Story |
 | --- | --- | --- | --- |
-| Di 10.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-055.jpg" width="90"><br>[CD-055](prompts.md#cd-055) Auf dem Handy unlesbar? | Ich baue Websites mobile-first. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) |  |
 | Mi 11.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-059.jpg" width="90"><br>[CD-059](prompts.md#cd-059) 30 Plugins zu 0 | Das ist ein Symbolbild, kein Kundenprojekt; die Zahlen sind ein Beispiel. Kostenloser Check: Link in Bio. | [CD-080](prompts.md#cd-080) Story: ChatGPT-Frage (Umfrage) ✋ |
 | Do 12.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-061.jpg" width="90"><br>[CD-061](prompts.md#cd-061) Branche Handwerk: Konfigurator | Mit einem Konfigurator kommen Anfragen gleich mit allen Infos. Kostenloser Check: Link in Bio. (KI-generiertes Symbolbild) |  |
 | Fr 13.11.2026 | <img src="bilder/facebook-linkedin-4x5/CD-066.jpg" width="90"><br>[CD-066](prompts.md#cd-066) Einzugsgebiet | Das ist mein Einzugsgebiet. Kostenloser Check: Link in Bio. |  |
