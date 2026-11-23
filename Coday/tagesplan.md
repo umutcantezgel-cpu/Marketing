@@ -1,6 +1,6 @@
 # Tagesplan Coday
 
-Stand 22.11.2026: höchstens 20 Veröffentlichungen pro Monat (Limit von Metricool, jedes Netzwerk zählt), also etwa 6 Feed-Posts im Monat, gleichmäßig verteilt, ohne Stories. Die geplante Aufgabe in Claude Code baut den Plan jeden Morgen neu und stellt die Posts eine Woche im Voraus in Metricool ein, siehe [posting/README.md](../posting/README.md).
+Stand 23.11.2026: höchstens 20 Veröffentlichungen pro Monat (Limit von Metricool, jedes Netzwerk zählt), also etwa 6 Feed-Posts im Monat, gleichmäßig verteilt, ohne Stories. Die geplante Aufgabe in Claude Code baut den Plan jeden Morgen neu und stellt die Posts eine Woche im Voraus in Metricool ein, siehe [posting/README.md](../posting/README.md).
 
 ⚠️ Wartet auf Freigabe (Gründe unten): Der Termin ist vorläufig. Der Post geht erst raus, wenn seine ID in `posting/geprueft.txt` steht, und rückt bis dahin jeden Tag nach.  
 ✋ Story mit Sticker (Umfrage, Quiz, Link): Metricool erinnert in der App, der Sticker kommt von Hand dazu.
